@@ -135,8 +135,7 @@ export function Footer() {
             </p>
           </div>
           </div>
-          <div className="grid grid-cols-3 gap-8 xl:col-span-2">
-
+          <div className="md:grid md:grid-cols-3 gap-8 xl:col-span-2 mt-10 md:mt-0">
               <div>
                 <h3 className="text-md font-extrabold leading-6 text-white">Use Cases</h3>
                 <ul role="list" className="mt-6 space-y-3">
@@ -161,7 +160,7 @@ export function Footer() {
                   ))}
                 </ul>
               </div>
-              <div>
+              <div className="mt-10 md:mt-0">
                 <h3 className="text-md font-extrabold leading-6 text-white">Contact Us</h3>
                 <ul role="list" className="mt-6 space-y-3">
                   {navigation.contactUs.map((item) => (
@@ -177,7 +176,7 @@ export function Footer() {
           
         </div>
         <div className="mt-16 border-t border-white/30 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
-          <div className="flex space-x-6 md:order-2">
+          <div className="flex space-x-6 md:order-2 mb-2 md:mb-0">
             {navigation.social.map((item) => (
               <a key={item.name} href={item.href} className="text-white hover:text-white/75 scale-75">
                 <span className="sr-only">{item.name}</span>
