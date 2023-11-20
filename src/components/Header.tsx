@@ -248,7 +248,7 @@ export function Header() {
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
-            className="rounded-full bg-[#C8EAFF] hover:bg-[#C8EAFF]/80 px-8 py-2 text-sm font-semibold leading-6 text-gray-900"
+            className="rounded-full bg-[#C8EAFF] px-8 py-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80"
           >
             MPC Network
           </a>
