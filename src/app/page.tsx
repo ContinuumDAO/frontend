@@ -5,8 +5,8 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
-import { SecondaryFeatures } from '@/components/SecondaryFeatures'
-import { Testimonials } from '@/components/Testimonials'
+import { ContinuumMatrix } from '@/components/ContinuumMatrix'
+import { UseCases } from '@/components/UseCases'
 
 export default function Home() {
   return (
@@ -15,9 +15,8 @@ export default function Home() {
       <main>
         <Hero />
         <PrimaryFeatures />
-        {/*<SecondaryFeatures />
-        <Testimonials />
-        <Pricing />*/}
+        <ContinuumMatrix />
+        <UseCases />
         <Faqs />
         <CallToAction />
       </main>

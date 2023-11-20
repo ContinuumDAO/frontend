@@ -134,7 +134,10 @@ export function Header() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 -translate-x-6"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-4 w-48 max-w-md overflow-hidden bg-black shadow-lg ring-1 ring-white/30">
+              <Popover.Panel
+                className="absolute -left-8 top-full
+              z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+              >
                 <div className="p-4">
                   {useCases.map((item, i) => (
                     <div
