@@ -138,7 +138,7 @@ export function Header() {
                 className="absolute -left-8 top-full
               z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
               >
-                <div className="p-4">
+                <div className="px-4">
                   {useCases.map((item, i) => (
                     <div
                       key={item.name}
@@ -183,7 +183,7 @@ export function Header() {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-4 w-48 max-w-md overflow-hidden bg-black shadow-lg ring-1 ring-white/30">
-                <div className="p-4">
+                <div className="px-4">
                   {governance.map((item, i) => (
                     <div
                       key={item.name}
@@ -228,7 +228,7 @@ export function Header() {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-4 w-48 max-w-md overflow-hidden bg-black shadow-lg ring-1 ring-white/30">
-                <div className="p-4">
+                <div className="px-4">
                   {contactUs.map((item, i) => (
                     <div
                       key={item.name}
