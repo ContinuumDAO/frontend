@@ -75,7 +75,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-black pt-6">
+    <header className="fixed top-0 z-50 w-full bg-black pt-6">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between border-b border-t border-white/30 p-6 lg:p-4 lg:px-8"
         aria-label="Global"
@@ -102,16 +102,22 @@ export function Header() {
           </button>
         </div>
         <Popover.Group className="hidden items-center lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          <a
+            href="#"
+            className="text-sm font-semibold leading-6 text-white focus:outline-none"
+          >
             What We Do
           </a>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          <a
+            href="#"
+            className="text-sm font-semibold leading-6 text-white focus:outline-none"
+          >
             Continuum Matrix
           </a>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
               Use Cases
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-white"
@@ -121,12 +127,12 @@ export function Header() {
 
             <Transition
               as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
+              enter="transition ease-out duration-500"
+              enterFrom="opacity-0 -translate-x-6"
+              enterTo="opacity-100 translate-x-0"
               leave="transition ease-in duration-150"
               leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
+              leaveTo="opacity-0 -translate-x-6"
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-4 w-48 max-w-md overflow-hidden bg-black shadow-lg ring-1 ring-white/30">
                 <div className="p-4">
@@ -156,7 +162,7 @@ export function Header() {
           </Popover>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
               Governance
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-white"
@@ -201,7 +207,7 @@ export function Header() {
           </Popover>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
               Contact Us
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-white"

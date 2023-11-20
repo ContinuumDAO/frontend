@@ -1,6 +1,6 @@
 'use client'
 
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, Transition } from '@headlessui/react'
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
 
 const faqs = [
@@ -39,26 +39,23 @@ export function Faqs() {
                         <span className="text-lg font-medium leading-7">
                           {faq.question}
                         </span>
-                        <span className="ml-6 flex h-7 items-center">
-                          {open ? (
-                            <MinusSmallIcon
-                              className="h-6 w-6"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <PlusSmallIcon
-                              className="h-6 w-6"
-                              aria-hidden="true"
-                            />
-                          )}
-                        </span>
                       </Disclosure.Button>
                     </dt>
-                    <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                      <p className="text-base leading-7 text-gray-300">
-                        {faq.answer}
-                      </p>
-                    </Disclosure.Panel>
+                    <Transition
+                      show={open}
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                        <p className="text-base leading-7 text-gray-300">
+                          {faq.answer}
+                        </p>
+                      </Disclosure.Panel>
+                    </Transition>
                   </>
                 )}
               </Disclosure>
