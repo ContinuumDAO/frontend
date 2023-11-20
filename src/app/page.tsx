@@ -21,7 +21,7 @@ export default function Home() {
         <Pricing />
         <Faqs />
       </main> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
