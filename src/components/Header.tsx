@@ -172,16 +172,18 @@ export function Header() {
         <Popover.Group className="hidden items-center lg:flex lg:gap-x-12">
           <a
             href="#"
-            className="text-lg font-medium leading-6 text-white focus:outline-none"
+            className="group text-lg font-medium leading-6 text-white transition duration-300 focus:outline-none"
           >
             What We Do
+            <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
           </a>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <a
             href="#"
-            className="text-lg font-medium leading-6 text-white focus:outline-none"
+            className="group text-lg font-medium leading-6 text-white focus:outline-none"
           >
             Continuum Matrix
+            <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
           </a>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
@@ -193,13 +195,16 @@ export function Header() {
                       ref={buttonRef}
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="group text-lg font-medium leading-6 text-white focus:outline-none"
                     >
-                      Use Cases
-                      <ChevronDownIcon
-                        className="h-5 w-5 flex-none text-white"
-                        aria-hidden="true"
-                      />
+                      <span className="flex items-center gap-x-1">
+                        Use Cases
+                        <ChevronDownIcon
+                          className="h-5 w-5 flex-none text-white"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
                     </Popover.Button>
 
                     <Transition
@@ -212,7 +217,7 @@ export function Header() {
                       leaveTo="opacity-0 -translate-x-6"
                     >
                       <Popover.Panel
-                        className="absolute -left-8 top-full z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+                        className="absolute -left-8 top-full z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                         onMouseEnter={onMouseEnter.bind(null, open)}
                         onMouseLeave={onMouseLeave.bind(null, open)}
                       >
@@ -221,11 +226,7 @@ export function Header() {
                             {useCases.map((item, i) => (
                               <div
                                 key={item.name}
-                                className={`group relative flex items-center gap-x-6 ${
-                                  i !== useCases.length - 1
-                                    ? 'border-b border-white/30'
-                                    : ''
-                                } p-4 text-sm leading-6 hover:bg-white/10`}
+                                className="animate-slide-in-left group relative flex items-center gap-x-6 p-4 text-sm leading-6"
                               >
                                 <div className="flex-auto">
                                   <a
@@ -233,8 +234,15 @@ export function Header() {
                                     className="block font-semibold text-white"
                                   >
                                     {item.name}
-                                    <span className="absolute inset-0" />
                                   </a>
+                                  <div
+                                    className={`${
+                                      i !== useCases.length - 1
+                                        ? 'animate-grow-border absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform bg-white/30'
+                                        : ''
+                                    } `}
+                                  ></div>
+                                  <div className=""></div>
                                 </div>
                               </div>
                             ))}
@@ -258,13 +266,16 @@ export function Header() {
                       ref={buttonRef2}
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
-                      className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="group text-lg font-medium leading-6 text-white focus:outline-none"
                     >
-                      Governance
-                      <ChevronDownIcon
-                        className="h-5 w-5 flex-none text-white"
-                        aria-hidden="true"
-                      />
+                      <span className="flex items-center gap-x-1">
+                        Governance
+                        <ChevronDownIcon
+                          className="h-5 w-5 flex-none text-white"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
                     </Popover.Button>
 
                     <Transition
@@ -286,11 +297,7 @@ export function Header() {
                           {governance.map((item, i) => (
                             <div
                               key={item.name}
-                              className={`group relative flex items-center gap-x-6 ${
-                                i !== governance.length - 1
-                                  ? 'border-b border-white/30'
-                                  : ''
-                              } p-4 text-sm leading-6 hover:bg-white/10`}
+                              className="animate-slide-in-left group relative flex items-center gap-x-6 p-4 text-sm leading-6"
                             >
                               <div className="flex-auto">
                                 <a
@@ -298,8 +305,15 @@ export function Header() {
                                   className="block font-semibold text-white"
                                 >
                                   {item.name}
-                                  <span className="absolute inset-0" />
                                 </a>
+                                <div
+                                  className={`${
+                                    i !== governance.length - 1
+                                      ? 'animate-grow-border absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform bg-white/30'
+                                      : ''
+                                  } `}
+                                ></div>
+                                <div className=""></div>
                               </div>
                             </div>
                           ))}
@@ -321,13 +335,16 @@ export function Header() {
                       ref={buttonRef3}
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
-                      className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="group text-lg font-medium leading-6 text-white focus:outline-none"
                     >
-                      Contact Us
-                      <ChevronDownIcon
-                        className="h-5 w-5 flex-none text-white"
-                        aria-hidden="true"
-                      />
+                      <span className="flex items-center gap-x-1">
+                        Contact Us
+                        <ChevronDownIcon
+                          className="h-5 w-5 flex-none text-white"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
                     </Popover.Button>
 
                     <Transition
@@ -349,11 +366,7 @@ export function Header() {
                           {contactUs.map((item, i) => (
                             <div
                               key={item.name}
-                              className={`group relative flex items-center gap-x-6 ${
-                                i !== contactUs.length - 1
-                                  ? 'border-b border-white/30'
-                                  : ''
-                              } p-4 text-sm leading-6 hover:bg-white/10`}
+                              className="animate-slide-in-left group relative flex items-center gap-x-6 p-4 text-sm leading-6"
                             >
                               <div className="flex-auto">
                                 <a
@@ -361,8 +374,15 @@ export function Header() {
                                   className="block font-semibold text-white"
                                 >
                                   {item.name}
-                                  <span className="absolute inset-0" />
                                 </a>
+                                <div
+                                  className={`${
+                                    i !== contactUs.length - 1
+                                      ? 'animate-grow-border absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform bg-white/30'
+                                      : ''
+                                  } `}
+                                ></div>
+                                <div className=""></div>
                               </div>
                             </div>
                           ))}

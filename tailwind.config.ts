@@ -21,6 +21,20 @@ export default {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     extend: {
+      keyframes: {
+        slideInFromLeft: {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        growBorder: {
+          '0%': { transform: 'scaleX(0)' },
+          '100%': { transform: 'scaleX(1)' },
+        },
+      },
+      animation: {
+        'slide-in-left': 'slideInFromLeft 300ms ease-in',
+        'grow-border': 'growBorder 650ms ease-out forwards',
+      },
       borderRadius: {
         '4xl': '2rem',
       },
