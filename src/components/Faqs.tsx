@@ -24,19 +24,20 @@ const faqs = [
 export function Faqs() {
   return (
     <div className="bg-black">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-        <div className="mx-auto max-w-4xl space-y-6 divide-y divide-white">
-          <h2 className="pb-6 text-4xl font-bold leading-10 tracking-tight text-white">
+      <div className="mx-auto max-w-[115rem] px-6 py-32 sm:py-48 lg:px-8 lg:py-48">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="pb-12 text-5xl font-bold leading-10 tracking-tight text-white">
             Why are we a DAO?
           </h2>
-          <dl className="mt-10 space-y-6 divide-y divide-white">
+          <div className="border-b border-white/70"></div>
+          <dl className="">
             {faqs.map((faq, i) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
                 {({ open }) => (
                   <>
                     <dt>
                       <Disclosure.Button className="flex w-full items-start justify-between text-left text-white">
-                        <span className="text-lg font-medium leading-7">
+                        <span className="py-6 text-3xl font-medium leading-7">
                           {faq.question}
                         </span>
                       </Disclosure.Button>
@@ -56,6 +57,7 @@ export function Faqs() {
                         </p>
                       </Disclosure.Panel>
                     </Transition>
+                    <div className="border-b border-white/70 pt-6"></div>
                   </>
                 )}
               </Disclosure>
