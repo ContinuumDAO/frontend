@@ -3,6 +3,14 @@
 import { Container } from '@/components/Container'
 
 export function CallToAction() {
+  // List of actions, each with a label and a link (assuming URLs will be different)
+  const actions = [
+    { label: 'Forum', url: '#' },
+    { label: 'Vote', url: '#' },
+    { label: 'Learn More', url: '#' },
+    { label: 'Build With Us', url: '#' },
+  ]
+
   return (
     <section
       id="call-to-action"
@@ -10,34 +18,16 @@ export function CallToAction() {
     >
       <Container className="relative isolate">
         <div className="mt-6 flex flex-col items-center justify-center gap-y-6 md:mt-10 md:flex-row md:gap-x-6">
-          <a
-            href="#"
-            className="link relative overflow-hidden border border-white px-20 py-4 text-base font-semibold leading-6 text-white"
-          >
-            Forum <span aria-hidden="true">↗</span>
-            <span className="link-bg"></span>
-          </a>
-          <a
-            href="#"
-            className="link relative overflow-hidden border border-white px-20 py-4 text-base font-semibold leading-6 text-white"
-          >
-            Vote <span aria-hidden="true">↗</span>
-            <span className="link-bg"></span>
-          </a>
-          <a
-            href="#"
-            className="link relative overflow-hidden border border-white px-20 py-4 text-base font-semibold leading-6 text-white"
-          >
-            Learn More <span aria-hidden="true">↗</span>
-            <span className="link-bg"></span>
-          </a>
-          <a
-            href="#"
-            className="link relative overflow-hidden border border-white px-20 py-4 text-base font-semibold leading-6 text-white"
-          >
-            Build With Us <span aria-hidden="true">↗</span>
-            <span className="link-bg"></span>
-          </a>
+          {actions.map((action, index) => (
+            <a
+              key={index}
+              href={action.url}
+              className="link relative overflow-hidden border border-white px-20 py-4 text-base font-semibold leading-6 text-white"
+            >
+              {action.label} <span aria-hidden="true">↗</span>
+              <span className="link-bg"></span>
+            </a>
+          ))}
         </div>
       </Container>
 
