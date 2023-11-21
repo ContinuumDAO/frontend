@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useState } from 'react'
+import { Fragment, useRef, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
@@ -74,6 +74,74 @@ function classNames(...classes: string[]) {
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const buttonRef2 = useRef<HTMLButtonElement>(null)
+  const buttonRef3 = useRef<HTMLButtonElement>(null)
+  const timeoutDuration = 200
+  let timeout: any
+
+  const closePopover = () => {
+    return buttonRef.current?.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'Escape',
+        bubbles: true,
+        cancelable: true,
+      }),
+    )
+  }
+
+  const closePopover2 = () => {
+    return buttonRef2.current?.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'Escape',
+        bubbles: true,
+        cancelable: true,
+      }),
+    )
+  }
+  const closePopover3 = () => {
+    return buttonRef3.current?.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'Escape',
+        bubbles: true,
+        cancelable: true,
+      }),
+    )
+  }
+
+  const onMouseEnter = (open: any) => {
+    clearTimeout(timeout)
+    if (open) return
+    return buttonRef.current?.click()
+  }
+
+  const onMouseEnter2 = (open: any) => {
+    clearTimeout(timeout)
+    if (open) return
+    return buttonRef2.current?.click()
+  }
+
+  const onMouseEnter3 = (open: any) => {
+    clearTimeout(timeout)
+    if (open) return
+    return buttonRef3.current?.click()
+  }
+
+  const onMouseLeave = (open: any) => {
+    if (!open) return
+    timeout = setTimeout(() => closePopover(), timeoutDuration)
+  }
+
+  const onMouseLeave2 = (open: any) => {
+    if (!open) return
+    timeout = setTimeout(() => closePopover2(), timeoutDuration)
+  }
+
+  const onMouseLeave3 = (open: any) => {
+    if (!open) return
+    timeout = setTimeout(() => closePopover3(), timeoutDuration)
+  }
+
   return (
     <header className="fixed top-0 z-50 w-full bg-black pt-8">
       <nav
@@ -117,141 +185,194 @@ export function Header() {
           </a>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none">
-              Use Cases
-              <ChevronDownIcon
-                className="h-5 w-5 flex-none text-white"
-                aria-hidden="true"
-              />
-            </Popover.Button>
+            {({ open }) => {
+              return (
+                <>
+                  <div>
+                    <Popover.Button
+                      ref={buttonRef}
+                      onMouseEnter={onMouseEnter.bind(null, open)}
+                      onMouseLeave={onMouseLeave.bind(null, open)}
+                      className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none"
+                    >
+                      Use Cases
+                      <ChevronDownIcon
+                        className="h-5 w-5 flex-none text-white"
+                        aria-hidden="true"
+                      />
+                    </Popover.Button>
 
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-500"
-              enterFrom="opacity-0 -translate-x-6"
-              enterTo="opacity-100 translate-x-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 -translate-x-6"
-            >
-              <Popover.Panel
-                className="absolute -left-8 top-full
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-500"
+                      enterFrom="opacity-0 -translate-x-6"
+                      enterTo="opacity-100 translate-x-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 -translate-x-6"
+                    >
+                      <Popover.Panel
+                        className="absolute -left-8 top-full z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+                        onMouseEnter={onMouseEnter.bind(null, open)}
+                        onMouseLeave={onMouseLeave.bind(null, open)}
+                      >
+                        <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                          <div className="px-4">
+                            {useCases.map((item, i) => (
+                              <div
+                                key={item.name}
+                                className={`group relative flex items-center gap-x-6 ${
+                                  i !== useCases.length - 1
+                                    ? 'border-b border-white/30'
+                                    : ''
+                                } p-4 text-sm leading-6 hover:bg-white/10`}
+                              >
+                                <div className="flex-auto">
+                                  <a
+                                    href={item.href}
+                                    className="block font-semibold text-white"
+                                  >
+                                    {item.name}
+                                    <span className="absolute inset-0" />
+                                  </a>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </div>
+                </>
+              )
+            }}
+          </Popover>
+
+          <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <Popover className="relative">
+            {({ open }) => {
+              return (
+                <>
+                  <div>
+                    <Popover.Button
+                      ref={buttonRef2}
+                      onMouseEnter={onMouseEnter2.bind(null, open)}
+                      onMouseLeave={onMouseLeave2.bind(null, open)}
+                      className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none"
+                    >
+                      Governance
+                      <ChevronDownIcon
+                        className="h-5 w-5 flex-none text-white"
+                        aria-hidden="true"
+                      />
+                    </Popover.Button>
+
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-500"
+                      enterFrom="opacity-0 -translate-x-6"
+                      enterTo="opacity-100 translate-x-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 -translate-x-6"
+                    >
+                      <Popover.Panel
+                        onMouseEnter={onMouseEnter2.bind(null, open)}
+                        onMouseLeave={onMouseLeave2.bind(null, open)}
+                        className="absolute -left-8 top-full
               z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
-              >
-                <div className="px-4">
-                  {useCases.map((item, i) => (
-                    <div
-                      key={item.name}
-                      className={`group relative flex items-center gap-x-6 ${
-                        i !== useCases.length - 1
-                          ? 'border-b border-white/30'
-                          : ''
-                      } p-4 text-sm leading-6 hover:bg-white/10`}
-                    >
-                      <div className="flex-auto">
-                        <a
-                          href={item.href}
-                          className="block font-semibold text-white"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Popover.Panel>
-            </Transition>
+                      >
+                        <div className="px-4">
+                          {governance.map((item, i) => (
+                            <div
+                              key={item.name}
+                              className={`group relative flex items-center gap-x-6 ${
+                                i !== governance.length - 1
+                                  ? 'border-b border-white/30'
+                                  : ''
+                              } p-4 text-sm leading-6 hover:bg-white/10`}
+                            >
+                              <div className="flex-auto">
+                                <a
+                                  href={item.href}
+                                  className="block font-semibold text-white"
+                                >
+                                  {item.name}
+                                  <span className="absolute inset-0" />
+                                </a>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </div>
+                </>
+              )
+            }}
           </Popover>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none">
-              Governance
-              <ChevronDownIcon
-                className="h-5 w-5 flex-none text-white"
-                aria-hidden="true"
-              />
-            </Popover.Button>
-
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-4 w-48 max-w-md overflow-hidden bg-black shadow-lg ring-1 ring-white/30">
-                <div className="px-4">
-                  {governance.map((item, i) => (
-                    <div
-                      key={item.name}
-                      className={`group relative flex items-center gap-x-6 ${
-                        i !== governance.length - 1
-                          ? 'border-b border-white/30'
-                          : ''
-                      } p-4 text-sm leading-6 hover:bg-white/10`}
+            {({ open }) => {
+              return (
+                <>
+                  <div>
+                    <Popover.Button
+                      ref={buttonRef3}
+                      onMouseEnter={onMouseEnter3.bind(null, open)}
+                      onMouseLeave={onMouseLeave3.bind(null, open)}
+                      className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none"
                     >
-                      <div className="flex-auto">
-                        <a
-                          href={item.href}
-                          className="block font-semibold text-white"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Popover.Panel>
-            </Transition>
-          </Popover>
-          <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
-          <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none">
-              Contact Us
-              <ChevronDownIcon
-                className="h-5 w-5 flex-none text-white"
-                aria-hidden="true"
-              />
-            </Popover.Button>
+                      Contact Us
+                      <ChevronDownIcon
+                        className="h-5 w-5 flex-none text-white"
+                        aria-hidden="true"
+                      />
+                    </Popover.Button>
 
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-4 w-48 max-w-md overflow-hidden bg-black shadow-lg ring-1 ring-white/30">
-                <div className="px-4">
-                  {contactUs.map((item, i) => (
-                    <div
-                      key={item.name}
-                      className={`group relative flex items-center gap-x-6 ${
-                        i !== contactUs.length - 1
-                          ? 'border-b border-white/30'
-                          : ''
-                      } p-4 text-sm leading-6 hover:bg-white/10`}
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-500"
+                      enterFrom="opacity-0 -translate-x-6"
+                      enterTo="opacity-100 translate-x-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 -translate-x-6"
                     >
-                      <div className="flex-auto">
-                        <a
-                          href={item.href}
-                          className="block font-semibold text-white"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Popover.Panel>
-            </Transition>
+                      <Popover.Panel
+                        onMouseEnter={onMouseEnter3.bind(null, open)}
+                        onMouseLeave={onMouseLeave3.bind(null, open)}
+                        className="absolute -left-8 top-full
+              z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+                      >
+                        <div className="px-4">
+                          {contactUs.map((item, i) => (
+                            <div
+                              key={item.name}
+                              className={`group relative flex items-center gap-x-6 ${
+                                i !== contactUs.length - 1
+                                  ? 'border-b border-white/30'
+                                  : ''
+                              } p-4 text-sm leading-6 hover:bg-white/10`}
+                            >
+                              <div className="flex-auto">
+                                <a
+                                  href={item.href}
+                                  className="block font-semibold text-white"
+                                >
+                                  {item.name}
+                                  <span className="absolute inset-0" />
+                                </a>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </div>
+                </>
+              )
+            }}
           </Popover>
         </Popover.Group>
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end">
