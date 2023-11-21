@@ -128,7 +128,7 @@ const navigation = {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             clip-rule="evenodd"
             d="M29 15.5C29 22.7884 23.2242 28.7279 16 28.9909V29H15.5H2V15.5V15H2.00909C2.27211 7.7758 8.21155 2 15.5 2C22.9558 2 29 8.04416 29 15.5ZM24 15.5C24 20.089 20.3634 23.8287 15.8148 23.9943V24.0001L15.7985 23.9949C15.6994 23.9983 15.5999 24 15.5 24C14.1903 24 12.9498 23.7038 11.8419 23.1747C10.3485 23.1083 8.90608 23.3837 7 24.0001C7.60924 22.0667 7.84346 20.5891 7.71789 18.9242C7.25629 17.8766 7 16.7183 7 15.5C7 15.4009 7.0017 15.3022 7.00506 15.204L7 15.1853H7.00572C7.17127 10.6367 10.9109 7 15.5 7C20.1944 7 24 10.8056 24 15.5Z"
             fill="white"
@@ -163,35 +163,35 @@ export function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="mx-auto max-w-[115rem] px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="grid grid-cols-1">
             <div className="mt-10 xl:mt-0">
-              <h3 className="text-md font-extrabold leading-6 text-white">
+              <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 What We Do
               </h3>
-              <p className="mt-2 text-sm leading-6 text-gray-300">What we do</p>
+              <p className="mt-4 text-lg leading-6 text-white/70">What we do</p>
             </div>
             <div className="mt-10 xl:mt-0">
-              <h3 className="text-md font-extrabold leading-6 text-white">
+              <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Continuum Matrix
               </h3>
-              <p className="mt-2 text-sm leading-6 text-gray-300">
-                Continuum Matrix
+              <p className="mt-4 text-lg leading-6 text-white/70">
+                Continuunm Matrix
               </p>
             </div>
           </div>
           <div className="mt-10 gap-8 md:mt-0 md:grid md:grid-cols-3 xl:col-span-2">
             <div>
-              <h3 className="text-md font-extrabold leading-6 text-white">
+              <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Use Cases
               </h3>
-              <ul role="list" className="mt-6 space-y-3">
+              <ul role="list" className="mt-6 space-y-5">
                 {navigation.useCases.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 text-gray-300 hover:text-white"
+                      className="text-xl leading-6 text-white/70 hover:text-white"
                     >
                       {item.name}
                     </a>
@@ -200,15 +200,15 @@ export function Footer() {
               </ul>
             </div>
             <div className="mt-10 md:mt-0">
-              <h3 className="text-md font-extrabold leading-6 text-white">
+              <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Governance
               </h3>
-              <ul role="list" className="mt-6 space-y-3">
+              <ul role="list" className="mt-6 space-y-5">
                 {navigation.governance.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 text-gray-300 hover:text-white"
+                      className="text-xl leading-6 text-white/70 hover:text-white"
                     >
                       {item.name}
                     </a>
@@ -217,15 +217,15 @@ export function Footer() {
               </ul>
             </div>
             <div className="mt-10 md:mt-0">
-              <h3 className="text-md font-extrabold leading-6 text-white">
+              <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Contact Us
               </h3>
-              <ul role="list" className="mt-6 space-y-3">
+              <ul role="list" className="mt-6 space-y-5">
                 {navigation.contactUs.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 text-gray-300 hover:text-white"
+                      className="text-xl leading-6 text-white/70 hover:text-white"
                     >
                       {item.name}
                     </a>
@@ -236,15 +236,15 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-white/30 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
-          <div className="mb-2 flex space-x-6 md:order-2 md:mb-0">
+          <div className="mb-2 flex space-x-12 md:order-2 md:mb-0">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="scale-75 text-white hover:text-white/75"
+                className=" text-white hover:text-white/75"
               >
                 <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
+                <item.icon className="h-8 w-8" aria-hidden="true" />
               </a>
             ))}
           </div>
@@ -252,8 +252,8 @@ export function Footer() {
             <a href="#" className="p-1.5 lg:-mx-8">
               <span className="sr-only">Continuum</span>
               <div className="flex flex-row items-center">
-                <Logo className="scale-[0.8]" />
-                <span className="pl-2 text-2xl font-semibold text-white">
+                <Logo />
+                <span className="pl-3 pt-0.5 text-4xl font-semibold text-white">
                   Continuum
                 </span>
               </div>

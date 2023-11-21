@@ -75,17 +75,17 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-black pt-6">
+    <header className="fixed top-0 z-50 w-full bg-black pt-8">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between border-b border-t border-white/30 p-6 lg:p-4 lg:px-8"
+        className="mx-auto flex max-w-[115rem] items-center justify-between border-b border-t border-white/30 p-6 lg:p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="p-1.5 lg:-mx-8">
             <span className="sr-only">Continuum</span>
             <div className="flex flex-row items-center">
-              <Logo className="scale-[0.8]" />
-              <span className="pl-2 text-2xl font-semibold text-white">
+              <Logo />
+              <span className="pl-3 pt-0.5 text-4xl font-semibold text-white">
                 Continuum
               </span>
             </div>
@@ -104,20 +104,20 @@ export function Header() {
         <Popover.Group className="hidden items-center lg:flex lg:gap-x-12">
           <a
             href="#"
-            className="text-sm font-semibold leading-6 text-white focus:outline-none"
+            className="text-lg font-medium leading-6 text-white focus:outline-none"
           >
             What We Do
           </a>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <a
             href="#"
-            className="text-sm font-semibold leading-6 text-white focus:outline-none"
+            className="text-lg font-medium leading-6 text-white focus:outline-none"
           >
             Continuum Matrix
           </a>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
+            <Popover.Button className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none">
               Use Cases
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-white"
@@ -165,7 +165,7 @@ export function Header() {
           </Popover>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
+            <Popover.Button className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none">
               Governance
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-white"
@@ -210,7 +210,7 @@ export function Header() {
           </Popover>
           <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
+            <Popover.Button className="flex items-center gap-x-1 text-lg font-medium leading-6 text-white focus:outline-none">
               Contact Us
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-white"
@@ -257,7 +257,7 @@ export function Header() {
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
-            className="rounded-full bg-[#C8EAFF] px-8 py-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80"
+            className="rounded-full bg-[#C8EAFF] px-12 py-4 text-base font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80"
           >
             MPC Network
           </a>
