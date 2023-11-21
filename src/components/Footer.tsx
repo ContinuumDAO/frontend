@@ -236,7 +236,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-white/30 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
-          <div className="mb-2 flex space-x-12 md:order-2 md:mb-0">
+          <div className="mb-2 flex space-x-14 md:order-2 md:mb-0">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
