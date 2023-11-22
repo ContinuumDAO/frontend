@@ -2,7 +2,6 @@
 
 import { Disclosure, Transition } from '@headlessui/react'
 import { useRef } from 'react'
-import { Bobble } from './Bobble'
 import { CallToAction } from './CallToAction'
 
 export function Faqs() {
@@ -120,13 +119,6 @@ export function Faqs() {
                         </defs>
                       </svg>
                       <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
-                        <div
-                          className={`${
-                            open ? 'absolute duration-1000 ease-in' : 'hidden'
-                          } `}
-                        >
-                          <Bobble />
-                        </div>
                         <span className={`${open ? '' : ''} `}>
                           Decentralized Governance
                         </span>
@@ -136,10 +128,10 @@ export function Faqs() {
                   <Transition
                     show={open}
                     className="overflow-visible"
-                    enter="transition ease-in-out duration-700"
+                    enter="transition ease-in-out duration-400"
                     enterFrom="transform scale-95 opacity-0"
                     enterTo="transform scale-100 opacity-100"
-                    leave="transition ease-in-out duration-700"
+                    leave="transition ease-in-out duration-400"
                     leaveFrom="transform scale-100 opacity-100"
                     leaveTo="transform scale-95 opacity-0"
                     // enter="transition transition-[max-height] duration-[2000ms] ease-in-out"
@@ -232,10 +224,10 @@ export function Faqs() {
                   </dt>
                   <Transition
                     show={open}
-                    enter="transition ease-in-out duration-700"
+                    enter="transition ease-in-out duration-400"
                     enterFrom="transform scale-95 opacity-0"
                     enterTo="transform scale-100 opacity-100"
-                    leave="transition ease-in-out duration-700"
+                    leave="transition ease-in-out duration-400"
                     leaveFrom="transform scale-100 opacity-100"
                     leaveTo="transform scale-95 opacity-0"
                   >
@@ -322,10 +314,10 @@ export function Faqs() {
                   </dt>
                   <Transition
                     show={open}
-                    enter="transition ease-in-out duration-700"
+                    enter="transition ease-in-out duration-400"
                     enterFrom="transform scale-95 opacity-0"
                     enterTo="transform scale-100 opacity-100"
-                    leave="transition ease-in-out duration-700"
+                    leave="transition ease-in-out duration-400"
                     leaveFrom="transform scale-100 opacity-100"
                     leaveTo="transform scale-95 opacity-0"
                   >
