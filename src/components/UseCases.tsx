@@ -5,7 +5,7 @@ export function UseCases() {
     <section
       id="useCases"
       aria-label="Use cases of Continuum DAO"
-      className="bg-black py-20 sm:py-32"
+      className="bg-[url('../images/background-graphic.gif')] py-20 sm:py-32"
     >
       <Container>
         <div className="bg-black">

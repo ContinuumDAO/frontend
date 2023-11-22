@@ -143,7 +143,7 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-black pt-8">
+    <header className="fixed top-0 z-50 w-full pt-8">
       <nav
         className="mx-auto flex max-w-[115rem] items-center justify-between border-b border-t border-white/30 p-6 lg:p-6 lg:px-8"
         aria-label="Global"
