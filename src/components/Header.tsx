@@ -200,7 +200,7 @@ export function Header() {
                       <span className="flex items-center gap-x-1">
                         Use Cases
                         <ChevronDownIcon
-                          className="h-5 w-5 flex-none text-white"
+                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
                           aria-hidden="true"
                         />
                       </span>
@@ -271,7 +271,7 @@ export function Header() {
                       <span className="flex items-center gap-x-1">
                         Governance
                         <ChevronDownIcon
-                          className="h-5 w-5 flex-none text-white"
+                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
                           aria-hidden="true"
                         />
                       </span>
@@ -340,7 +340,7 @@ export function Header() {
                       <span className="flex items-center gap-x-1">
                         Contact Us
                         <ChevronDownIcon
-                          className="h-5 w-5 flex-none text-white"
+                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
                           aria-hidden="true"
                         />
                       </span>

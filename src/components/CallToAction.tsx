@@ -22,7 +22,7 @@ export function CallToAction() {
             <a
               key={index}
               href={action.url}
-              className="link relative overflow-hidden border border-white px-20 py-4 text-base font-semibold leading-6 text-white"
+              className="link relative  overflow-hidden border border-white px-20 py-4 text-base font-semibold leading-6 text-white"
             >
               {action.label} <span aria-hidden="true">↗</span>
               <span className="link-bg"></span>
