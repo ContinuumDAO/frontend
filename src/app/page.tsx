@@ -14,8 +14,8 @@ export default function Home() {
       <main>
         <Hero />
         <PrimaryFeatures />
-        {/* <ContinuumMatrix />
-        <UseCases /> */}
+        {/* <ContinuumMatrix />*/}
+        <UseCases />
         <Faqs />
       </main>
       <Footer />

@@ -120,15 +120,14 @@ export function Faqs() {
                         </defs>
                       </svg>
                       <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
-                        <div className={`${open ? 'absolute' : 'hidden'} `}>
+                        <div
+                          className={`${
+                            open ? 'absolute duration-1000 ease-in' : 'hidden'
+                          } `}
+                        >
                           <Bobble />
                         </div>
-
-                        <span
-                          className={`transition-transform duration-300 ${
-                            open ? 'translate-x-12' : 'translate-x-0'
-                          }`}
-                        >
+                        <span className={`${open ? '' : ''} `}>
                           Decentralized Governance
                         </span>
                       </span>
@@ -143,13 +142,18 @@ export function Faqs() {
                     leave="transition ease-in-out duration-700"
                     leaveFrom="transform scale-100 opacity-100"
                     leaveTo="transform scale-95 opacity-0"
+                    // enter="transition transition-[max-height] duration-[2000ms] ease-in-out"
+                    // enterFrom="transform max-h-0 scale-95 opacity-0"
+                    // enterTo="transform max-h-screen scale-100 opacity-100"
+                    // leave="transition transition-[max-height] duration-400 ease-in-out"
+                    // leaveFrom="transform max-h-screen"
+                    // leaveTo="transform max-h-0"
                   >
                     <Disclosure.Panel
-                      static
                       as="dd"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="durat mt-2 h-36 pr-12"
+                      className="mt-2 h-36 pr-12"
                     >
                       <div className="absolute -top-14 right-0 w-1/2 px-10">
                         <span className="text-2xl leading-7 text-gray-300">
