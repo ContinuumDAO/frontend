@@ -123,7 +123,12 @@ export function Faqs() {
                         <div className={`${open ? 'absolute' : 'hidden'} `}>
                           <Bobble />
                         </div>
-                        <span className={`${open ? '' : ''} `}>
+
+                        <span
+                          className={`transition-transform duration-300 ${
+                            open ? 'translate-x-12' : 'translate-x-0'
+                          }`}
+                        >
                           Decentralized Governance
                         </span>
                       </span>
@@ -132,18 +137,12 @@ export function Faqs() {
                   <Transition
                     show={open}
                     className="overflow-visible"
-                    // enter="transition ease-in-out duration-700"
-                    // enterFrom="transform scale-95 opacity-0"
-                    // enterTo="transform scale-100 opacity-100"
-                    // leave="transition ease-in-out duration-700"
-                    // leaveFrom="transform scale-100 opacity-100"
-                    // leaveTo="transform scale-95 opacity-0"
-                    enter="transition transition-[max-height] duration-[20000ms] ease-in-out"
-                    enterFrom="transform max-h-0"
-                    enterTo="transform max-h-screen"
-                    leave="transition transition-[max-height] duration-400 ease-in-out"
-                    leaveFrom="transform max-h-screen"
-                    leaveTo="transform max-h-0"
+                    enter="transition ease-in-out duration-700"
+                    enterFrom="transform scale-95 opacity-0"
+                    enterTo="transform scale-100 opacity-100"
+                    leave="transition ease-in-out duration-700"
+                    leaveFrom="transform scale-100 opacity-100"
+                    leaveTo="transform scale-95 opacity-0"
                   >
                     <Disclosure.Panel
                       static

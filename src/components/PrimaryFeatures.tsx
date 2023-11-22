@@ -1,4 +1,5 @@
-import { WhatWeDo } from './WhatWeDo'
+import WhoWeAreGraphic from '../images/who-we-are-graphic.gif'
+import Image from 'next/image'
 
 export function PrimaryFeatures() {
   return (
@@ -20,7 +21,7 @@ export function PrimaryFeatures() {
               </p>
             </div>
             <div className="relative -z-20 min-w-full max-w-xl lg:row-span-4 lg:w-[64rem] lg:max-w-none">
-              <img src="https://s3-alpha-sig.figma.com/img/c126/8f79/48d7de8387925256eb7530546500b89d?Expires=1701648000&Signature=b0-OtMJuOmsA1Pw-4YlzhufzXLGoR2nSsFt3FKatNcE0zldADLkl85MiPhBX-1HoF~qCXk-ZYPIl86j6qNdu3u-m3LaCNOZk3ywZhiFbQldQEVGzzohTeqtke596bsbWcJzO~Gtoil~PFih5K60hLeNqPo8~y4Huyww2bwFgk0zX3cdvgDI3K1frnsJXn6Yq14XJJJbYiwhoGrWJeDkbapVwp5wHbpKVUJsDydznTWghx4INdpLRHtjm1Hmzw1JxRwUFofWyuL7EjCsGL9vrDvFKY6oQxe~lSDabz1kF92IqZu~Rs-93Hf2qngmqR~1F9bgVlzPwpbsknDcp2~pS~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+              <Image src={WhoWeAreGraphic} alt="Network Graphic" />
             </div>
           </div>
         </div>

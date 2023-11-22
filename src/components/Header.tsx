@@ -5,6 +5,7 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Logo } from './Logo'
+import './Header.css'
 
 const useCases = [
   {
@@ -143,9 +144,9 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full pt-8">
+    <header className="fixed top-0 z-50 w-full bg-black pt-8">
       <nav
-        className="mx-auto flex max-w-[115rem] items-center justify-between border-b border-t border-white/30 p-6 lg:p-6 lg:px-8"
+        className="mx-auto flex max-w-[100rem] items-center justify-between border-b border-t border-white/30 px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -169,23 +170,23 @@ export function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden items-center lg:flex lg:gap-x-12">
+        <Popover.Group className="hidden items-center lg:flex">
           <a
             href="#"
-            className="group text-lg font-medium leading-6 text-white transition duration-300 focus:outline-none"
+            className="custom-link group relative px-8 py-8 text-lg font-medium leading-6 text-white focus:outline-none"
           >
             What We Do
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
           </a>
-          <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <a
             href="#"
-            className="group text-lg font-medium leading-6 text-white focus:outline-none"
+            className="custom-link group relative px-8 py-8 text-lg font-medium leading-6 text-white focus:outline-none"
           >
-            Continuum Matrix
+            Continumm Matrix
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
           </a>
-          <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
             {({ open }) => {
               return (
@@ -195,7 +196,7 @@ export function Header() {
                       ref={buttonRef}
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="group text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="custom-link group relative p-8 text-lg font-medium leading-6 text-white focus:outline-none"
                     >
                       <span className="flex items-center gap-x-1">
                         Use Cases
@@ -217,7 +218,7 @@ export function Header() {
                       leaveTo="opacity-0 -translate-x-6"
                     >
                       <Popover.Panel
-                        className="absolute -left-8 top-full z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+                        className="absolute -left-4 top-3/4 z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                         onMouseEnter={onMouseEnter.bind(null, open)}
                         onMouseLeave={onMouseLeave.bind(null, open)}
                       >
@@ -256,7 +257,7 @@ export function Header() {
             }}
           </Popover>
 
-          <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
             {({ open }) => {
               return (
@@ -266,7 +267,7 @@ export function Header() {
                       ref={buttonRef2}
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
-                      className="group text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="custom-link group relative p-8 text-lg font-medium leading-6 text-white focus:outline-none"
                     >
                       <span className="flex items-center gap-x-1">
                         Governance
@@ -290,7 +291,7 @@ export function Header() {
                       <Popover.Panel
                         onMouseEnter={onMouseEnter2.bind(null, open)}
                         onMouseLeave={onMouseLeave2.bind(null, open)}
-                        className="absolute -left-8 top-full
+                        className="absolute -left-4 top-3/4
               z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                       >
                         <div className="px-4">
@@ -325,7 +326,7 @@ export function Header() {
               )
             }}
           </Popover>
-          <div className="-mx-4 hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
             {({ open }) => {
               return (
@@ -335,7 +336,7 @@ export function Header() {
                       ref={buttonRef3}
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
-                      className="group text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="custom-link group relative p-8 text-lg font-medium leading-6 text-white focus:outline-none"
                     >
                       <span className="flex items-center gap-x-1">
                         Contact Us
@@ -359,7 +360,7 @@ export function Header() {
                       <Popover.Panel
                         onMouseEnter={onMouseEnter3.bind(null, open)}
                         onMouseLeave={onMouseLeave3.bind(null, open)}
-                        className="absolute -left-8 top-full
+                        className="absolute -left-4 top-3/4
               z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                       >
                         <div className="px-4">
