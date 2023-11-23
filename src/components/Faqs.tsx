@@ -3,6 +3,7 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { useRef } from 'react'
 import { CallToAction } from './CallToAction'
+import { Bobble } from './Bobble'
 
 export function Faqs() {
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -73,10 +74,23 @@ export function Faqs() {
                       ref={buttonRef}
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="relative flex w-full items-start justify-between text-left text-white focus:outline-none"
+                      className={`${
+                        open
+                          ? 'ease-in-out" translate-x-8 transition-transform duration-300'
+                          : 'ease-in-out" -translate-x-0 transition-transform duration-300'
+                      } relative z-50 flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
-                      <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
-                        <span className={`${open ? '!translate-x-10' : ''} `}>
+                      <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
+                        <div
+                          className={`-translate-x-10 ${
+                            open
+                              ? 'ease-in-out" translate-x-10 transition-transform duration-1000'
+                              : 'hidden'
+                          } -ml-12 -mt-2`}
+                        >
+                          <Bobble />
+                        </div>
+                        <span className={`${open ? '-ml-6' : ''} `}>
                           Decentralized Governance
                         </span>
                       </span>
@@ -84,10 +98,10 @@ export function Faqs() {
                   </dt>
                   <Transition
                     show={open}
-                    enter="transition transition-[max-height] duration-1000 ease-in"
+                    enter="transition transition-[max-height] duration-500 ease-in"
                     enterFrom="transform max-h-0 scale-95 opacity-0"
                     enterTo="transform max-h-screen scale-100"
-                    leave="transition transition-[max-height] duration-1000 ease-out"
+                    leave="transition transition-[max-height] duration-500 ease-out"
                     leaveFrom="transform max-h-screen"
                     leaveTo="transform max-h-0"
                   >
@@ -98,17 +112,17 @@ export function Faqs() {
                       className="relative mt-2 h-36 pr-12"
                     >
                       <Transition.Child
-                        enter="transition ease-in-out duration-1000"
+                        enter="transition ease-in-out duration-500"
                         enterFrom="transform opacity-0"
                         enterTo="transform opacity-100"
-                        leave="transition ease-in-out duration-1000"
+                        leave="transition ease-in-out duration-500"
                         leaveFrom="transform opacity-100"
                         leaveTo="transform opacity-0"
                       >
                         <span className="absolute -top-20">
                           <Ellipse />
                         </span>
-                        <div className="absolute -top-14 right-0 w-1/2 px-10">
+                        <div className="absolute -top-14 right-0 w-1/2 pl-16">
                           <span className="text-2xl leading-7 text-gray-300">
                             Continuum is a trustless MPC network of
                             decentralized nodes that allows dApps from many
@@ -239,6 +253,7 @@ export function Ellipse() {
       viewBox="0 0 565 249"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="z-0"
     >
       <g opacity="0.2" filter="url(#filter0_f_870_6165)">
         <ellipse cx="9" cy="246" rx="416" ry="112" fill="white" />
