@@ -184,7 +184,7 @@ export function Footer() {
               </p>
             </div>
           </div>
-          <div className="mt-10 gap-8 md:mt-0 md:grid md:grid-cols-3 xl:col-span-2">
+          <div className="mt-10 gap-8 md:grid md:grid-cols-3 xl:col-span-2 xl:mt-0 2xl:mt-0">
             <div>
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Use Cases
@@ -251,7 +251,7 @@ export function Footer() {
               </a>
             ))}
           </div>
-          <div className="flex lg:flex-1">
+          <div className="-ml-6 flex lg:-ml-0 lg:flex-1">
             <a href="#" className="p-1.5 lg:-mx-8">
               <span className="sr-only">Continuum</span>
               <div className="flex flex-row items-center pl-6">

@@ -121,7 +121,7 @@ export function Faqs() {
                         <span className="absolute -top-20">
                           <Ellipse />
                         </span>
-                        <div className="absolute -top-20 right-0 w-1/2 pl-16">
+                        <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
                           <span className="text-2xl leading-7 text-gray-300">
                             Continuum is a trustless MPC network of
                             decentralized nodes that allows dApps from many
@@ -194,7 +194,7 @@ export function Faqs() {
                         <span className="absolute -top-20">
                           <Ellipse />
                         </span>
-                        <div className="absolute -top-20 right-0 w-1/2 pl-16">
+                        <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
                           <span className="text-2xl leading-7 text-gray-300">
                             Our community members are from all over the world,
                             and we are not tied to a specific jurisdiction. This
@@ -267,7 +267,7 @@ export function Faqs() {
                         <span className="absolute -top-20">
                           <Ellipse />
                         </span>
-                        <div className="absolute -top-20 right-0 w-1/2 pl-16">
+                        <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
                           <span className="text-2xl leading-7 text-gray-300">
                             We are committed to building trust with our
                             community by providing full visibility into our

@@ -37,12 +37,12 @@ export function UseCases() {
             Use Cases
           </p>
         </div>
-        <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 lg:mx-0 lg:max-w-7xl lg:grid-cols-4 lg:pl-24">
+        <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 md:grid-cols-2 lg:mx-0 lg:max-w-7xl lg:pl-24 xl:grid-cols-4">
           {useCases.map((useCase, index) => (
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
-              className="group z-0 -mr-24 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 lg:max-w-7xl"
+              className="group z-0 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 lg:max-w-7xl xl:-mr-24"
             >
               <div className="group relative">
                 <div className="h-56"></div>
@@ -58,10 +58,10 @@ export function UseCases() {
                   useCases.length - index < useCases.length ? 'text-right' : ''
                 }`}
               >
-                <h3 className="mt-6 pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left">
+                <h3 className="mt-6 pb-10 text-3xl font-medium leading-7 tracking-tight text-white xl:group-hover:text-left">
                   {useCase.name}
                 </h3>
-                <p className="text-2xl font-light leading-8 text-white/70 group-hover:text-left">
+                <p className="text-2xl font-light leading-8 text-white/70 xl:group-hover:text-left">
                   {useCase.role}
                 </p>
               </div>
