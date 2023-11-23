@@ -20,9 +20,9 @@ export function WhatWeDo() {
                 interact using decentralized SMPC for security.
               </p>
             </div>
-            <div className="-z-20 -ml-24 -mt-24 min-w-full max-w-xl lg:row-span-4 lg:w-[64rem] lg:max-w-none">
+            <div className="-z-20 -mt-24 min-w-full max-w-xl lg:row-span-4 lg:-ml-24 lg:w-[64rem] lg:max-w-none">
               <Image
-                className="scale-75"
+                className="md:items-center lg:-ml-48 lg:scale-50 xl:-ml-24 xl:scale-[0.6] 2xl:-ml-0 2xl:scale-75"
                 src={WhoWeAreGraphic}
                 alt="Network Graphic"
               />

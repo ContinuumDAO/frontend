@@ -144,7 +144,11 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-black pt-8">
+    <header
+      className={`${
+        mobileMenuOpen ? 'z-0' : 'z-50'
+      } fixed top-0 w-full bg-black pt-8`}
+    >
       <nav
         className="mx-auto flex max-w-[110rem] items-center justify-between border-b border-t border-white/30 px-8"
         aria-label="Global"
@@ -407,7 +411,7 @@ export function Header() {
       </nav>
       <Dialog
         as="div"
-        className=" lg:hidden"
+        className="lg:hidden"
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
