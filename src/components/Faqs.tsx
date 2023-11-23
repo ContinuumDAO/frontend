@@ -63,6 +63,7 @@ export function Faqs() {
             Why are we a DAO?
           </h2>
           <div className="border-b border-white/70"></div>
+
           <dl>
             <Disclosure as="div" className="pt-6 focus:outline-none">
               {({ open }) => (

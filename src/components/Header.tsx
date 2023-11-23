@@ -146,7 +146,7 @@ export function Header() {
   return (
     <header className="fixed top-0 z-50 w-full bg-black pt-8">
       <nav
-        className="mx-auto flex max-w-[100rem] items-center justify-between border-b border-t border-white/30 px-8"
+        className="mx-auto flex max-w-[110rem] items-center justify-between border-b border-t border-white/30 px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -399,7 +399,7 @@ export function Header() {
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
-            className="rounded-full bg-[#C8EAFF] px-12 py-4 text-base font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80"
+            className="rounded-full bg-[#C8EAFF] px-10 py-4 text-base font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80"
           >
             MPC Network
           </a>

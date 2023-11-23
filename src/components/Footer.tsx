@@ -254,7 +254,7 @@ export function Footer() {
           <div className="flex lg:flex-1">
             <a href="#" className="p-1.5 lg:-mx-8">
               <span className="sr-only">Continuum</span>
-              <div className="flex flex-row items-center">
+              <div className="flex flex-row items-center pl-6">
                 <Logo />
                 <span className="pl-3 pt-0.5 text-4xl font-semibold text-white">
                   Continuum
