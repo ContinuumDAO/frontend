@@ -75,9 +75,6 @@ export function Faqs() {
                       onMouseLeave={onMouseLeave.bind(null, open)}
                       className="relative flex w-full items-start justify-between text-left text-white focus:outline-none"
                     >
-                      <div className={`${open ? 'absolute' : 'hidden'} `}>
-                        <Ellipse />
-                      </div>
                       <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
                         <span className={`${open ? '!translate-x-10' : ''} `}>
                           Decentralized Governance
@@ -87,10 +84,10 @@ export function Faqs() {
                   </dt>
                   <Transition
                     show={open}
-                    enter="transition transition-[max-height] duration-[20000ms] ease-in-out"
+                    enter="transition transition-[max-height] duration-1000 ease-in"
                     enterFrom="transform max-h-0 scale-95 opacity-0"
-                    enterTo="transform max-h-screen scale-100 opacity-100"
-                    leave="transition transition-[max-height] duration-400 ease-in-out"
+                    enterTo="transform max-h-screen scale-100"
+                    leave="transition transition-[max-height] duration-1000 ease-out"
                     leaveFrom="transform max-h-screen"
                     leaveTo="transform max-h-0"
                   >
@@ -98,16 +95,19 @@ export function Faqs() {
                       as="dd"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="mt-2 h-36 pr-12"
+                      className="relative mt-2 h-36 pr-12"
                     >
                       <Transition.Child
-                        enter="transition ease-in-out duration-[2000ms]"
-                        enterFrom="transform scale-95 opacity-0"
-                        enterTo="transform scale-100 opacity-100"
-                        leave="transition ease-in-out duration-400"
-                        leaveFrom="transform scale-100 opacity-100"
-                        leaveTo="transform scale-95 opacity-0"
+                        enter="transition ease-in-out duration-1000"
+                        enterFrom="transform opacity-0"
+                        enterTo="transform opacity-100"
+                        leave="transition ease-in-out duration-1000"
+                        leaveFrom="transform opacity-100"
+                        leaveTo="transform opacity-0"
                       >
+                        <span className="absolute -top-20">
+                          <Ellipse />
+                        </span>
                         <div className="absolute -top-14 right-0 w-1/2 px-10">
                           <span className="text-2xl leading-7 text-gray-300">
                             Continuum is a trustless MPC network of
