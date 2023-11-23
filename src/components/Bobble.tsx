@@ -10,7 +10,7 @@ export function Bobble() {
       <g filter="url(#filter0_d_870_6161)">
         <mask
           id="mask0_870_6161"
-          className="mask-type:alpha"
+          // style="mask-type:alpha"
           maskUnits="userSpaceOnUse"
           x="6"
           y="6"

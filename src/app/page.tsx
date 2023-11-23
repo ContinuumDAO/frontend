@@ -3,7 +3,7 @@ import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { PrimaryFeatures } from '@/components/PrimaryFeatures'
+import { WhatWeDo } from '@/components/WhatWeDo'
 import { ContinuumMatrix } from '@/components/ContinuumMatrix'
 import { UseCases } from '@/components/UseCases'
 
@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <PrimaryFeatures />
+        <WhatWeDo />
         {/* <ContinuumMatrix />*/}
         <UseCases />
         <Faqs />

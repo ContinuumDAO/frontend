@@ -64,7 +64,6 @@ export function Faqs() {
             Why are we a DAO?
           </h2>
           <div className="border-b border-white/70"></div>
-
           <dl>
             <Disclosure as="div" className="pt-6 focus:outline-none">
               {({ open }) => (
@@ -76,23 +75,23 @@ export function Faqs() {
                       onMouseLeave={onMouseLeave.bind(null, open)}
                       className={`${
                         open
-                          ? 'ease-in-out" translate-x-8 transition-transform duration-300'
-                          : 'ease-in-out" -translate-x-0 transition-transform duration-300'
+                          ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
+                          : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
                       } relative z-50 flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
                       <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
-                        <div
-                          className={`-translate-x-10 ${
-                            open
-                              ? 'ease-in-out" translate-x-10 transition-transform duration-1000'
-                              : 'hidden'
-                          } -ml-12 -mt-2`}
-                        >
-                          <Bobble />
+                        <div className="flex flex-row">
+                          <div
+                            className={`opacity-0 ${
+                              open
+                                ? 'ease-in-out" opacity-100 transition-opacity duration-[350ms]'
+                                : 'ease-in-out" opacity-0 transition-opacity duration-[350ms]'
+                            } -ml-12`}
+                          >
+                            <Bobble />
+                          </div>
+                          <div className="pt-2">Decentralized Governance</div>
                         </div>
-                        <span className={`${open ? '-ml-6' : ''} `}>
-                          Decentralized Governance
-                        </span>
                       </span>
                     </Disclosure.Button>
                   </dt>
@@ -122,7 +121,7 @@ export function Faqs() {
                         <span className="absolute -top-20">
                           <Ellipse />
                         </span>
-                        <div className="absolute -top-14 right-0 w-1/2 pl-16">
+                        <div className="absolute -top-20 right-0 w-1/2 pl-16">
                           <span className="text-2xl leading-7 text-gray-300">
                             Continuum is a trustless MPC network of
                             decentralized nodes that allows dApps from many
@@ -147,39 +146,63 @@ export function Faqs() {
                       ref={buttonRef2}
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
-                      className="relative flex w-full items-start justify-between text-left text-white focus:outline-none"
+                      className={`${
+                        open
+                          ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
+                          : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
+                      } relative z-50 flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
-                      <div className={`${open ? 'absolute' : 'hidden'} `}>
-                        <Ellipse />
-                      </div>
-                      <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
-                        Global and Borderless
+                      <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
+                        <div className="flex flex-row">
+                          <div
+                            className={`opacity-0 ${
+                              open
+                                ? 'ease-in-out" opacity-100 transition-opacity duration-[350ms]'
+                                : 'ease-in-out" opacity-0 transition-opacity duration-[350ms]'
+                            } -ml-12`}
+                          >
+                            <Bobble />
+                          </div>
+                          <div className="pt-2">Global and Borderless</div>
+                        </div>
                       </span>
                     </Disclosure.Button>
                   </dt>
                   <Transition
                     show={open}
-                    enter="transition ease-in-out duration-400"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition ease-in-out duration-400"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
+                    enter="transition transition-[max-height] duration-500 ease-in"
+                    enterFrom="transform max-h-0 scale-95 opacity-0"
+                    enterTo="transform max-h-screen scale-100"
+                    leave="transition transition-[max-height] duration-500 ease-out"
+                    leaveFrom="transform max-h-screen"
+                    leaveTo="transform max-h-0"
                   >
                     <Disclosure.Panel
                       as="dd"
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
-                      className="mt-2 h-36 pr-12"
+                      className="relative mt-2 h-36 pr-12"
                     >
-                      <div className="absolute -top-14 right-0 w-1/2 px-10">
-                        <span className="text-2xl leading-7 text-gray-300">
-                          Our community members are from all over the world, and
-                          we are not tied to a specific jurisdiction. This
-                          global perspective enriches CTM by bringing diverse
-                          ideas and experiences.
+                      <Transition.Child
+                        enter="transition ease-in-out duration-500"
+                        enterFrom="transform opacity-0"
+                        enterTo="transform opacity-100"
+                        leave="transition ease-in-out duration-500"
+                        leaveFrom="transform opacity-100"
+                        leaveTo="transform opacity-0"
+                      >
+                        <span className="absolute -top-20">
+                          <Ellipse />
                         </span>
-                      </div>
+                        <div className="absolute -top-20 right-0 w-1/2 pl-16">
+                          <span className="text-2xl leading-7 text-gray-300">
+                            Our community members are from all over the world,
+                            and we are not tied to a specific jurisdiction. This
+                            global perspective enriches CTM by bringing diverse
+                            ideas and experiences.
+                          </span>
+                        </div>
+                      </Transition.Child>
                     </Disclosure.Panel>
                   </Transition>
                   <div className="border-b border-white/70 pt-6"></div>
@@ -196,38 +219,62 @@ export function Faqs() {
                       ref={buttonRef3}
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
-                      className="relative flex w-full items-start justify-between text-left text-white focus:outline-none"
+                      className={`${
+                        open
+                          ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
+                          : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
+                      } relative z-50 flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
-                      <div className={`${open ? 'absolute' : 'hidden'} `}>
-                        <Ellipse />
-                      </div>
-                      <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
-                        Transparency
+                      <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
+                        <div className="flex flex-row">
+                          <div
+                            className={`opacity-0 ${
+                              open
+                                ? 'ease-in-out" opacity-100 transition-opacity duration-[350ms]'
+                                : 'ease-in-out" opacity-0 transition-opacity duration-[350ms]'
+                            } -ml-12`}
+                          >
+                            <Bobble />
+                          </div>
+                          <div className="pt-2">Transparency</div>
+                        </div>
                       </span>
                     </Disclosure.Button>
                   </dt>
                   <Transition
                     show={open}
-                    enter="transition ease-in-out duration-400"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition ease-in-out duration-400"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
+                    enter="transition transition-[max-height] duration-500 ease-in"
+                    enterFrom="transform max-h-0 scale-95 opacity-0"
+                    enterTo="transform max-h-screen scale-100"
+                    leave="transition transition-[max-height] duration-500 ease-out"
+                    leaveFrom="transform max-h-screen"
+                    leaveTo="transform max-h-0"
                   >
                     <Disclosure.Panel
                       as="dd"
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
-                      className="mt-2 h-36 pr-12"
+                      className="relative mt-2 h-36 pr-12"
                     >
-                      <div className="absolute -top-14 right-0 w-1/2 px-10">
-                        <span className=" text-2xl leading-7 text-gray-300">
-                          We are committed to building trust with our community
-                          by providing full visibility into our daily operations
-                          as much as possible.
+                      <Transition.Child
+                        enter="transition ease-in-out duration-500"
+                        enterFrom="transform opacity-0"
+                        enterTo="transform opacity-100"
+                        leave="transition ease-in-out duration-500"
+                        leaveFrom="transform opacity-100"
+                        leaveTo="transform opacity-0"
+                      >
+                        <span className="absolute -top-20">
+                          <Ellipse />
                         </span>
-                      </div>
+                        <div className="absolute -top-20 right-0 w-1/2 pl-16">
+                          <span className="text-2xl leading-7 text-gray-300">
+                            We are committed to building trust with our
+                            community by providing full visibility into our
+                            daily operations as much as possible.
+                          </span>
+                        </div>
+                      </Transition.Child>
                     </Disclosure.Panel>
                   </Transition>
                   <div className="border-b border-white/70 pt-6"></div>
