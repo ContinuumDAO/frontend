@@ -75,52 +75,11 @@ export function Faqs() {
                       onMouseLeave={onMouseLeave.bind(null, open)}
                       className="relative flex w-full items-start justify-between text-left text-white focus:outline-none"
                     >
-                      <svg
-                        width="565"
-                        height="249"
-                        viewBox="0 0 565 249"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`${open ? 'absolute' : 'hidden'} `}
-                      >
-                        <g opacity="0.2" filter="url(#filter0_f_870_6165)">
-                          <ellipse
-                            cx="9"
-                            cy="246"
-                            rx="416"
-                            ry="112"
-                            fill="white"
-                          />
-                        </g>
-                        <defs>
-                          <filter
-                            id="filter0_f_870_6165"
-                            x="-547"
-                            y="-6"
-                            width="1112"
-                            height="504"
-                            filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
-                          >
-                            <feFlood
-                              flood-opacity="0"
-                              result="BackgroundImageFix"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in="SourceGraphic"
-                              in2="BackgroundImageFix"
-                              result="shape"
-                            />
-                            <feGaussianBlur
-                              stdDeviation="70"
-                              result="effect1_foregroundBlur_870_6165"
-                            />
-                          </filter>
-                        </defs>
-                      </svg>
+                      <div className={`${open ? 'absolute' : 'hidden'} `}>
+                        <Ellipse />
+                      </div>
                       <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
-                        <span className={`${open ? '' : ''} `}>
+                        <span className={`${open ? '!translate-x-10' : ''} `}>
                           Decentralized Governance
                         </span>
                       </span>
@@ -128,19 +87,12 @@ export function Faqs() {
                   </dt>
                   <Transition
                     show={open}
-                    className="overflow-visible"
-                    enter="transition ease-in-out duration-400"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition ease-in-out duration-400"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
-                    // enter="transition transition-[max-height] duration-[2000ms] ease-in-out"
-                    // enterFrom="transform max-h-0 scale-95 opacity-0"
-                    // enterTo="transform max-h-screen scale-100 opacity-100"
-                    // leave="transition transition-[max-height] duration-400 ease-in-out"
-                    // leaveFrom="transform max-h-screen"
-                    // leaveTo="transform max-h-0"
+                    enter="transition transition-[max-height] duration-[20000ms] ease-in-out"
+                    enterFrom="transform max-h-0 scale-95 opacity-0"
+                    enterTo="transform max-h-screen scale-100 opacity-100"
+                    leave="transition transition-[max-height] duration-400 ease-in-out"
+                    leaveFrom="transform max-h-screen"
+                    leaveTo="transform max-h-0"
                   >
                     <Disclosure.Panel
                       as="dd"
@@ -148,14 +100,23 @@ export function Faqs() {
                       onMouseLeave={onMouseLeave.bind(null, open)}
                       className="mt-2 h-36 pr-12"
                     >
-                      <div className="absolute -top-14 right-0 w-1/2 px-10">
-                        <span className="text-2xl leading-7 text-gray-300">
-                          Continuum is a trustless MPC network of decentralized
-                          nodes that allows dApps from many diverse blockchains
-                          to seamlessly interact using decentralized SMPC for
-                          security.
-                        </span>
-                      </div>
+                      <Transition.Child
+                        enter="transition ease-in-out duration-[2000ms]"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition ease-in-out duration-400"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <div className="absolute -top-14 right-0 w-1/2 px-10">
+                          <span className="text-2xl leading-7 text-gray-300">
+                            Continuum is a trustless MPC network of
+                            decentralized nodes that allows dApps from many
+                            diverse blockchains to seamlessly interact using
+                            decentralized SMPC for security.
+                          </span>
+                        </div>
+                      </Transition.Child>
                     </Disclosure.Panel>
                   </Transition>
                   <div className="border-b border-white/70 pt-6"></div>
@@ -174,50 +135,9 @@ export function Faqs() {
                       onMouseLeave={onMouseLeave2.bind(null, open)}
                       className="relative flex w-full items-start justify-between text-left text-white focus:outline-none"
                     >
-                      <svg
-                        width="565"
-                        height="249"
-                        viewBox="0 0 565 249"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`${open ? 'absolute' : 'hidden'} `}
-                      >
-                        <g opacity="0.2" filter="url(#filter0_f_870_6165)">
-                          <ellipse
-                            cx="9"
-                            cy="246"
-                            rx="416"
-                            ry="112"
-                            fill="white"
-                          />
-                        </g>
-                        <defs>
-                          <filter
-                            id="filter0_f_870_6165"
-                            x="-547"
-                            y="-6"
-                            width="1112"
-                            height="504"
-                            filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
-                          >
-                            <feFlood
-                              flood-opacity="0"
-                              result="BackgroundImageFix"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in="SourceGraphic"
-                              in2="BackgroundImageFix"
-                              result="shape"
-                            />
-                            <feGaussianBlur
-                              stdDeviation="70"
-                              result="effect1_foregroundBlur_870_6165"
-                            />
-                          </filter>
-                        </defs>
-                      </svg>
+                      <div className={`${open ? 'absolute' : 'hidden'} `}>
+                        <Ellipse />
+                      </div>
                       <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
                         Global and Borderless
                       </span>
@@ -264,50 +184,9 @@ export function Faqs() {
                       onMouseLeave={onMouseLeave3.bind(null, open)}
                       className="relative flex w-full items-start justify-between text-left text-white focus:outline-none"
                     >
-                      <svg
-                        width="565"
-                        height="249"
-                        viewBox="0 0 565 249"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`${open ? 'absolute' : 'hidden'} `}
-                      >
-                        <g opacity="0.2" filter="url(#filter0_f_870_6165)">
-                          <ellipse
-                            cx="9"
-                            cy="246"
-                            rx="416"
-                            ry="112"
-                            fill="white"
-                          />
-                        </g>
-                        <defs>
-                          <filter
-                            id="filter0_f_870_6165"
-                            x="-547"
-                            y="-6"
-                            width="1112"
-                            height="504"
-                            filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
-                          >
-                            <feFlood
-                              flood-opacity="0"
-                              result="BackgroundImageFix"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in="SourceGraphic"
-                              in2="BackgroundImageFix"
-                              result="shape"
-                            />
-                            <feGaussianBlur
-                              stdDeviation="70"
-                              result="effect1_foregroundBlur_870_6165"
-                            />
-                          </filter>
-                        </defs>
-                      </svg>
+                      <div className={`${open ? 'absolute' : 'hidden'} `}>
+                        <Ellipse />
+                      </div>
                       <span className="py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
                         Transparency
                       </span>
@@ -349,5 +228,44 @@ export function Faqs() {
         </div>
       </div>
     </div>
+  )
+}
+
+export function Ellipse() {
+  return (
+    <svg
+      width="565"
+      height="249"
+      viewBox="0 0 565 249"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g opacity="0.2" filter="url(#filter0_f_870_6165)">
+        <ellipse cx="9" cy="246" rx="416" ry="112" fill="white" />
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_870_6165"
+          x="-547"
+          y="-6"
+          width="1112"
+          height="504"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="70"
+            result="effect1_foregroundBlur_870_6165"
+          />
+        </filter>
+      </defs>
+    </svg>
   )
 }
