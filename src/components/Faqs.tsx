@@ -90,7 +90,7 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="pt-2 text-2xl font-medium leading-7 sm:text-3xl">
+                          <div className="xs:pt-2 text-2xl font-medium leading-7 sm:pt-0.5 sm:text-3xl">
                             Decentralized Governance
                           </div>
                         </div>
@@ -124,7 +124,7 @@ export function Faqs() {
                           <Ellipse />
                         </span>
                         <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="text-lg leading-7 text-gray-300 md:mt-0 md:text-2xl xl:text-xl">
+                          <span className="xs:text-lg leading-7 text-gray-300 sm:text-xl md:mt-0 md:text-2xl">
                             Continuum is a trustless MPC network of
                             decentralized nodes that allows dApps from many
                             diverse blockchains to seamlessly interact using
@@ -165,7 +165,7 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="pt-2 text-2xl font-medium leading-7 sm:text-3xl">
+                          <div className="xs:pt-2 text-2xl font-medium leading-7 sm:pt-0.5 sm:text-3xl">
                             Global and Borderless
                           </div>
                         </div>
@@ -199,7 +199,7 @@ export function Faqs() {
                           <Ellipse />
                         </span>
                         <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="text-xl leading-7 text-gray-300 md:mt-0 md:text-2xl">
+                          <span className="xs:text-lg leading-7 text-gray-300 sm:text-xl md:mt-0 md:text-2xl">
                             Our community members are from all over the world,
                             and we are not tied to a specific jurisdiction. This
                             global perspective enriches CTM by bringing diverse
@@ -240,7 +240,7 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="pt-2 text-2xl font-medium leading-7 sm:text-3xl">
+                          <div className="xs:pt-2 text-2xl font-medium leading-7 sm:pt-0.5 sm:text-3xl">
                             Transparency
                           </div>
                         </div>
@@ -274,7 +274,7 @@ export function Faqs() {
                           <Ellipse />
                         </span>
                         <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="text-xl leading-7 text-gray-300 md:mt-0 md:text-2xl">
+                          <span className="xs:text-lg leading-7 text-gray-300 sm:text-xl md:mt-0 md:text-2xl">
                             We are committed to building trust with our
                             community by providing full visibility into our
                             daily operations as much as possible.

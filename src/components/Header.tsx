@@ -156,9 +156,9 @@ export function Header() {
         <div className="flex lg:flex-1">
           <a href="#" className="p-1.5 lg:-mx-8">
             <span className="sr-only">Continuum</span>
-            <div className="flex flex-row items-center">
+            <div className="xs:ml-0 flex flex-row items-center lg:ml-10 xl:ml-0">
               <Logo />
-              <span className="pl-3 pt-0.5 text-4xl font-semibold text-white">
+              <span className="hidden pl-3 pt-0.5 font-semibold text-white xl:inline xl:text-2xl 2xl:text-3xl">
                 Continuum
               </span>
             </div>
@@ -177,7 +177,7 @@ export function Header() {
         <Popover.Group className="hidden items-center lg:flex">
           <a
             href="#"
-            className="custom-link group relative px-8 py-8 text-lg font-medium leading-6 text-white focus:outline-none"
+            className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
             What We Do
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
@@ -185,7 +185,7 @@ export function Header() {
           <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <a
             href="#"
-            className="custom-link group relative px-8 py-8 text-lg font-medium leading-6 text-white focus:outline-none"
+            className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
             Continumm Matrix
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
@@ -200,7 +200,7 @@ export function Header() {
                       ref={buttonRef}
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="custom-link group relative p-8 text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
                     >
                       <span className="flex items-center gap-x-1">
                         Use Cases
@@ -271,7 +271,7 @@ export function Header() {
                       ref={buttonRef2}
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
-                      className="custom-link group relative p-8 text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
                     >
                       <span className="flex items-center gap-x-1">
                         Governance
@@ -340,7 +340,7 @@ export function Header() {
                       ref={buttonRef3}
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
-                      className="custom-link group relative p-8 text-lg font-medium leading-6 text-white focus:outline-none"
+                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
                     >
                       <span className="flex items-center gap-x-1">
                         Contact Us
@@ -403,7 +403,7 @@ export function Header() {
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
-            className="rounded-full bg-[#C8EAFF] px-10 py-4 text-base font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80"
+            className="rounded-full bg-[#C8EAFF] font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
           >
             MPC Network
           </a>
