@@ -79,7 +79,7 @@ export function Faqs() {
                           : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
                       } relative z-50 flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
-                      <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
+                      <span className="flex flex-row py-6 pl-8 focus:outline-none">
                         <div className="flex flex-row">
                           <div
                             className={`opacity-0 ${
@@ -90,7 +90,9 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="pt-2">Decentralized Governance</div>
+                          <div className="pt-2 text-2xl font-medium leading-7 sm:text-3xl">
+                            Decentralized Governance
+                          </div>
                         </div>
                       </span>
                     </Disclosure.Button>
@@ -108,7 +110,7 @@ export function Faqs() {
                       as="dd"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="relative mt-2 h-36 pr-12"
+                      className="relative -mt-4 h-36 pr-0 xl:mt-2 xl:pr-12"
                     >
                       <Transition.Child
                         enter="transition ease-in-out duration-500"
@@ -122,7 +124,7 @@ export function Faqs() {
                           <Ellipse />
                         </span>
                         <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="text-2xl leading-7 text-gray-300">
+                          <span className="text-lg leading-7 text-gray-300 md:mt-0 md:text-2xl xl:text-xl">
                             Continuum is a trustless MPC network of
                             decentralized nodes that allows dApps from many
                             diverse blockchains to seamlessly interact using
@@ -163,7 +165,9 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="pt-2">Global and Borderless</div>
+                          <div className="pt-2 text-2xl font-medium leading-7 sm:text-3xl">
+                            Global and Borderless
+                          </div>
                         </div>
                       </span>
                     </Disclosure.Button>
@@ -181,7 +185,7 @@ export function Faqs() {
                       as="dd"
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
-                      className="relative mt-2 h-36 pr-12"
+                      className="relative -mt-4 h-36 pr-0 xl:mt-2 xl:pr-12"
                     >
                       <Transition.Child
                         enter="transition ease-in-out duration-500"
@@ -195,7 +199,7 @@ export function Faqs() {
                           <Ellipse />
                         </span>
                         <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="text-2xl leading-7 text-gray-300">
+                          <span className="text-xl leading-7 text-gray-300 md:mt-0 md:text-2xl">
                             Our community members are from all over the world,
                             and we are not tied to a specific jurisdiction. This
                             global perspective enriches CTM by bringing diverse
@@ -236,7 +240,9 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="pt-2">Transparency</div>
+                          <div className="pt-2 text-2xl font-medium leading-7 sm:text-3xl">
+                            Transparency
+                          </div>
                         </div>
                       </span>
                     </Disclosure.Button>
@@ -254,7 +260,7 @@ export function Faqs() {
                       as="dd"
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
-                      className="relative mt-2 h-36 pr-12"
+                      className="relative -mt-4 h-36 pr-0 xl:mt-2 xl:pr-12"
                     >
                       <Transition.Child
                         enter="transition ease-in-out duration-500"
@@ -268,7 +274,7 @@ export function Faqs() {
                           <Ellipse />
                         </span>
                         <div className="absolute px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="text-2xl leading-7 text-gray-300">
+                          <span className="text-xl leading-7 text-gray-300 md:mt-0 md:text-2xl">
                             We are committed to building trust with our
                             community by providing full visibility into our
                             daily operations as much as possible.

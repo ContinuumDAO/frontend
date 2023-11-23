@@ -1,3 +1,5 @@
+'use client'
+
 import C3RouterUseCaseGraphic from '../images/c3-router-usecase.gif'
 import Image from 'next/image'
 
@@ -31,18 +33,18 @@ const useCases = [
 export function UseCases() {
   return (
     <div className="bg-[url('../images/background-graphic.gif')] py-24 sm:py-32">
-      <div className="mx-auto max-w-xl px-6 text-left lg:max-w-[100rem] lg:px-8">
-        <div className="mx-auto">
-          <p className="pl-24 text-3xl font-bold tracking-tight text-white sm:text-5xl">
+      <div className="mx-auto max-w-xl pl-32 text-left lg:max-w-[100rem]">
+        <div className=" mx-auto">
+          <p className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
             Use Cases
           </p>
         </div>
-        <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 md:grid-cols-2 lg:mx-0 lg:max-w-7xl lg:pl-24 xl:grid-cols-4">
+        <ul className="webkit-center mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 lg:mx-0 lg:grid-cols-2 xl:max-w-7xl xl:grid-cols-4">
           {useCases.map((useCase, index) => (
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
-              className="group z-0 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 lg:max-w-7xl xl:-mr-24"
+              className="group z-0 -mr-24 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 lg:max-w-7xl"
             >
               <div className="group relative">
                 <div className="h-56"></div>
@@ -58,10 +60,10 @@ export function UseCases() {
                   useCases.length - index < useCases.length ? 'text-right' : ''
                 }`}
               >
-                <h3 className="mt-6 pb-10 text-3xl font-medium leading-7 tracking-tight text-white xl:group-hover:text-left">
+                <h3 className="mt-6 pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left">
                   {useCase.name}
                 </h3>
-                <p className="text-2xl font-light leading-8 text-white/70 xl:group-hover:text-left">
+                <p className="text-2xl font-light leading-8 text-white/70 group-hover:text-left">
                   {useCase.role}
                 </p>
               </div>
@@ -69,6 +71,11 @@ export function UseCases() {
           ))}
         </ul>
       </div>
+      <style jsx>{`
+        .webkit-center {
+          // -webkit-align-items: center;
+        }
+      `}</style>
     </div>
   )
 }
