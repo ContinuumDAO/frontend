@@ -13,8 +13,8 @@ const useCases = [
   {
     name: 'C3Caller',
     role: 'The purest cross-chain primitive, allowing unencrypted messages to be sent cross-chain. Fees can be charged on the source or destination chain and smart contracts can be called on the destination chain, all within one transaction.',
-    StartImage: C3CallerStart,
-    EndImage: C3CallerEnd,
+    StartImage: C3RouterStart,
+    EndImage: C3RouterEnd,
   },
   {
     name: 'C3Wallet',
@@ -33,25 +33,25 @@ const useCases = [
 export function UseCases() {
   return (
     <div className="bg-[url('../images/background-graphic.gif')] py-24 sm:py-32">
-      <div className="mx-auto max-w-xl pl-32 text-left lg:max-w-[100rem]">
+      <div className="xs:pl-8 mx-auto max-w-xl text-left md:pl-16 lg:max-w-[100rem] lg:pl-32">
         <div className=" mx-auto">
           <p className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
             Use Cases
           </p>
         </div>
-        <ul className="webkit-center mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 lg:mx-0 lg:grid-cols-2 xl:max-w-7xl xl:grid-cols-4">
+        <ul className="webkit-center xs:max-w-sm mx-auto mt-20 grid grid-cols-1 gap-6 sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
           {useCases.map((useCase, index) => (
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
-              className="group z-0 -mr-24 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 lg:max-w-7xl"
+              className="group z-0 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 sm:-mr-24 lg:max-w-7xl"
             >
               <div className="group relative">
                 <div className="h-56"></div>
                 <div className="absolute inset-0 transition-opacity duration-700 ease-in-out group-hover:opacity-0">
                   <useCase.StartImage />
                 </div>
-                <div className="absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100">
+                <div className="absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 xl:-mt-2 2xl:-mt-0">
                   <useCase.EndImage />
                 </div>
               </div>
@@ -60,7 +60,7 @@ export function UseCases() {
                   useCases.length - index < useCases.length ? 'text-right' : ''
                 }`}
               >
-                <h3 className="mt-6 pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left">
+                <h3 className="pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left lg:mt-11 xl:mt-6">
                   {useCase.name}
                 </h3>
                 <p className="text-2xl font-light leading-8 text-white/70 group-hover:text-left">
@@ -456,7 +456,7 @@ export function C3RouterStart() {
       viewBox="0 0 422 254"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="-ml-14 -mt-12 scale-[0.85]"
+      className="lg:-ml-4 lg:-mt-6 lg:scale-[1.05] xl:-ml-20 xl:-mt-16 xl:scale-[0.75] 2xl:-ml-12 2xl:-mt-10 2xl:scale-[0.9]"
     >
       <circle cx="298" cy="99" r="28.5" stroke="#676767" />
       <circle cx="298" cy="97" r="28.5" fill="#010101" stroke="#676767" />
