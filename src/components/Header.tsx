@@ -10,7 +10,7 @@ import './Header.css'
 const useCases = [
   {
     name: 'C3Router',
-    href: '#',
+    href: '#use-cases',
   },
   {
     name: 'C3Caller',
@@ -176,7 +176,7 @@ export function Header() {
         </div>
         <Popover.Group className="hidden items-center lg:flex">
           <a
-            href="#"
+            href="#what-we-do"
             className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
             What We Do
@@ -184,7 +184,7 @@ export function Header() {
           </a>
           <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <a
-            href="#"
+            href="#continuum-matrix"
             className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
             Continumm Matrix

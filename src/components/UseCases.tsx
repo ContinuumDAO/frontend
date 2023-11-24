@@ -5,24 +5,28 @@ import Image from 'next/image'
 
 const useCases = [
   {
+    id: 'c3-router',
     name: 'C3Router',
     role: 'Enables cross-chain liquidity aggregation or token transfer, all under the control of the dApp. It has a simple-to-implement interface and an inexpensive gas-based fee structure.',
     StartImage: C3RouterStart,
     EndImage: C3RouterEnd,
   },
   {
+    id: 'c3-router',
     name: 'C3Caller',
     role: 'The purest cross-chain primitive, allowing unencrypted messages to be sent cross-chain. Fees can be charged on the source or destination chain and smart contracts can be called on the destination chain, all within one transaction.',
     StartImage: C3RouterStart,
     EndImage: C3RouterEnd,
   },
   {
+    id: 'c3-router',
     name: 'C3Wallet',
     role: 'This will be the first truly cross-chain multi-signature wallet, allowing users to sign from diverse chains.',
     StartImage: C3WalletStart,
     EndImage: C3WalletEnd,
   },
   {
+    id: 'c3-router',
     name: 'Build On CTM',
     role: 'External page with project submission application with BD guild info',
     StartImage: BuildOnCtmStart,
@@ -32,21 +36,24 @@ const useCases = [
 
 export function UseCases() {
   return (
-    <div className="bg-[url('../images/background-graphic.gif')] py-24 sm:py-32">
+    <div
+      id="use-cases"
+      className="bg-[url('../images/background-graphic.gif')] py-24 sm:py-32"
+    >
       <div className="xs:pl-8 mx-auto max-w-xl text-left md:pl-16 lg:max-w-[100rem] lg:pl-32">
         <div className=" mx-auto">
-          <p className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <p className="xs:text-5xl text-3xl font-bold tracking-tight text-white">
             Use Cases
           </p>
         </div>
-        <ul className="webkit-center xs:max-w-sm mx-auto mt-20 grid grid-cols-1 gap-6 sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
+        <ul className="xs:max-w-sm mx-auto mt-20 grid grid-cols-1 gap-6 sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
           {useCases.map((useCase, index) => (
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
               className="group z-0 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 sm:-mr-24 lg:max-w-7xl"
             >
-              <div className="group relative">
+              <div className="xs:pt-16 group relative lg:pt-0">
                 <div className="h-56"></div>
                 <div className="absolute inset-0 transition-opacity duration-700 ease-in-out group-hover:opacity-0">
                   <useCase.StartImage />
@@ -57,7 +64,9 @@ export function UseCases() {
               </div>
               <div
                 className={`${
-                  useCases.length - index < useCases.length ? 'text-right' : ''
+                  useCases.length - index < useCases.length
+                    ? 'text-left lg:text-right'
+                    : ''
                 }`}
               >
                 <h3 className="pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left lg:mt-11 xl:mt-6">
@@ -71,11 +80,6 @@ export function UseCases() {
           ))}
         </ul>
       </div>
-      <style jsx>{`
-        .webkit-center {
-          // -webkit-align-items: center;
-        }
-      `}</style>
     </div>
   )
 }
@@ -88,6 +92,7 @@ export function BuildOnCtmStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="xs:-ml-4 md:ml-12 lg:ml-8 xl:-ml-10 2xl:-ml-2"
     >
       <g clip-path="url(#clip0_865_4565)">
         <g opacity="0.4" filter="url(#filter0_f_865_4565)">
@@ -186,6 +191,7 @@ export function BuildOnCtmEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="xs:-ml-4 md:ml-12 lg:ml-8 xl:-ml-10 2xl:-ml-2"
     >
       <g clip-path="url(#clip0_865_4587)">
         <g opacity="0.4" filter="url(#filter0_f_865_4587)">
@@ -270,6 +276,7 @@ export function C3WalletStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="sm:ml-12 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clip-path="url(#clip0_865_4431)">
         <g clip-path="url(#clip1_865_4431)">
@@ -363,6 +370,7 @@ export function C3WalletEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="sm:ml-12 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clip-path="url(#clip0_865_4473)">
         <g clip-path="url(#clip1_865_4473)">
@@ -456,7 +464,7 @@ export function C3RouterStart() {
       viewBox="0 0 422 254"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="lg:-ml-4 lg:-mt-6 lg:scale-[1.05] xl:-ml-20 xl:-mt-16 xl:scale-[0.75] 2xl:-ml-12 2xl:-mt-10 2xl:scale-[0.9]"
+      className="xs:-ml-14 xs:-mt-10 xs:scale-75 sm:ml-2 sm:mt-1 sm:scale-[1.05] md:mt-1 md:scale-[1.05] lg:-ml-4 lg:-mt-6 xl:-ml-20 xl:-mt-16 xl:scale-[0.75] 2xl:-ml-12 2xl:-mt-10 2xl:scale-[0.9]"
     >
       <circle cx="298" cy="99" r="28.5" stroke="#676767" />
       <circle cx="298" cy="97" r="28.5" fill="#010101" stroke="#676767" />
@@ -581,7 +589,7 @@ export function C3RouterStart() {
 export function C3RouterEnd() {
   return (
     <Image
-      className="-mt-2 scale-[1.15]"
+      className="-mt-2 md:scale-95 lg:scale-[1.15]"
       src={C3RouterUseCaseGraphic}
       alt="Network Graphic"
     />

@@ -3,7 +3,10 @@ import Image from 'next/image'
 
 export function WhatWeDo() {
   return (
-    <div className="bg-[url('../images/background-graphic.gif')]">
+    <div
+      id="what-we-do"
+      className="bg-[url('../images/background-graphic.gif')]"
+    >
       <div className="mx-auto max-w-7xl sm:px-6">
         <div className="relative isolate px-6 py-20 sm:rounded-3xl sm:px-10 sm:py-24 lg:py-12 xl:px-24">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
