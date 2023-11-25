@@ -93,7 +93,7 @@ export function BuildOnCtmStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-4 md:ml-12 lg:ml-8 xl:-ml-10 2xl:-ml-2"
+      className="xs:-ml-4 sm:ml-12 md:ml-12 lg:ml-8 xl:-ml-10 2xl:-ml-2"
     >
       <g clip-path="url(#clip0_865_4565)">
         <g opacity="0.4" filter="url(#filter0_f_865_4565)">
@@ -192,7 +192,7 @@ export function BuildOnCtmEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-4 md:ml-12 lg:ml-8 xl:-ml-10 2xl:-ml-2"
+      className="xs:-ml-4 sm:ml-12 md:ml-12 lg:ml-8 xl:-ml-10 2xl:-ml-2"
     >
       <g clip-path="url(#clip0_865_4587)">
         <g opacity="0.4" filter="url(#filter0_f_865_4587)">
@@ -277,7 +277,7 @@ export function C3WalletStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="sm:ml-12 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xs:-ml-4 sm:ml-12 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clip-path="url(#clip0_865_4431)">
         <g clip-path="url(#clip1_865_4431)">
@@ -371,7 +371,7 @@ export function C3WalletEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="sm:ml-12 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xs:-ml-4 sm:ml-12 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clip-path="url(#clip0_865_4473)">
         <g clip-path="url(#clip1_865_4473)">
@@ -609,7 +609,7 @@ export function C3CallerStart() {
       viewBox="0 0 844 541"
       enableBackground="new 0 0 844 541"
       xmlSpace="preserve"
-      className="xs:-ml-14 xs:-mt-10 xs:scale-75 sm:ml-2 sm:mt-1 sm:scale-[1.05] md:mt-1 md:scale-[1.05] lg:-mt-6 lg:ml-0 lg:scale-[1.1] xl:-mt-4 xl:ml-2 xl:scale-[1.12] 2xl:-mt-4 2xl:ml-2 2xl:scale-[1.11]"
+      className="xs:-ml-0 xs:-mt-4 xs:scale-[1.05] sm:-ml-0 sm:-mt-7 sm:scale-[1] md:-ml-1 md:-mt-6 md:scale-[1.1] lg:-mt-6 lg:ml-0 lg:scale-[1.1] xl:-mt-3 xl:ml-1 xl:scale-[1.15] 2xl:-mt-4 2xl:ml-1 2xl:scale-[1.11]"
     >
       <path
         fill="#020202"
@@ -1326,7 +1326,7 @@ export function C3CallerStart() {
 export function C3CallerEnd() {
   return (
     <Image
-      className="-mt-2 md:scale-95 lg:-mt-4 lg:scale-[1.15] xl:ml-0 "
+      className="xs:-mt-4 xs:scale-[1.05] sm:-mt-6 md:-ml-0.5 md:-mt-6 md:scale-[1.1] lg:-mt-6 lg:scale-[1.1] xl:-mt-1 xl:ml-0 2xl:-mt-4 2xl:scale-[1.12]"
       src={C3CallerUseCaseGraphic}
       alt="Network Graphic"
     />
