@@ -6,11 +6,13 @@ import { Hero } from '@/components/Hero'
 import { WhatWeDo } from '@/components/WhatWeDo'
 import { ContinuumMatrix } from '@/components/ContinuumMatrix'
 import { UseCases } from '@/components/UseCases'
+import { SideNav } from '@/components/SideNav'
 
 export default function Home() {
   return (
     <>
       <Header />
+      <SideNav />
       <main>
         <Hero />
         <WhatWeDo />
