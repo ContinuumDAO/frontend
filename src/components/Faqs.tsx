@@ -86,7 +86,7 @@ export function Faqs() {
                               open
                                 ? 'ease-in-out" opacity-100 transition-opacity duration-[350ms]'
                                 : 'ease-in-out" opacity-0 transition-opacity duration-[350ms]'
-                            } -ml-12`}
+                            } -ml-12 -mt-2 scale-75`}
                           >
                             <Bobble />
                           </div>
@@ -161,7 +161,7 @@ export function Faqs() {
                               open
                                 ? 'ease-in-out" opacity-100 transition-opacity duration-[350ms]'
                                 : 'ease-in-out" opacity-0 transition-opacity duration-[350ms]'
-                            } -ml-12`}
+                            } -ml-12 -mt-2 scale-75`}
                           >
                             <Bobble />
                           </div>
@@ -236,7 +236,7 @@ export function Faqs() {
                               open
                                 ? 'ease-in-out" opacity-100 transition-opacity duration-[350ms]'
                                 : 'ease-in-out" opacity-0 transition-opacity duration-[350ms]'
-                            } -ml-12`}
+                            } -ml-12 -mt-2 scale-75`}
                           >
                             <Bobble />
                           </div>
