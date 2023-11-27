@@ -12,7 +12,7 @@ export function CallToAction() {
   ]
 
   return (
-    <section id="call-to-action" className="relative overflow-hidden py-20">
+    <section id="footer" className="relative overflow-hidden py-20">
       <Container className="relative isolate">
         <div className="mt-6 flex flex-col items-center justify-center gap-y-6 md:mt-10 md:flex-row md:gap-x-6">
           {actions.map((action, index) => (

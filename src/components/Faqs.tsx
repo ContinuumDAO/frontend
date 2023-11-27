@@ -57,7 +57,7 @@ export function Faqs() {
   }
 
   return (
-    <div className="bg-[url('../images/background-graphic.gif')]">
+    <div id="faq" className="z-30 bg-[url('../images/background-graphic.gif')]">
       <div className="mx-auto max-w-[115rem] px-6 py-32 sm:py-48 lg:px-8 lg:py-48">
         <div className="mx-auto max-w-6xl">
           <h2 className="xs:leading-snug pb-12 text-5xl font-bold tracking-tight text-white sm:leading-10">
@@ -65,11 +65,12 @@ export function Faqs() {
           </h2>
           <div className="border-b border-white/70"></div>
           <dl>
-            <Disclosure as="div" className="pt-6 focus:outline-none">
+            <Disclosure as="div" id="faq" className="pt-6 focus:outline-none">
               {({ open }) => (
                 <>
                   <dt>
                     <Disclosure.Button
+                      id="faq"
                       ref={buttonRef}
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
@@ -77,7 +78,7 @@ export function Faqs() {
                         open
                           ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
                           : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
-                      } relative z-50 flex w-full items-start justify-between text-left text-white focus:outline-none`}
+                      } relative z-40 flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
                       <span className="flex flex-row py-6 pl-8 focus:outline-none">
                         <div className="flex flex-row">
@@ -108,6 +109,7 @@ export function Faqs() {
                   >
                     <Disclosure.Panel
                       as="dd"
+                      id="faq"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
                       className="relative -mt-4 h-36 pr-0 xl:mt-2 xl:pr-12"
@@ -145,6 +147,7 @@ export function Faqs() {
                 <>
                   <dt>
                     <Disclosure.Button
+                      id="faq"
                       ref={buttonRef2}
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
@@ -152,7 +155,7 @@ export function Faqs() {
                         open
                           ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
                           : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
-                      } relative z-50 flex w-full items-start justify-between text-left text-white focus:outline-none`}
+                      } relative z-40 flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
                       <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
                         <div className="flex flex-row">
@@ -183,6 +186,7 @@ export function Faqs() {
                   >
                     <Disclosure.Panel
                       as="dd"
+                      id="faq"
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
                       className="relative -mt-4 h-36 pr-0 xl:mt-2 xl:pr-12"
@@ -215,11 +219,12 @@ export function Faqs() {
             </Disclosure>
           </dl>
           <dl>
-            <Disclosure as="div" className="pt-6 focus:outline-none">
+            <Disclosure id="faq" as="div" className="pt-6 focus:outline-none">
               {({ open }) => (
                 <>
                   <dt>
                     <Disclosure.Button
+                      id="faq"
                       ref={buttonRef3}
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
@@ -227,7 +232,7 @@ export function Faqs() {
                         open
                           ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
                           : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
-                      } relative z-50 flex w-full items-start justify-between text-left text-white focus:outline-none`}
+                      } relative z-40 flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
                       <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
                         <div className="flex flex-row">
@@ -258,6 +263,7 @@ export function Faqs() {
                   >
                     <Disclosure.Panel
                       as="dd"
+                      id="faq"
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
                       className="relative -mt-4 h-36 pr-0 xl:mt-2 xl:pr-12"

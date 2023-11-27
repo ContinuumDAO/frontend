@@ -3,7 +3,7 @@ import { Bobble } from './Bobble'
 export function ContinuumMatrix() {
   return (
     <div
-      id="continuumMatrix"
+      id="continuum-matrix"
       aria-label="Continuum Matrix"
       className="xs:mb-[48rem] bg-[url('../images/background-graphic.gif')] xl:mb-0"
     >

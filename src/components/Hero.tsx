@@ -13,7 +13,10 @@ export function Hero() {
   }, [])
 
   return (
-    <div className="bg-[url('../images/background-graphic.gif')] pt-24">
+    <div
+      id="hero"
+      className="bg-[url('../images/background-graphic.gif')] pt-24"
+    >
       <div className="relative isolate py-48">
         <div
           className="webkit-center absolute inset-x-0 -z-10 transform-gpu overflow-hidden"
