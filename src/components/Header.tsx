@@ -14,57 +14,57 @@ const useCases = [
   },
   {
     name: 'C3Caller',
-    href: '#',
+    href: '#use-cases',
   },
   {
     name: 'C3Wallet',
-    href: '#',
+    href: '#use-cases',
   },
   {
     name: 'Build on CTM',
-    href: '#',
+    href: '#use-cases',
   },
 ]
 
 const governance = [
   {
     name: 'Forum',
-    href: '#',
+    href: 'https://forum.continuumdao.org/',
   },
   {
     name: 'Vote',
-    href: '#',
+    href: 'https://snapshot.org/#/continuumdao.eth',
   },
   {
     name: 'Learn More',
-    href: '#',
+    href: 'https://docs.continuumdao.org/',
   },
   {
     name: 'Build With Us',
-    href: '#',
+    href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/HowToWriteAProposal',
   },
 ]
 
 const contactUs = [
   {
     name: 'X',
-    href: '#',
+    href: 'https://twitter.com/ContinuumDAO',
   },
   {
     name: 'Telegram',
-    href: '#',
+    href: 'https://t.me/ContinuumDAO',
   },
   {
     name: 'Medium',
-    href: '#',
+    href: 'https://medium.com/@continuumdao',
   },
   {
     name: 'Forum',
-    href: '#',
+    href: 'https://forum.continuumdao.org/',
   },
   {
     name: 'GitHub',
-    href: '#',
+    href: 'https://github.com/ContinuumDAO',
   },
 ]
 
@@ -192,7 +192,7 @@ export function Header() {
           </a>
           <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            {({ open }) => {
+            {({ open, close }) => {
               return (
                 <>
                   <div>
@@ -235,6 +235,7 @@ export function Header() {
                               >
                                 <div className="flex-auto">
                                   <a
+                                    onClick={close}
                                     href={item.href}
                                     className="block font-semibold text-white"
                                   >
@@ -263,7 +264,7 @@ export function Header() {
 
           <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            {({ open }) => {
+            {({ open, close }) => {
               return (
                 <>
                   <div>
@@ -296,7 +297,7 @@ export function Header() {
                         onMouseEnter={onMouseEnter2.bind(null, open)}
                         onMouseLeave={onMouseLeave2.bind(null, open)}
                         className="absolute -left-4 top-3/4
-              z-10 mt-4 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+              z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                       >
                         <div className="px-4">
                           {governance.map((item, i) => (
@@ -306,6 +307,8 @@ export function Header() {
                             >
                               <div className="flex-auto">
                                 <a
+                                  target="_"
+                                  onClick={close}
                                   href={item.href}
                                   className="block font-semibold text-white"
                                 >
@@ -332,7 +335,7 @@ export function Header() {
           </Popover>
           <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
-            {({ open }) => {
+            {({ open, close }) => {
               return (
                 <>
                   <div>
@@ -365,7 +368,7 @@ export function Header() {
                         onMouseEnter={onMouseEnter3.bind(null, open)}
                         onMouseLeave={onMouseLeave3.bind(null, open)}
                         className="absolute -left-4 top-3/4
-              z-10 mt-4 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+              z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                       >
                         <div className="px-4">
                           {contactUs.map((item, i) => (
@@ -375,7 +378,9 @@ export function Header() {
                             >
                               <div className="flex-auto">
                                 <a
+                                  onClick={close}
                                   href={item.href}
+                                  target="_"
                                   className="block font-semibold text-white"
                                 >
                                   {item.name}

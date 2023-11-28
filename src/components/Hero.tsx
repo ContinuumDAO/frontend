@@ -72,7 +72,7 @@ export function Hero() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   ref={linkRef}
-                  href="#"
+                  href="https://docs.continuumdao.org/"
                   className="link relative overflow-hidden border border-white px-10 py-4 text-base font-semibold leading-6 text-white"
                 >
                   Learn about ContinuumDAO <span aria-hidden="true">↗</span>

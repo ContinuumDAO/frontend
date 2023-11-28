@@ -3,7 +3,9 @@
 import React, { useEffect, useState } from 'react'
 
 export function SideNav() {
-  const [currentComponent, setCurrentComponent] = useState<string | null>(null)
+  const [currentComponent, setCurrentComponent] = useState<string | null>(
+    'hero',
+  )
 
   const handleScroll = () => {
     const elementsUnderNav = document.elementsFromPoint(
@@ -16,7 +18,6 @@ export function SideNav() {
     setCurrentComponent(
       foundComponent ? foundComponent.getAttribute('id') : null,
     )
-    console.log(foundComponent)
   }
 
   useEffect(() => {
@@ -27,12 +28,12 @@ export function SideNav() {
   }, [])
 
   return (
-    <div className={`${currentComponent ? '' : 'xs:hidden 2xl:fixed'}`}>
+    <div className="xs:hidden 2xl:inline">
       <div
         className={`${
           currentComponent === 'footer' || currentComponent === 'hero'
-            ? 'opacity-0'
-            : 'ease-in-out" inline opacity-100 transition-opacity duration-[350ms]'
+            ? 'inline opacity-0 transition-opacity duration-200 ease-in-out'
+            : 'inline opacity-100 transition-opacity duration-500 ease-in-out'
         }`}
       >
         <div className="fixed left-10 top-96 z-40">

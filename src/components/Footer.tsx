@@ -4,65 +4,65 @@ const navigation = {
   useCases: [
     {
       name: 'C3Router',
-      href: '#',
+      href: '#use-cases',
     },
     {
       name: 'C3Caller',
-      href: '#',
+      href: '#use-cases',
     },
     {
       name: 'C3Wallet',
-      href: '#',
+      href: '#use-cases',
     },
     {
       name: 'Build on CTM',
-      href: '#',
+      href: '#use-cases',
     },
   ],
   governance: [
     {
       name: 'Forum',
-      href: '#',
+      href: 'https://forum.continuumdao.org/',
     },
     {
       name: 'Vote',
-      href: '#',
+      href: 'https://snapshot.org/#/continuumdao.eth',
     },
     {
       name: 'Learn More',
-      href: '#',
+      href: 'https://docs.continuumdao.org/',
     },
     {
       name: 'Build With Us',
-      href: '#',
+      href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/HowToWriteAProposal',
     },
   ],
   contactUs: [
     {
       name: 'X',
-      href: '#',
+      href: 'https://twitter.com/ContinuumDAO',
     },
     {
       name: 'Telegram',
-      href: '#',
+      href: 'https://t.me/ContinuumDAO',
     },
     {
       name: 'Medium',
-      href: '#',
+      href: 'https://medium.com/@continuumdao',
     },
     {
       name: 'Forum',
-      href: '#',
+      href: 'https://forum.continuumdao.org/',
     },
     {
       name: 'GitHub',
-      href: '#',
+      href: 'https://github.com/ContinuumDAO',
     },
   ],
   social: [
     {
       name: 'Twitter',
-      href: '#',
+      href: 'https://twitter.com/ContinuumDAO',
       icon: (props: any) => (
         <svg
           width="30"
@@ -80,7 +80,7 @@ const navigation = {
     },
     {
       name: 'Telegram',
-      href: '#',
+      href: 'https://t.me/ContinuumDAO',
       icon: (props: any) => (
         <svg
           width="31"
@@ -98,7 +98,7 @@ const navigation = {
     },
     {
       name: 'Medium',
-      href: '#',
+      href: 'https://medium.com/@continuumdao',
       icon: (props: any) => (
         <svg
           width="32"
@@ -117,8 +117,8 @@ const navigation = {
     },
 
     {
-      name: 'Substack',
-      href: '#',
+      name: 'Forum',
+      href: 'https://forum.continuumdao.org/',
       icon: (props: any) => (
         <svg
           width="31"
@@ -138,7 +138,7 @@ const navigation = {
     },
     {
       name: 'GitHub',
-      href: '#',
+      href: 'https://github.com/ContinuumDAO',
       icon: (props: any) => (
         <svg
           width="29"
@@ -171,18 +171,24 @@ export function Footer() {
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 What We Do
               </h3>
-              <p className="mt-4 text-lg leading-6 text-white/70">What we do</p>
+              <p className="mt-4 text-lg leading-6 text-white/70">
+                Continuum is a trustless MPC network of decentralized nodes that
+                allows dApps from many diverse blockchains to seamlessly
+                interact using decentralized SMPC for security.
+              </p>
             </div>
-            <div className="mt-10 xl:mt-0">
+            <div className="mt-6">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Continuum Matrix
               </h3>
               <p className="mt-4 text-lg leading-6 text-white/70">
-                Continuunm Matrix
+                Continuum is a trustless MPC network of decentralized nodes that
+                allows dApps from many diverse blockchains to seamlessly
+                interact using decentralized SMPC for security.
               </p>
             </div>
           </div>
-          <div className="mt-10 gap-8 md:grid md:grid-cols-3 xl:col-span-2 xl:mt-0 2xl:mt-0">
+          <div className="mt-10 gap-8 pl-8 md:grid md:grid-cols-3 xl:col-span-2 xl:mt-0 2xl:mt-0">
             <div>
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Use Cases

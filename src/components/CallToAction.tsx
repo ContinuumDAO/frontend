@@ -5,10 +5,13 @@ import { Container } from '@/components/Container'
 export function CallToAction() {
   // List of actions, each with a label and a link (assuming URLs will be different)
   const actions = [
-    { label: 'Forum', url: '#' },
-    { label: 'Vote', url: '#' },
-    { label: 'Learn More', url: '#' },
-    { label: 'Build With Us', url: '#' },
+    { label: 'Forum', url: 'https://forum.continuumdao.org/' },
+    { label: 'Vote', url: 'https://snapshot.org/#/continuumdao.eth' },
+    { label: 'Learn More', url: 'https://docs.continuumdao.org/' },
+    {
+      label: 'Build With Us',
+      url: 'https://docs.continuumdao.org/ContinuumDAO/Governance/HowToWriteAProposal',
+    },
   ]
 
   return (
@@ -17,6 +20,7 @@ export function CallToAction() {
         <div className="mt-6 flex flex-col items-center justify-center gap-y-6 md:mt-10 md:flex-row md:gap-x-6">
           {actions.map((action, index) => (
             <a
+              target="_"
               key={index}
               href={action.url}
               className="link relative overflow-hidden border border-white px-6 py-4 text-base font-semibold leading-6 text-white md:px-6 lg:px-12 xl:px-20"
