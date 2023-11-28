@@ -245,6 +245,7 @@ export function Footer() {
               <a
                 key={item.name}
                 href={item.href}
+                target="_"
                 className=" text-white hover:text-white/75"
               >
                 <span className="sr-only">{item.name}</span>

@@ -437,19 +437,21 @@ export function Header() {
             <div className="-my-6 divide-y divide-white/30">
               <div className="space-y-2 py-6">
                 <a
-                  href="#"
+                  href="#what-we-do"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
                   What We Do
                 </a>
                 <a
-                  href="#"
+                  href="#continuum-matrix"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
                   Continuum Matrix
                 </a>
                 <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
+                  {({ open, close }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-white/10">
                         Use Cases
@@ -467,6 +469,7 @@ export function Header() {
                             key={item.name}
                             as="a"
                             href={item.href}
+                            onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
                           >
                             {item.name}
@@ -494,6 +497,8 @@ export function Header() {
                           <Disclosure.Button
                             key={item.name}
                             as="a"
+                            target="_"
+                            onClick={() => setMobileMenuOpen(false)}
                             href={item.href}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
                           >
@@ -522,6 +527,8 @@ export function Header() {
                           <Disclosure.Button
                             key={item.name}
                             as="a"
+                            target="_"
+                            onClick={() => setMobileMenuOpen(false)}
                             href={item.href}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
                           >

@@ -8,7 +8,7 @@ export function ContinuumMatrix() {
       className="xs:mb-[48rem] bg-[url('../images/background-graphic.gif')] xl:mb-0"
     >
       <div className="mx-auto max-w-7xl py-24 sm:py-32 lg:px-8 lg:py-40">
-        <div className="xs:mx-32 relative z-40 mt-12 border border-white bg-black py-3 text-center text-lg font-semibold text-white sm:mx-32 md:mx-48 lg:mx-80 xl:mx-[26rem]">
+        <div className="xs:mx-32 relative z-10 mt-12 border border-white bg-black py-3 text-center text-lg font-semibold text-white sm:mx-32 md:mx-48 lg:mx-80 xl:mx-[26rem]">
           Continuum Matrix
         </div>
         <div className="relative mt-16">
