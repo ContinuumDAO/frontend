@@ -297,7 +297,7 @@ export function Header() {
                         onMouseEnter={onMouseEnter2.bind(null, open)}
                         onMouseLeave={onMouseLeave2.bind(null, open)}
                         className="absolute -left-4 top-3/4
-              z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+              z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                       >
                         <div className="px-4">
                           {governance.map((item, i) => (
@@ -368,7 +368,7 @@ export function Header() {
                         onMouseEnter={onMouseEnter3.bind(null, open)}
                         onMouseLeave={onMouseLeave3.bind(null, open)}
                         className="absolute -left-4 top-3/4
-              z-10 mt-4 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+              z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                       >
                         <div className="px-4">
                           {contactUs.map((item, i) => (
