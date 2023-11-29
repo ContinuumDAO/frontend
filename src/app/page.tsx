@@ -7,6 +7,7 @@ import { WhatWeDo } from '@/components/WhatWeDo'
 import { ContinuumMatrix } from '@/components/ContinuumMatrix'
 import { UseCases } from '@/components/UseCases'
 import { SideNav } from '@/components/SideNav'
+import { FakeFooter } from '@/components/FakeFooter'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <ContinuumMatrix />
         <UseCases />
         <Faqs />
+        <FakeFooter />
       </main>
       <Footer />
     </>
