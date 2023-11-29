@@ -1,4 +1,4 @@
-export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
+export function Logo() {
   return (
     <svg
       width={37}
@@ -7,7 +7,6 @@ export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      {...props}
     >
       <path fill="url(#a)" d="M0 0h37v43H0z" />
       <defs>
