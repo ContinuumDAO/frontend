@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: 'Continuum DAO',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Continuum is a trustless MPC network of decentralized nodes that allows dApps from many diverse blockchains to seamlessly interact using decentralized SMPC for security.',
 }
 
 const montserrat = Montserrat({

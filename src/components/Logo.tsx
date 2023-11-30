@@ -1,4 +1,4 @@
-export function Logo() {
+export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       width={37}
