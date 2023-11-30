@@ -3,8 +3,10 @@
 
 export function FakeFooter() {
   return (
-    <div id="footer" className="relative z-50">
-      <div className="absolute w-full bg-transparent py-56"></div>
+    <div id="footer" className="-pt-56 relative z-20">
+      <div className="absolute max-w-7xl bg-transparent py-72">
+        asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd
+      </div>
     </div>
   )
 }

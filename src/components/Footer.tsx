@@ -159,7 +159,7 @@ const navigation = {
 
 export function Footer() {
   return (
-    <div className="z-40 bg-[url('../images/background-graphic.gif')] bg-right-top">
+    <div className="z-10 bg-[url('../images/background-graphic.gif')] bg-right-top">
       <h2 className="sr-only">Footer</h2>
       <div className="mx-auto max-w-[115rem] px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -179,9 +179,9 @@ export function Footer() {
                 Continuum Matrix
               </h3>
               <p className="mt-4 text-lg leading-6 text-white/70">
-                Continuum is a trustless MPC network of decentralized nodes that
-                allows dApps from many diverse blockchains to seamlessly
-                interact using decentralized SMPC for security.
+                We are committed to building trust with our community by
+                providing full visibility into our daily operations as much as
+                possible.
               </p>
             </div>
           </div>
