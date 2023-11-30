@@ -1,4 +1,5 @@
-import { Logo } from './Logo'
+import Logo from '@/images/logo.png'
+import Image from 'next/image'
 
 const navigation = {
   useCases: [
@@ -254,10 +255,14 @@ export function Footer() {
             ))}
           </div>
           <div className="-ml-6 flex lg:-ml-0 lg:flex-1">
-            <a href="#" className="p-1.5 lg:-mx-8">
+            <a href="#" className=" lg:-mx-8">
               <span className="sr-only">Continuum</span>
-              <div className="flex flex-row items-center pl-6">
-                <Logo />
+              <div className="xs:pl-2 flex flex-row items-center md:pl-3">
+                <Image
+                  className="-mr-4 scale-[0.6] pt-1.5 lg:scale-[0.5]"
+                  src={Logo}
+                  alt="Logo"
+                />
                 <span className="pl-3 pt-0.5 text-4xl font-semibold text-white">
                   Continuum
                 </span>

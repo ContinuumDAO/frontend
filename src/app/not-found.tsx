@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { Logo } from '@/components/Logo'
+import Logo from '@/images/logo.png'
+import Image from 'next/image'
 import { SlimLayout } from '@/components/SlimLayout'
 
 export default function NotFound() {
@@ -9,7 +10,7 @@ export default function NotFound() {
     <SlimLayout>
       <div className="flex">
         <Link href="/" aria-label="Home">
-          <Logo className="h-10 w-auto" />
+          <Image className="-ml-4 scale-75" src={Logo} alt="Logo" />
         </Link>
       </div>
       <p className="mt-20 text-sm font-medium text-white">404</p>

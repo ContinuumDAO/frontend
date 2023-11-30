@@ -4,7 +4,8 @@ import { Fragment, useRef, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Logo } from './Logo'
+import Image from 'next/image'
+import Logo from '@/images/logo.png'
 import './Header.css'
 
 const useCases = [
@@ -157,7 +158,11 @@ export function Header() {
           <a href="#" className="p-1.5 lg:-mx-8">
             <span className="sr-only">Continuum</span>
             <div className="xs:ml-0 flex flex-row items-center lg:ml-10 xl:ml-0">
-              <Logo />
+              <Image
+                className="-mr-4 scale-[0.6] pt-1.5 lg:scale-[0.5]"
+                src={Logo}
+                alt="Logo"
+              />
               <span className="hidden pl-3 pt-0.5 font-semibold text-white xl:inline xl:text-2xl 2xl:text-3xl">
                 Continuum
               </span>
@@ -423,7 +428,11 @@ export function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto border-l border-white/30 bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
-            <Logo />
+            <Image
+              className=" -mb-1.5 -ml-5 scale-50 pt-1.5"
+              src={Logo}
+              alt="Logo"
+            />
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
