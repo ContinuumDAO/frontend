@@ -16,7 +16,6 @@ export function SideNav() {
       150,
     )
     const foundComponent = elementsUnderNav.find((el) => el.hasAttribute('id'))
-    console.log(foundComponent)
     setCurrentComponent(
       foundComponent ? foundComponent.getAttribute('id') : null,
     )
