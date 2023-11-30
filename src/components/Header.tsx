@@ -42,7 +42,7 @@ const governance = [
   },
   {
     name: 'Build With Us',
-    href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/HowToWriteAProposal',
+    href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
   },
 ]
 
