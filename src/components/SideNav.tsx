@@ -11,6 +11,21 @@ export function SideNav() {
   const [hoveredComponent, setHoveredComponent] = useState<string | null>(null)
 
   const handleScroll = () => {
+    // Check if the screen height is less than 1280 pixels
+    if (window.innerHeight < 1280) {
+      // Calculate the distance from the bottom
+      const distanceFromBottom =
+        document.body.offsetHeight - (window.innerHeight + window.scrollY)
+
+      console.log(distanceFromBottom, document.body.scrollHeight)
+
+      // Check if the distance from the bottom is less than or equal to 1000px
+      if (distanceFromBottom + document.body.scrollHeight <= 1500) {
+        setCurrentComponent(null)
+        return
+      }
+    }
+
     const elementsUnderNav = document.elementsFromPoint(
       window.innerWidth / 2,
       150,
@@ -41,7 +56,7 @@ export function SideNav() {
     <div className="xs:hidden z-50 2xl:inline">
       <div
         className={`${
-          currentComponent === 'footer' || currentComponent === 'hero'
+          currentComponent === null || currentComponent === 'hero'
             ? 'inline opacity-0 transition-opacity duration-200 ease-in-out'
             : 'inline opacity-100 transition-opacity duration-500 ease-in-out'
         }`}

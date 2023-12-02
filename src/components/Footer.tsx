@@ -164,25 +164,25 @@ export function Footer() {
       <h2 className="sr-only">Footer</h2>
       <div className="mx-auto max-w-[115rem] px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="grid grid-cols-1">
+          <div className="xs:pl-8 grid grid-cols-1 xl:pl-0">
             <div className="mt-10 xl:mt-0">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 What We Do
               </h3>
-              <p className="mt-4 text-lg leading-6 text-white/70">
-                Continuum is a trustless MPC network of decentralized nodes that
-                allows dApps from many diverse blockchains to seamlessly
-                interact using decentralized SMPC for security.
+              <p className="mt-8 text-lg leading-6 text-white/70">
+                <a className="hover:underline" href="#what-we-do">
+                  What We Do
+                </a>
               </p>
             </div>
             <div className="mt-6">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Continuum Matrix
               </h3>
-              <p className="mt-4 text-lg leading-6 text-white/70">
-                We are committed to building trust with our community by
-                providing full visibility into our daily operations as much as
-                possible.
+              <p className="mt-6 text-lg leading-6 text-white/70">
+                <a className="hover:underline" href="#continuum-matrix">
+                  Continuum Matrix
+                </a>
               </p>
             </div>
           </div>
