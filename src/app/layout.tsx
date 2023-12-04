@@ -1,6 +1,5 @@
 import { Montserrat } from 'next/font/google'
 import clsx from 'clsx'
-
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 

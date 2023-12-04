@@ -95,7 +95,13 @@ export function SideNav() {
   )
 }
 
-export function Line({ onClick, onMouseEnter, onMouseLeave }) {
+interface LineProps {
+  onClick: React.MouseEventHandler<SVGSVGElement>
+  onMouseEnter: React.MouseEventHandler<SVGSVGElement>
+  onMouseLeave: React.MouseEventHandler<SVGSVGElement>
+}
+
+export function Line({ onClick, onMouseEnter, onMouseLeave }: LineProps) {
   return (
     <svg
       onClick={onClick}
@@ -120,12 +126,19 @@ export function Line({ onClick, onMouseEnter, onMouseLeave }) {
   )
 }
 
+interface SelectedProps {
+  isAdjacentSelected: boolean
+  onClick: React.MouseEventHandler<HTMLDivElement>
+  onMouseEnter: React.MouseEventHandler<HTMLDivElement>
+  onMouseLeave: React.MouseEventHandler<HTMLDivElement>
+}
+
 export function Selected({
   isAdjacentSelected,
   onClick,
   onMouseEnter,
   onMouseLeave,
-}) {
+}: SelectedProps) {
   return (
     <div
       className={`-ml-9 ${

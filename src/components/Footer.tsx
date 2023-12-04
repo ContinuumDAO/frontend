@@ -64,7 +64,7 @@ const navigation = {
     {
       name: 'Twitter',
       href: 'https://twitter.com/ContinuumDAO',
-      icon: (props: any) => (
+      icon: () => (
         <svg
           width="30"
           height="28"
@@ -82,7 +82,7 @@ const navigation = {
     {
       name: 'Telegram',
       href: 'https://t.me/ContinuumDAO',
-      icon: (props: any) => (
+      icon: () => (
         <svg
           width="31"
           height="32"
@@ -100,7 +100,7 @@ const navigation = {
     {
       name: 'Medium',
       href: 'https://medium.com/@continuumdao',
-      icon: (props: any) => (
+      icon: () => (
         <svg
           width="32"
           height="19"
@@ -120,7 +120,7 @@ const navigation = {
     {
       name: 'Forum',
       href: 'https://forum.continuumdao.org/',
-      icon: (props: any) => (
+      icon: () => (
         <svg
           width="31"
           height="32"
@@ -140,7 +140,7 @@ const navigation = {
     {
       name: 'GitHub',
       href: 'https://github.com/ContinuumDAO',
-      icon: (props: any) => (
+      icon: () => (
         <svg
           width="29"
           height="28"
@@ -247,10 +247,10 @@ export function Footer() {
                 key={item.name}
                 href={item.href}
                 target="_"
-                className=" text-white hover:text-white/75"
+                className="h-8 w-8 text-white hover:text-white/75"
               >
                 <span className="sr-only">{item.name}</span>
-                <item.icon className="h-8 w-8" aria-hidden="true" />
+                <item.icon aria-hidden="true" />
               </a>
             ))}
           </div>

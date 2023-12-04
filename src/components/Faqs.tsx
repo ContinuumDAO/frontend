@@ -78,7 +78,7 @@ export function Faqs() {
                         open
                           ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
                           : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
-                      } relative z-40 flex w-full items-start justify-between text-left text-white focus:outline-none`}
+                      } relative flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
                       <span className="flex flex-row py-6 pl-8 focus:outline-none">
                         <div className="flex flex-row">
@@ -155,7 +155,7 @@ export function Faqs() {
                         open
                           ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
                           : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
-                      } relative z-40 flex w-full items-start justify-between text-left text-white focus:outline-none`}
+                      } relative flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
                       <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
                         <div className="flex flex-row">
@@ -232,7 +232,7 @@ export function Faqs() {
                         open
                           ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
                           : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
-                      } relative z-40 flex w-full items-start justify-between text-left text-white focus:outline-none`}
+                      } relative flex w-full items-start justify-between text-left text-white focus:outline-none`}
                     >
                       <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
                         <div className="flex flex-row">

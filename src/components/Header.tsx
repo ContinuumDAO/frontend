@@ -147,7 +147,7 @@ export function Header() {
   return (
     <header
       className={`${
-        mobileMenuOpen ? 'z-0' : 'z-50'
+        mobileMenuOpen ? 'z-20' : 'z-50'
       } fixed top-0 w-full bg-black pt-8`}
     >
       <nav
@@ -425,8 +425,8 @@ export function Header() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto border-l border-white/30 bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        <div className="fixed inset-0" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto border-l border-white/30 bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <Image
               className=" -mb-1.5 -ml-5 scale-50 pt-1.5"
@@ -460,7 +460,7 @@ export function Header() {
                   Continuum Matrix
                 </a>
                 <Disclosure as="div" className="-mx-3">
-                  {({ open, close }) => (
+                  {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-white/10">
                         Use Cases
