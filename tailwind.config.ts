@@ -7,7 +7,7 @@ export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     screens: {
-      xs: '375px',
+      xs: '320px',
       ...defaultTheme.screens,
     },
     fontSize: {
