@@ -31,7 +31,7 @@ export function Hero() {
         <div className="py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
-              <h1 className="text-[10rem] font-bold tracking-wide text-white/50 xs:-ml-32 xs:scale-[0.34] sm:-ml-24 sm:scale-50 md:-ml-10 md:scale-[0.70] lg:scale-100">
+              <h1 className="text-[10rem] font-bold tracking-wide text-white/50 xs:-ml-36 xs:scale-[0.34] sm:-ml-24 sm:scale-50 md:-ml-10 md:scale-[0.70] lg:scale-100">
                 <svg
                   width={955}
                   height={122}

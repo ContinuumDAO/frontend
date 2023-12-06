@@ -47,7 +47,7 @@ export function UseCases() {
             Use Cases
           </p>
         </div>
-        <ul className="mx-auto mt-20 grid grid-cols-1 gap-6 xs:max-w-sm sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
+        <ul className="mx-auto grid grid-cols-1 gap-6 xs:mt-10 xs:max-w-sm sm:mt-20 sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
           {useCases.map((useCase, index) => (
             <li
               key={useCase.name}

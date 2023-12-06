@@ -164,7 +164,7 @@ export function Footer() {
       <h2 className="sr-only">Footer</h2>
       <div className="mx-auto max-w-[115rem] px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="xs:pl-8 grid grid-cols-1 xl:pl-0">
+          <div className="grid grid-cols-1 xs:pl-8 xl:pl-0">
             <div className="mt-10 xl:mt-0">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 What We Do
@@ -241,7 +241,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-white/30 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
-          <div className="mb-2 flex space-x-14 md:order-2 md:mb-0">
+          <div className="mb-2 flex xs:space-x-8 sm:only:space-x-14 md:order-2 md:mb-0">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
@@ -257,7 +257,7 @@ export function Footer() {
           <div className="-ml-6 flex lg:-ml-0 lg:flex-1">
             <a href="#" className=" lg:-mx-8">
               <span className="sr-only">Continuum</span>
-              <div className="xs:pl-2 flex flex-row items-center md:pl-3">
+              <div className="flex flex-row items-center xs:pl-2 md:pl-3">
                 <Image
                   className="-mr-4 scale-[0.6] pt-1.5 lg:scale-[0.5]"
                   src={Logo}
