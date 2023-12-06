@@ -162,7 +162,7 @@ export function Footer() {
   return (
     <div className="z-10 bg-[url('../images/background-graphic.gif')] bg-right-top">
       <h2 className="sr-only">Footer</h2>
-      <div className="mx-auto max-w-[115rem] px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="mx-auto max-w-[115rem] px-6 pb-8 xs:pt-0 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="grid grid-cols-1 xs:pl-8 xl:pl-0">
             <div className="mt-10 xl:mt-0">
