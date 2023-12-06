@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
+import Image from 'next/image'
+import Mobius from '@/images/mobius.gif'
 
 export function Hero() {
   const linkRef = useRef<HTMLAnchorElement>(null)
@@ -22,14 +24,14 @@ export function Hero() {
           className="webkit-center absolute inset-x-0 -z-10 transform-gpu overflow-hidden"
           aria-hidden="true"
         >
-          <img src="https://s3-alpha-sig.figma.com/img/dee8/32aa/bf7a34c81bbee5b138cd60cfdece8056?Expires=1701648000&Signature=ZHFFKc3y7jwItCitRk0eVp2QE6YALp4Twf1Zu~642bTAElftc8ddF-SDHZv67cxRN-g7oR1mmX42cfp~JTFpAWWTpgyij492qd6dHsC98jAmJ7GIVJ0wlzFyuLmGq1IGnhyH5f4tAdVGjGWAGpHN18Xo-470eD1egYRtgsP60lSuRGcW7IclqpQ6yRJmB-FRe3zopqvcv7IK4s5JYTyfLM-H27XsnMAMFM71nYzam-3-kN8BQIKLQvW149B8kuW6J4fd6B8PTaZeZGNQnVmHywfNLfQbU7h6bYBuDonaSgKYqWdXWt8znzW7JKDz1PCMhEPfBWGCTguUHZHqjCrihQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+          <Image src={Mobius} alt="Mobius Graphic" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent from-0% to-black to-65%"></div>
         </div>
 
         <div className="py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
-              <h1 className="xs:scale-[0.4] xs:-ml-32 text-[10rem] font-bold tracking-wide text-white/50 sm:-ml-24 sm:scale-50 md:-ml-10 md:scale-[0.70] lg:scale-100">
+              <h1 className="text-[10rem] font-bold tracking-wide text-white/50 xs:-ml-32 xs:scale-[0.4] sm:-ml-24 sm:scale-50 md:-ml-10 md:scale-[0.70] lg:scale-100">
                 <svg
                   width={955}
                   height={122}
