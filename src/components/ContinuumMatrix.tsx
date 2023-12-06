@@ -5,14 +5,14 @@ export function ContinuumMatrix() {
     <div
       id="continuum-matrix"
       aria-label="Continuum Matrix"
-      className="xs:mb-[48rem] bg-[url('../images/background-graphic.gif')] xl:mb-0"
+      className="bg-[url('../images/background-graphic.gif')] xs:-ml-28 xs:mb-[48rem] xl:mb-0"
     >
       <div className="mx-auto max-w-7xl py-24 sm:py-32 lg:px-8 lg:py-40">
-        <div className="xs:mx-32 relative z-10 mt-12 border border-white bg-black py-3 text-center text-lg font-semibold text-white sm:mx-32 md:mx-48 lg:mx-80 xl:mx-[26rem]">
+        <div className="relative z-10 mt-12 border border-white bg-black py-3 text-center text-lg font-semibold text-white xs:mx-32 sm:mx-32 md:mx-48 lg:mx-80 xl:mx-[26rem]">
           Continuum Matrix
         </div>
         <div className="relative mt-16">
-          <div className="xs:absolute xs:left-1/4 xs:-top-20 sm:-top-16 sm:z-10 md:left-1/3 xl:hidden">
+          <div className="xs:absolute xs:-top-20 xs:left-1/4 sm:-top-16 sm:z-10 md:left-1/3 xl:hidden">
             <svg
               width="2"
               height="855"
@@ -23,7 +23,7 @@ export function ContinuumMatrix() {
               <path d="M1 0.5V855" stroke="white" />
             </svg>
           </div>
-          <div className="xs:left-1/4 absolute md:left-1/3 xl:left-1/3">
+          <div className="absolute xs:left-1/4 md:left-1/3 xl:left-1/3">
             <div className="absolute xl:-left-52 xl:-top-24">
               <svg
                 width="808"
@@ -39,7 +39,7 @@ export function ContinuumMatrix() {
                 />
               </svg>
             </div>
-            <div className="xs:scale-50 xs:-left-7 absolute z-30 sm:-left-7 xl:-top-9 xl:left-40">
+            <div className="absolute z-30 xs:-left-7 xs:scale-50 sm:-left-7 xl:-top-9 xl:left-40">
               <Bobble />
             </div>
             <div className="absolute">
@@ -60,16 +60,16 @@ export function ContinuumMatrix() {
               </div>
             </div>
           </div>
-          <div className="xs:left-1/4 xs:top-[25rem] absolute md:left-1/3 xl:left-2/3 xl:top-0">
-            <div className="xs:scale-50 xs:-left-7 absolute z-30 sm:-left-7 xl:-top-9 xl:left-40">
+          <div className="absolute xs:left-1/4 xs:top-[25rem] md:left-1/3 xl:left-2/3 xl:top-0">
+            <div className="absolute z-30 xs:-left-7 xs:scale-50 sm:-left-7 xl:-top-9 xl:left-40">
               <Bobble />
             </div>
             <div className="absolute xl:-top-2">
               <InterChainCommunication />
             </div>
           </div>
-          <div className="xs:left-1/4 xs:top-[47rem] absolute md:left-1/3 xl:left-0 xl:top-0">
-            <div className="xs:scale-50 xs:-left-7 absolute z-30 sm:-left-7 xl:-top-9 xl:left-[10.5rem]">
+          <div className="absolute xs:left-1/4 xs:top-[47rem] md:left-1/3 xl:left-0 xl:top-0">
+            <div className="absolute z-30 xs:-left-7 xs:scale-50 sm:-left-7 xl:-top-9 xl:left-[10.5rem]">
               <Bobble />
             </div>
             <div className="absolute xl:-top-2">

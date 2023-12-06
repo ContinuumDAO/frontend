@@ -41,20 +41,20 @@ export function UseCases() {
       id="use-cases"
       className="bg-[url('../images/background-graphic.gif')] py-24 sm:py-32"
     >
-      <div className="xs:pl-4 mx-auto max-w-xl text-left md:pl-16 lg:max-w-[100rem] lg:pl-32">
+      <div className="mx-auto max-w-xl text-left xs:pl-4 md:pl-16 lg:max-w-[100rem] lg:pl-32">
         <div className=" mx-auto">
-          <p className="xs:text-5xl text-3xl font-bold tracking-tight text-white">
+          <p className="text-3xl font-bold tracking-tight text-white xs:text-5xl">
             Use Cases
           </p>
         </div>
-        <ul className="xs:max-w-sm mx-auto mt-20 grid grid-cols-1 gap-6 sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
+        <ul className="mx-auto mt-20 grid grid-cols-1 gap-6 xs:max-w-sm sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
           {useCases.map((useCase, index) => (
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
               className="group z-0 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 sm:-mr-24 lg:max-w-7xl"
             >
-              <div className="xs:pt-16 group relative lg:pt-0">
+              <div className="group relative xs:pt-16 lg:pt-0">
                 <div className="h-56"></div>
                 <div className="absolute inset-0 transition-opacity duration-700 ease-in-out group-hover:opacity-0">
                   <useCase.StartImage />

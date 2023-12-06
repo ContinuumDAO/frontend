@@ -16,10 +16,10 @@ export function WhatWeDo() {
               <p className="text-5xl font-bold tracking-tight text-white">
                 What We Do
               </p>
-              <p className="mt-10 text-3xl font-medium leading-8 text-white">
+              <p className="mt-10 font-medium leading-8 text-white xs:text-2xl sm:text-3xl">
                 Propel multi-chain dApps through a decentralized MPC network
               </p>
-              <p className="mt-10 text-2xl font-light leading-8 text-gray-300 xl:pr-24">
+              <p className="mt-10 font-light leading-8 text-gray-300 xs:text-xl sm:text-2xl xl:pr-24">
                 Continuum is a trustless MPC network of decentralized nodes that
                 allows dApps from many diverse blockchains to seamlessly
                 interact using decentralized SMPC for security.
@@ -68,7 +68,7 @@ export function WhatWeDo() {
                 }
               `}</style>
             </div>
-            <div className="-z-20 -mt-24 lg:row-span-4 lg:-ml-24 lg:max-w-none">
+            <div className="-z-20 xs:-mt-10 sm:-mt-24 lg:row-span-4 lg:-ml-24 lg:max-w-none">
               <Image
                 className="md:items-center lg:ml-16 lg:mt-20 lg:scale-100 xl:ml-32 xl:mt-24"
                 src={WhoWeAreGraphic}

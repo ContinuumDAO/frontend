@@ -19,7 +19,7 @@ export function Hero() {
       id="hero"
       className="bg-[url('../images/background-graphic.gif')] pt-24"
     >
-      <div className="relative isolate py-48">
+      <div className="relative isolate xs:py-32 sm:py-48">
         <div
           className="webkit-center absolute inset-x-0 -z-10 transform-gpu overflow-hidden"
           aria-hidden="true"
@@ -31,7 +31,7 @@ export function Hero() {
         <div className="py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
-              <h1 className="text-[10rem] font-bold tracking-wide text-white/50 xs:-ml-32 xs:scale-[0.4] sm:-ml-24 sm:scale-50 md:-ml-10 md:scale-[0.70] lg:scale-100">
+              <h1 className="text-[10rem] font-bold tracking-wide text-white/50 xs:-ml-32 xs:scale-[0.34] sm:-ml-24 sm:scale-50 md:-ml-10 md:scale-[0.70] lg:scale-100">
                 <svg
                   width={955}
                   height={122}
@@ -67,7 +67,7 @@ export function Hero() {
                   </defs>
                 </svg>
               </h1>
-              <p className="mt-20 text-[30px] font-semibold leading-normal text-white">
+              <p className="mt-20 font-semibold leading-normal text-white xs:text-2xl sm:text-[30px]">
                 ContinuumDAO, a trustless and fully decentralized MPC
                 infrastructure to connect the world.
               </p>
@@ -75,7 +75,7 @@ export function Hero() {
                 <a
                   ref={linkRef}
                   href="https://docs.continuumdao.org/"
-                  className="link relative overflow-hidden border border-white px-10 py-4 text-base font-semibold leading-6 text-white"
+                  className="link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xs:px-8 sm:px-10"
                 >
                   Learn about ContinuumDAO <span aria-hidden="true">↗</span>
                   <span className="link-bg"></span>
