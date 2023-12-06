@@ -52,7 +52,7 @@ export function UseCases() {
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
-              className="group z-0 max-w-lg border border-white bg-black px-8 py-10 hover:!z-10 sm:-mr-24 lg:max-w-7xl"
+              className="group z-0 max-w-lg border border-white bg-black py-10 hover:!z-10 xs:px-4 sm:-mr-24 sm:px-8 lg:max-w-7xl"
             >
               <div className="group relative xs:pt-16 lg:pt-0">
                 <div className="h-56"></div>
@@ -70,10 +70,10 @@ export function UseCases() {
                     : ''
                 }`}
               >
-                <h3 className="pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left lg:mt-11 xl:mt-6">
+                <h3 className="pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left xs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6">
                   {useCase.name}
                 </h3>
-                <p className="text-2xl font-light leading-8 text-white/70 group-hover:text-left">
+                <p className="font-light leading-8 text-white/70 group-hover:text-left xs:-mt-4 xs:text-xl sm:mt-0 sm:text-2xl">
                   {useCase.role}
                 </p>
               </div>
