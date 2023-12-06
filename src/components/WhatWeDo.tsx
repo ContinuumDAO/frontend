@@ -24,7 +24,7 @@ export function WhatWeDo() {
                 allows dApps from many diverse blockchains to seamlessly
                 interact using decentralized SMPC for security.
               </p>
-              <div className="xs:justify-center mt-10 flex lg:justify-start">
+              <div className="mt-10 flex xs:justify-center lg:justify-start">
                 <a
                   href="../../assets/White_Paper_ContinuumDAO.a0c79446.pdf"
                   className="link relative overflow-hidden border border-white px-10 py-4 text-base font-semibold leading-6 text-white"
@@ -68,9 +68,9 @@ export function WhatWeDo() {
                 }
               `}</style>
             </div>
-            <div className="-z-20 -mt-24 min-w-full max-w-xl lg:row-span-4 lg:-ml-24 lg:w-[64rem] lg:max-w-none">
+            <div className="-z-20 -mt-24 lg:row-span-4 lg:-ml-24 lg:max-w-none">
               <Image
-                className="md:items-center lg:-ml-48 lg:scale-50 xl:-ml-24 xl:scale-[0.6] 2xl:-ml-0 2xl:scale-75"
+                className="md:items-center lg:ml-16 lg:mt-20 lg:scale-100 xl:ml-32 xl:mt-24"
                 src={WhoWeAreGraphic}
                 alt="Network Graphic"
               />
