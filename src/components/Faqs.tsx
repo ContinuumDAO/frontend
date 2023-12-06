@@ -64,7 +64,7 @@ export function Faqs() {
             Why are we a DAO?
           </h2>
           <div className="border-b border-white/70"></div>
-          <dl>
+          <dl className="xs:-ml-4 sm:ml-0">
             <Disclosure as="div" id="faq" className="pt-6 focus:outline-none">
               {({ open }) => (
                 <>
@@ -141,7 +141,7 @@ export function Faqs() {
               )}
             </Disclosure>
           </dl>
-          <dl>
+          <dl className="xs:-ml-4 sm:ml-0">
             <Disclosure as="div" className="pt-6 focus:outline-none">
               {({ open }) => (
                 <>
@@ -218,7 +218,7 @@ export function Faqs() {
               )}
             </Disclosure>
           </dl>
-          <dl>
+          <dl className="xs:-ml-4 sm:ml-0">
             <Disclosure id="faq" as="div" className="pt-6 focus:outline-none">
               {({ open }) => (
                 <>
