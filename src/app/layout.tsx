@@ -5,8 +5,8 @@ import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Continuum DAO',
-    default: 'Continuum DAO',
+    template: '%s - ContinuumDAO',
+    default: 'ContinuumDAO',
   },
   description:
     'Continuum is a trustless MPC network of decentralized nodes that allows dApps from many diverse blockchains to seamlessly interact using decentralized SMPC for security.',
