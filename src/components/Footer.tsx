@@ -162,9 +162,9 @@ export function Footer() {
   return (
     <div className="z-10 bg-[url('../images/background-graphic.gif')] bg-right-top">
       <h2 className="sr-only">Footer</h2>
-      <div className="mx-auto max-w-[115rem] px-6 pb-8 xs:pt-0 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="xxs:pt-0 mx-auto max-w-[115rem] px-6 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="grid grid-cols-1 xs:pl-8 xl:pl-0">
+          <div className="xxs:pl-8 grid grid-cols-1 xl:pl-0">
             <div className="mt-10 xl:mt-0">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 What We Do
@@ -241,7 +241,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-white/30 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
-          <div className="mb-2 flex xs:space-x-8 sm:only:space-x-14 md:order-2 md:mb-0">
+          <div className="xxs:space-x-6 mb-2 flex xs:space-x-8 sm:only:space-x-14 md:order-2 md:mb-0">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
@@ -257,13 +257,13 @@ export function Footer() {
           <div className="-ml-6 flex lg:-ml-0 lg:flex-1">
             <a href="#" className=" lg:-mx-8">
               <span className="sr-only">Continuum</span>
-              <div className="flex flex-row items-center xs:pl-2 md:pl-3">
+              <div className="xxs:pl-2 flex flex-row items-center md:pl-3">
                 <Image
-                  className="-mr-4 scale-[0.6] pt-1.5 lg:scale-[0.5]"
+                  className="xxs:scale-50 -mr-4 pt-1.5 xs:scale-[0.6] lg:scale-[0.5]"
                   src={Logo}
                   alt="Logo"
                 />
-                <span className="pl-3 pt-0.5 text-4xl font-semibold text-white">
+                <span className="xxs:text-3xl pl-3 pt-0.5 font-semibold text-white xs:text-4xl">
                   Continuum
                 </span>
               </div>

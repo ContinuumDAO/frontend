@@ -157,7 +157,7 @@ export function Header() {
         <div className="flex lg:flex-1">
           <a href="#" className="p-1.5 lg:-mx-8">
             <span className="sr-only">Continuum</span>
-            <div className="xs:ml-0 flex flex-row items-center lg:ml-10 xl:ml-0">
+            <div className="xxs:-ml-4 flex flex-row items-center md:ml-0 lg:ml-10 xl:ml-0">
               <Image
                 className="-mr-4 scale-[0.6] pt-1.5 lg:scale-[0.5]"
                 src={Logo}
@@ -236,7 +236,7 @@ export function Header() {
                             {useCases.map((item, i) => (
                               <div
                                 key={item.name}
-                                className="animate-slide-in-left group relative flex items-center gap-x-6 p-4 text-sm leading-6"
+                                className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
                               >
                                 <div className="flex-auto">
                                   <a
@@ -249,7 +249,7 @@ export function Header() {
                                   <div
                                     className={`${
                                       i !== useCases.length - 1
-                                        ? 'animate-grow-border absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform bg-white/30'
+                                        ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
                                         : ''
                                     } `}
                                   ></div>
@@ -308,7 +308,7 @@ export function Header() {
                           {governance.map((item, i) => (
                             <div
                               key={item.name}
-                              className="animate-slide-in-left group relative flex items-center gap-x-6 p-4 text-sm leading-6"
+                              className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
                             >
                               <div className="flex-auto">
                                 <a
@@ -322,7 +322,7 @@ export function Header() {
                                 <div
                                   className={`${
                                     i !== governance.length - 1
-                                      ? 'animate-grow-border absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform bg-white/30'
+                                      ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
                                       : ''
                                   } `}
                                 ></div>
@@ -379,7 +379,7 @@ export function Header() {
                           {contactUs.map((item, i) => (
                             <div
                               key={item.name}
-                              className="animate-slide-in-left group relative flex items-center gap-x-6 p-4 text-sm leading-6"
+                              className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
                             >
                               <div className="flex-auto">
                                 <a
@@ -393,7 +393,7 @@ export function Header() {
                                 <div
                                   className={`${
                                     i !== contactUs.length - 1
-                                      ? 'animate-grow-border absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform bg-white/30'
+                                      ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
                                       : ''
                                   } `}
                                 ></div>

@@ -5,14 +5,14 @@ export function ContinuumMatrix() {
     <div
       id="continuum-matrix"
       aria-label="Continuum Matrix"
-      className="bg-[url('../images/background-graphic.gif')] xs:-ml-28 xs:mb-[48rem] sm:ml-0 xl:mb-0"
+      className="xxs:-ml-28 xxs:mb-[48rem] bg-[url('../images/background-graphic.gif')] sm:ml-0 xl:mb-0"
     >
-      <div className="mx-auto max-w-7xl xs:py-12 sm:py-32 lg:px-8 lg:py-40">
-        <div className="relative z-10 mt-12 border border-white bg-black py-3 text-center text-lg font-semibold text-white xs:mx-32 sm:mx-32 md:mx-48 lg:mx-80 xl:mx-[26rem]">
+      <div className="xxs:py-12 mx-auto max-w-7xl sm:py-32 lg:px-8 lg:py-40">
+        <div className="xxs:mx-32 relative z-10 mt-12 border border-white bg-black py-3 text-center text-lg font-semibold text-white sm:mx-32 md:mx-48 lg:mx-80 xl:mx-[26rem]">
           Continuum Matrix
         </div>
         <div className="relative mt-16">
-          <div className="xs:absolute xs:-top-20 xs:left-1/4 sm:-top-16 sm:z-10 md:left-1/3 xl:hidden">
+          <div className="xxs:absolute xxs:-top-20 xxs:left-32 xs:left-1/4 sm:-top-16 sm:z-10 md:left-1/3 xl:hidden">
             <svg
               width="2"
               height="855"
@@ -24,7 +24,7 @@ export function ContinuumMatrix() {
               <path d="M1 0.5V855" stroke="white" />
             </svg>
           </div>
-          <div className="absolute xs:left-1/4 md:left-1/3 xl:left-1/3">
+          <div className="xxs:left-1/4 absolute md:left-1/3 xl:left-1/3">
             <div className="absolute xl:-left-52 xl:-top-24">
               <svg
                 width="808"
@@ -32,7 +32,7 @@ export function ContinuumMatrix() {
                 viewBox="0 0 808 85"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="xs:hidden xl:inline"
+                className="xxs:hidden xl:inline"
               >
                 <path
                   d="M1 84C33.2531 46.5206 98.4035 15.9817 219.5 1.58399M807 84C774.304 46.0059 707.05 15.1443 583.5 1"
@@ -40,7 +40,7 @@ export function ContinuumMatrix() {
                 />
               </svg>
             </div>
-            <div className="absolute z-30 xs:-left-7 xs:scale-50 sm:-left-7 xl:-top-9 xl:left-40">
+            <div className="xxs:-left-1 xxs:scale-50 absolute z-30 xs:-left-7 sm:-left-7 xl:-top-9 xl:left-40">
               <Bobble />
             </div>
             <div className="absolute">
@@ -51,7 +51,7 @@ export function ContinuumMatrix() {
                   viewBox="0 0 2 52"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="xs:hidden xl:inline"
+                  className="xxs:hidden xl:inline"
                 >
                   <path d="M1 0.5V52" stroke="white" />
                 </svg>
@@ -61,16 +61,16 @@ export function ContinuumMatrix() {
               </div>
             </div>
           </div>
-          <div className="absolute xs:left-1/4 xs:top-[25rem] md:left-1/3 xl:left-2/3 xl:top-0">
-            <div className="absolute z-30 xs:-left-7 xs:scale-50 sm:-left-7 xl:-top-9 xl:left-40">
+          <div className="xxs:left-1/4 xxs:top-[25rem] absolute md:left-1/3 xl:left-2/3 xl:top-0">
+            <div className="xxs:-left-1 xxs:scale-50 absolute z-30 xs:-left-7 sm:-left-7 xl:-top-9 xl:left-40">
               <Bobble />
             </div>
             <div className="absolute xl:-top-2">
               <InterChainCommunication />
             </div>
           </div>
-          <div className="absolute xs:left-1/4 xs:top-[47rem] md:left-1/3 xl:left-0 xl:top-0">
-            <div className="absolute z-30 xs:-left-7 xs:scale-50 sm:-left-7 xl:-top-9 xl:left-[10.5rem]">
+          <div className="xxs:left-1/4 xxs:top-[47rem] absolute md:left-1/3 xl:left-0 xl:top-0">
+            <div className="xxs:-left-1 xxs:scale-50 absolute z-30 xs:-left-7 sm:-left-7 xl:-top-9 xl:left-[10.5rem]">
               <Bobble />
             </div>
             <div className="absolute xl:-top-2">
@@ -92,7 +92,7 @@ export function InterChainCommunication() {
       viewBox="0 0 378 287"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-2 xs:-mt-3 xs:scale-90 sm:ml-0 sm:mt-0 sm:scale-100"
+      className="xxs:-ml-4 xxs:-mt-7 xxs:scale-75 xs:-ml-2 xs:-mt-3 xs:scale-90 sm:ml-0 sm:mt-0 sm:scale-100"
     >
       <path
         d="M376.5 32C376.5 33.9952 375.313 36.0249 372.861 38.0647C370.414 40.1004 366.774 42.0866 362.039 43.992C352.575 47.8009 338.849 51.2414 321.852 54.1345C287.866 59.9194 240.896 63.5 189 63.5C137.104 63.5 90.1338 59.9194 56.1478 54.1345C39.1508 51.2414 25.4253 47.8009 15.9606 43.992C11.2259 42.0866 7.58648 40.1004 5.13924 38.0647C2.68693 36.0249 1.5 33.9952 1.5 32C1.5 30.0048 2.68693 27.9751 5.13924 25.9353C7.58648 23.8996 11.2259 21.9134 15.9606 20.008C25.4253 16.1991 39.1508 12.7586 56.1478 9.86549C90.1338 4.08064 137.104 0.5 189 0.5C240.896 0.5 287.866 4.08064 321.852 9.86549C338.849 12.7586 352.575 16.1991 362.039 20.008C366.774 21.9134 370.414 23.8996 372.861 25.9353C375.313 27.9751 376.5 30.0048 376.5 32Z"
@@ -269,7 +269,7 @@ export function CustodyBusiness() {
       viewBox="0 0 376 349"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-2 xs:-mt-4 xs:scale-90 sm:ml-0 sm:mt-0 sm:scale-100"
+      className="xxs:-ml-4 xxs:-mt-9 xxs:scale-75 xs:-ml-2 xs:-mt-3 xs:scale-90 sm:ml-0 sm:mt-0 sm:scale-100"
     >
       <path
         d="M375.5 32C375.5 33.9952 374.313 36.0249 371.861 38.0647C369.414 40.1004 365.774 42.0866 361.039 43.992C351.575 47.8009 337.849 51.2414 320.852 54.1345C286.866 59.9194 239.896 63.5 188 63.5C136.104 63.5 89.1338 59.9194 55.1478 54.1345C38.1508 51.2414 24.4253 47.8009 14.9606 43.992C10.2259 42.0866 6.58648 40.1004 4.13924 38.0647C1.68693 36.0249 0.5 33.9952 0.5 32C0.5 30.0048 1.68693 27.9751 4.13924 25.9353C6.58648 23.8996 10.2259 21.9134 14.9606 20.008C24.4253 16.1991 38.1508 12.7586 55.1478 9.86549C89.1338 4.08064 136.104 0.5 188 0.5C239.896 0.5 286.866 4.08064 320.852 9.86549C337.849 12.7586 351.575 16.1991 361.039 20.008C365.774 21.9134 369.414 23.8996 371.861 25.9353C374.313 27.9751 375.5 30.0048 375.5 32Z"
@@ -409,7 +409,7 @@ export function EncryptionCommunication() {
       viewBox="0 0 377 244"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-2 xs:-mt-3 xs:scale-90 sm:ml-0 sm:mt-0 sm:scale-100"
+      className="xxs:-ml-4 xxs:-mt-6 xxs:scale-75 xs:-ml-2 xs:-mt-3 xs:scale-90 sm:ml-0 sm:mt-0 sm:scale-100"
     >
       <path
         d="M375.5 32C375.5 33.9952 374.313 36.0249 371.861 38.0647C369.414 40.1004 365.774 42.0866 361.039 43.992C351.575 47.8009 337.849 51.2414 320.852 54.1345C286.866 59.9194 239.896 63.5 188 63.5C136.104 63.5 89.1338 59.9194 55.1478 54.1345C38.1508 51.2414 24.4253 47.8009 14.9606 43.992C10.2259 42.0866 6.58648 40.1004 4.13924 38.0647C1.68693 36.0249 0.5 33.9952 0.5 32C0.5 30.0048 1.68693 27.9751 4.13924 25.9353C6.58648 23.8996 10.2259 21.9134 14.9606 20.008C24.4253 16.1991 38.1508 12.7586 55.1478 9.86549C89.1338 4.08064 136.104 0.5 188 0.5C239.896 0.5 286.866 4.08064 320.852 9.86549C337.849 12.7586 351.575 16.1991 361.039 20.008C365.774 21.9134 369.414 23.8996 371.861 25.9353C374.313 27.9751 375.5 30.0048 375.5 32Z"

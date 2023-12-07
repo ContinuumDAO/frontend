@@ -39,22 +39,22 @@ export function UseCases() {
   return (
     <div
       id="use-cases"
-      className="bg-[url('../images/background-graphic.gif')] py-24 sm:py-32"
+      className="xxs:py-24 bg-[url('../images/background-graphic.gif')] sm:py-32"
     >
-      <div className="mx-auto max-w-xl text-left xs:pl-4 md:pl-16 lg:max-w-[100rem] lg:pl-32">
+      <div className="xxs:pl-1 mx-auto max-w-xl text-left xs:pl-2 md:pl-16 lg:max-w-[100rem] lg:pl-32">
         <div className=" mx-auto">
-          <p className="text-3xl font-bold tracking-tight text-white xs:text-5xl">
+          <p className="xxs:text-5xl text-3xl font-bold tracking-tight text-white">
             Use Cases
           </p>
         </div>
-        <ul className="mx-auto grid grid-cols-1 gap-6 xs:mt-10 xs:max-w-sm sm:mt-20 sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
+        <ul className="xxs:max-w-xs xxs:mt-10 mx-auto grid grid-cols-1 gap-6 xs:max-w-sm sm:mt-20 sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
           {useCases.map((useCase, index) => (
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
-              className="group z-0 max-w-lg border border-white bg-black py-10 hover:!z-10 xs:px-4 sm:-mr-24 sm:px-8 lg:max-w-7xl"
+              className="xxs:max-w-[295px] xxs:px-4 group z-0 border border-white bg-black py-10 hover:!z-10 xs:max-w-[360px] sm:-mr-24 sm:px-8 md:max-w-lg lg:max-w-7xl"
             >
-              <div className="group relative xs:pt-16 lg:pt-0">
+              <div className="xxs:pt-16 group relative lg:pt-0">
                 <div className="h-56"></div>
                 <div className="absolute inset-0 transition-opacity duration-700 ease-in-out group-hover:opacity-0">
                   <useCase.StartImage />
@@ -70,10 +70,10 @@ export function UseCases() {
                     : ''
                 }`}
               >
-                <h3 className="pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left xs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6">
+                <h3 className="xxs:-mt-2 pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left sm:mt-6 lg:mt-11 xl:mt-6">
                   {useCase.name}
                 </h3>
-                <p className="font-light leading-8 text-white/70 group-hover:text-left xs:-mt-4 xs:text-xl sm:mt-0 sm:text-2xl">
+                <p className="xxs:-mt-4 xxs:text-xl font-light leading-8 text-white/70 group-hover:text-left sm:mt-0 sm:text-2xl">
                   {useCase.role}
                 </p>
               </div>
@@ -93,7 +93,7 @@ export function BuildOnCtmStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-4 sm:ml-12 md:ml-12 lg:ml-8 xl:-ml-10 2xl:-ml-2"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-12 sm:mt-0 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4565)">
         <g opacity="0.4" filter="url(#filter0_f_865_4565)">
@@ -192,7 +192,7 @@ export function BuildOnCtmEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-4 sm:ml-12 md:ml-12 lg:ml-8 xl:-ml-10 2xl:-ml-2"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-100 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-12 sm:mt-0 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4587)">
         <g opacity="0.4" filter="url(#filter0_f_865_4587)">
@@ -277,7 +277,7 @@ export function C3WalletStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-4 sm:ml-12 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-12 sm:mt-0 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4431)">
         <g clipPath="url(#clip1_865_4431)">
@@ -371,7 +371,7 @@ export function C3WalletEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-4 sm:ml-12 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-12 sm:mt-0 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4473)">
         <g clipPath="url(#clip1_865_4473)">
@@ -465,7 +465,7 @@ export function C3RouterStart() {
       viewBox="0 0 422 254"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xs:-ml-14 xs:-mt-10 xs:scale-75 sm:ml-2 sm:mt-1 sm:scale-[1.05] md:mt-1 md:scale-[1.05] lg:-ml-4 lg:-mt-6 xl:-ml-20 xl:-mt-16 xl:scale-[0.75] 2xl:-ml-12 2xl:-mt-10 2xl:scale-[0.9]"
+      className="xxs:scale-[0.6] xxs:-ml-20 xxs:-mt-16 xs:-ml-14 xs:-mt-10 xs:scale-75 sm:ml-2 sm:mt-1 sm:scale-[1.05] md:mt-1 md:scale-[1.05] lg:-ml-4 lg:-mt-6 xl:-ml-20 xl:-mt-16 xl:scale-[0.75] 2xl:-ml-12 2xl:-mt-10 2xl:scale-[0.9]"
     >
       <circle cx="298" cy="99" r="28.5" stroke="#676767" />
       <circle cx="298" cy="97" r="28.5" fill="#010101" stroke="#676767" />

@@ -60,11 +60,11 @@ export function Faqs() {
     <div id="faq" className="z-10 bg-[url('../images/background-graphic.gif')]">
       <div className="mx-auto max-w-[115rem] px-6 py-32 sm:py-48 lg:px-8 lg:py-48">
         <div className="mx-auto max-w-6xl">
-          <h2 className="pb-12 font-bold tracking-tight text-white xs:text-4xl xs:leading-snug sm:text-5xl sm:leading-10">
+          <h2 className="xxs:text-4xl xxs:leading-snug pb-12 font-bold tracking-tight text-white sm:text-5xl sm:leading-10">
             Why are we a DAO?
           </h2>
           <div className="border-b border-white/70"></div>
-          <dl className="xs:-ml-4 sm:ml-0">
+          <dl className="xxs:-ml-4 sm:ml-0">
             <Disclosure as="div" id="faq" className="pt-6 focus:outline-none">
               {({ open }) => (
                 <>
@@ -91,7 +91,7 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="text-2xl font-medium leading-7 xs:pt-2 sm:pt-0.5 sm:text-3xl">
+                          <div className="xxs:pt-2 text-2xl font-medium leading-7 sm:pt-0.5 sm:text-3xl">
                             Decentralized Governance
                           </div>
                         </div>
@@ -112,7 +112,7 @@ export function Faqs() {
                       id="faq"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="relative -mt-4 pr-0 xs:h-64 sm:h-36 xl:mt-2 xl:pr-12"
+                      className="xxs:h-64 relative -mt-4 pr-0 sm:h-36 xl:mt-2 xl:pr-12"
                     >
                       <Transition.Child
                         enter="transition ease-in-out duration-500"
@@ -122,11 +122,11 @@ export function Faqs() {
                         leaveFrom="transform opacity-100"
                         leaveTo="transform opacity-0"
                       >
-                        <span className="absolute xs:top-8 sm:-top-20">
+                        <span className="xxs:top-8 absolute sm:-top-20">
                           <Ellipse />
                         </span>
-                        <div className="absolute xs:px-8 sm:px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="leading-7 text-gray-300 xs:text-lg sm:text-xl md:mt-0 md:text-2xl">
+                        <div className="xxs:px-8 absolute sm:px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
+                          <span className="xxs:text-lg leading-7 text-gray-300 sm:text-xl md:mt-0 md:text-2xl">
                             Continuum is a trustless MPC network of
                             decentralized nodes that allows dApps from many
                             diverse blockchains to seamlessly interact using
@@ -141,7 +141,7 @@ export function Faqs() {
               )}
             </Disclosure>
           </dl>
-          <dl className="xs:-ml-4 sm:ml-0">
+          <dl className="xxs:-ml-4 sm:ml-0">
             <Disclosure as="div" className="pt-6 focus:outline-none">
               {({ open }) => (
                 <>
@@ -168,7 +168,7 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="text-2xl font-medium leading-7 xs:pt-2 sm:pt-0.5 sm:text-3xl">
+                          <div className="xxs:pt-2 text-2xl font-medium leading-7 sm:pt-0.5 sm:text-3xl">
                             Global and Borderless
                           </div>
                         </div>
@@ -189,7 +189,7 @@ export function Faqs() {
                       id="faq"
                       onMouseEnter={onMouseEnter2.bind(null, open)}
                       onMouseLeave={onMouseLeave2.bind(null, open)}
-                      className="relative -mt-4 pr-0 xs:h-64 sm:h-36 xl:mt-2 xl:pr-12"
+                      className="xxs:h-64 relative -mt-4 pr-0 sm:h-36 xl:mt-2 xl:pr-12"
                     >
                       <Transition.Child
                         enter="transition ease-in-out duration-500"
@@ -199,11 +199,11 @@ export function Faqs() {
                         leaveFrom="transform opacity-100"
                         leaveTo="transform opacity-0"
                       >
-                        <span className="absolute xs:top-8 sm:-top-20">
+                        <span className="xxs:top-8 absolute sm:-top-20">
                           <Ellipse />
                         </span>
-                        <div className="absolute xs:px-8 sm:px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="leading-7 text-gray-300 xs:text-lg sm:text-xl md:mt-0 md:text-2xl">
+                        <div className="xxs:px-8 absolute sm:px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
+                          <span className="xxs:text-lg leading-7 text-gray-300 sm:text-xl md:mt-0 md:text-2xl">
                             Our community members are from all over the world,
                             and we are not tied to a specific jurisdiction. This
                             global perspective enriches CTM by bringing diverse
@@ -218,7 +218,7 @@ export function Faqs() {
               )}
             </Disclosure>
           </dl>
-          <dl className="xs:-ml-4 sm:ml-0">
+          <dl className="xxs:-ml-4 sm:ml-0">
             <Disclosure id="faq" as="div" className="pt-6 focus:outline-none">
               {({ open }) => (
                 <>
@@ -245,7 +245,7 @@ export function Faqs() {
                           >
                             <Bobble />
                           </div>
-                          <div className="text-2xl font-medium leading-7 xs:pt-2 sm:pt-0.5 sm:text-3xl">
+                          <div className="xxs:pt-2 text-2xl font-medium leading-7 sm:pt-0.5 sm:text-3xl">
                             Transparency
                           </div>
                         </div>
@@ -266,7 +266,7 @@ export function Faqs() {
                       id="faq"
                       onMouseEnter={onMouseEnter3.bind(null, open)}
                       onMouseLeave={onMouseLeave3.bind(null, open)}
-                      className="relative -mt-4 pr-0 xs:h-64 sm:h-36 xl:mt-2 xl:pr-12"
+                      className="xxs:h-64 relative -mt-4 pr-0 sm:h-36 xl:mt-2 xl:pr-12"
                     >
                       <Transition.Child
                         enter="transition ease-in-out duration-500"
@@ -276,11 +276,11 @@ export function Faqs() {
                         leaveFrom="transform opacity-100"
                         leaveTo="transform opacity-0"
                       >
-                        <span className="absolute xs:top-8 sm:-top-20">
+                        <span className="xxs:top-8 absolute sm:-top-20">
                           <Ellipse />
                         </span>
-                        <div className="absolute xs:px-8 sm:px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
-                          <span className="leading-7 text-gray-300 xs:text-lg sm:text-xl md:mt-0 md:text-2xl">
+                        <div className="xxs:px-8 absolute sm:px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
+                          <span className="xxs:text-lg leading-7 text-gray-300 sm:text-xl md:mt-0 md:text-2xl">
                             We are committed to building trust with our
                             community by providing full visibility into our
                             daily operations as much as possible.

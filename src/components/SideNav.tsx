@@ -53,7 +53,7 @@ export function SideNav() {
   const componentList = ['what-we-do', 'continuum-matrix', 'use-cases', 'faq']
 
   return (
-    <div className="xs:hidden z-50 2xl:inline">
+    <div className="xxs:hidden z-50 2xl:inline">
       <div
         className={`${
           currentComponent === null || currentComponent === 'hero'
