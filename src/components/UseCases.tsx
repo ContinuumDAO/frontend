@@ -41,7 +41,7 @@ export function UseCases() {
       id="use-cases"
       className="xxs:py-24 bg-[url('../images/background-graphic.gif')] sm:py-32"
     >
-      <div className="xxs:pl-1 mx-auto max-w-xl text-left xs:pl-8 md:pl-16 lg:max-w-[100rem] lg:pl-32">
+      <div className="mx-auto max-w-xl text-left lg:max-w-[100rem] lg:pl-32">
         <div className=" mx-auto">
           <p className="xxs:text-5xl xxs:text-center text-3xl font-bold tracking-tight text-white lg:text-left">
             Use Cases
@@ -93,7 +93,7 @@ export function BuildOnCtmStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-20 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4565)">
         <g opacity="0.4" filter="url(#filter0_f_865_4565)">
@@ -192,7 +192,7 @@ export function BuildOnCtmEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-100 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-100 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-20 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4587)">
         <g opacity="0.4" filter="url(#filter0_f_865_4587)">
@@ -277,7 +277,7 @@ export function C3WalletStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-20 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4431)">
         <g clipPath="url(#clip1_865_4431)">
@@ -371,7 +371,7 @@ export function C3WalletEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-10 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-20 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4473)">
         <g clipPath="url(#clip1_865_4473)">
