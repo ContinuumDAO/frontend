@@ -42,11 +42,11 @@ export function ContinuumMatrix() {
                 />
               </svg>
             </div>
-            <div className="absolute z-30 xxs:-left-1 xxs:scale-50 xs:-left-7 sm:-left-7 xl:-top-9 xl:left-40">
+            <div className="absolute z-30 xxs:-left-1 xxs:scale-50 xs:-left-7 sm:-left-7 xl:-top-9 xl:left-[10.7rem]">
               <Bobble />
             </div>
             <div className="absolute">
-              <div className="absolute xl:-top-16 xl:left-[11.8rem]">
+              <div className="absolute xl:-top-16 xl:left-[12.5rem]">
                 <svg
                   width="2"
                   height="52"
@@ -58,16 +58,16 @@ export function ContinuumMatrix() {
                   <path d="M1 0.5V52" stroke="white" />
                 </svg>
               </div>
-              <div className="absolute xl:-top-2 xl:left-1">
+              <div className="absolute xl:-top-2 xl:left-4">
                 <CustodyBusiness />
               </div>
             </div>
           </div>
           <div className="absolute xxs:left-1/4 xxs:top-[25rem] md:left-1/3 xl:left-2/3 xl:top-0">
-            <div className="absolute z-30 xxs:-left-1 xxs:scale-50 xs:-left-7 sm:-left-7 xl:-top-9 xl:left-40">
+            <div className="absolute z-30 xxs:-left-1 xxs:scale-50 xs:-left-7 sm:-left-7 xl:-top-9 xl:left-[10.3rem]">
               <Bobble />
             </div>
-            <div className="absolute xl:-top-2">
+            <div className="absolute xl:-top-2 xl:left-3">
               <InterChainCommunication />
             </div>
           </div>
@@ -75,7 +75,7 @@ export function ContinuumMatrix() {
             <div className="absolute z-30 xxs:-left-1 xxs:scale-50 xs:-left-7 sm:-left-7 xl:-top-9 xl:left-[10.5rem]">
               <Bobble />
             </div>
-            <div className="absolute xl:-top-2 xl:left-2">
+            <div className="absolute xl:-top-2 xl:left-4">
               <EncryptionCommunication />
             </div>
           </div>
