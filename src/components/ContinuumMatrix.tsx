@@ -8,8 +8,10 @@ export function ContinuumMatrix() {
       className="xxs:-ml-28 xxs:mb-[48rem] bg-[url('../images/background-graphic.gif')] sm:ml-0 xl:mb-0"
     >
       <div className="xxs:py-12 mx-auto max-w-7xl sm:py-32 lg:px-8 lg:py-40">
-        <div className="xxs:mx-32 relative z-10 mt-12 border border-white bg-black py-3 text-center text-lg font-semibold text-white sm:mx-32 md:mx-48 lg:mx-80 xl:mx-[26rem] ">
-          Continuum Matrix
+        <div className="xxs:pl-28 xs:pl-28 sm:pl-0">
+          <div className="xxs:mx-3 relative z-10 mt-12 border border-white bg-black py-3 text-center text-lg font-semibold text-white xs:mx-2 sm:mx-32 md:mx-48 lg:mx-80 xl:mx-[26rem] ">
+            Continuum Matrix
+          </div>
         </div>
         <div className="relative mt-16">
           <div className="xxs:absolute xxs:-top-20 xxs:left-32 xs:left-1/4 sm:-top-16 sm:z-10 md:left-1/3 xl:hidden">
