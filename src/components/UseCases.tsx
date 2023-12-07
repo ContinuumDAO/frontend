@@ -41,9 +41,9 @@ export function UseCases() {
       id="use-cases"
       className="xxs:py-24 bg-[url('../images/background-graphic.gif')] sm:py-32"
     >
-      <div className="xxs:pl-1 mx-auto max-w-xl text-left xs:pl-2 md:pl-16 lg:max-w-[100rem] lg:pl-32">
+      <div className="xxs:pl-1 mx-auto max-w-xl text-left xs:pl-8 md:pl-16 lg:max-w-[100rem] lg:pl-32">
         <div className=" mx-auto">
-          <p className="xxs:text-5xl text-3xl font-bold tracking-tight text-white">
+          <p className="xxs:text-5xl xxs:text-center text-3xl font-bold tracking-tight text-white lg:text-left">
             Use Cases
           </p>
         </div>

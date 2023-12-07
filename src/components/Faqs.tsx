@@ -60,7 +60,7 @@ export function Faqs() {
     <div id="faq" className="z-10 bg-[url('../images/background-graphic.gif')]">
       <div className="mx-auto max-w-[115rem] px-6 py-32 sm:py-48 lg:px-8 lg:py-48">
         <div className="mx-auto max-w-6xl">
-          <h2 className="xxs:text-4xl xxs:leading-snug pb-12 font-bold tracking-tight text-white sm:text-5xl sm:leading-10">
+          <h2 className="xxs:text-4xl xxs:text-center xxs:leading-snug pb-12 font-bold tracking-tight text-white sm:text-5xl sm:leading-10 lg:text-left">
             Why are we a DAO?
           </h2>
           <div className="border-b border-white/70"></div>
