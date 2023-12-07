@@ -38,7 +38,7 @@ const governance = [
   },
   {
     name: 'Learn More',
-    href: 'https://docs.continuumdao.org/',
+    href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
   },
   {
     name: 'Build With Us',
@@ -157,7 +157,7 @@ export function Header() {
         <div className="flex lg:flex-1">
           <a href="#" className="p-1.5 lg:-mx-8">
             <span className="sr-only">Continuum</span>
-            <div className="xxs:-ml-4 flex flex-row items-center md:ml-0 lg:ml-10 xl:ml-0">
+            <div className="flex flex-row items-center xxs:-ml-4 md:ml-0 lg:ml-10 xl:ml-0">
               <Image
                 className="-mr-4 scale-[0.6] pt-1.5 lg:scale-[0.5]"
                 src={Logo}
