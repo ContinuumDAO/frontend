@@ -26,10 +26,12 @@ export function CallToAction() {
               target="_"
               key={index}
               href={action.url}
-              className="link relative overflow-hidden border border-white px-6 py-4 text-base font-semibold leading-6 text-white md:px-6 lg:px-12 xl:px-20"
+              className="link relative h-16 w-64 overflow-hidden border border-white text-center  text-base font-semibold leading-6 text-white"
             >
-              {action.label} <span aria-hidden="true">↗</span>
-              <span className="link-bg"></span>
+              <div className="mt-5">
+                {action.label} <span aria-hidden="true">↗</span>
+                <span className="link-bg"></span>
+              </div>
             </a>
           ))}
         </div>

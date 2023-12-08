@@ -410,7 +410,7 @@ export function Header() {
             }}
           </Popover>
         </Popover.Group>
-        <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end xl:pr-4">
           <a
             href="https://network.continuumdao.org"
             className="rounded-full bg-[#C8EAFF] font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
