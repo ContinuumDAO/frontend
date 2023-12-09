@@ -39,22 +39,22 @@ export function UseCases() {
   return (
     <div
       id="use-cases"
-      className="xxs:py-24 bg-[url('../images/background-graphic.gif')] sm:py-32"
+      className="bg-[url('../images/background-graphic.gif')] xxs:py-24 sm:py-32"
     >
-      <div className="mx-auto max-w-xl text-left lg:max-w-[100rem] lg:pl-32">
-        <div className=" mx-auto">
-          <p className="xxs:text-5xl xxs:text-center text-3xl font-bold tracking-tight text-white lg:text-left">
+      <div className="webkit-center mx-auto max-w-xl text-left lg:max-w-[100rem]">
+        <div className="mx-auto">
+          <p className="text-3xl font-bold tracking-tight text-white xxs:text-center xxs:text-5xl lg:pl-44 lg:text-left xl:pl-36">
             Use Cases
           </p>
         </div>
-        <ul className="xxs:max-w-xs xxs:mt-10 mx-auto grid grid-cols-1 gap-6 xs:max-w-sm sm:mt-20 sm:max-w-2xl lg:mx-0 lg:max-w-3xl lg:grid-cols-2 xl:max-w-5xl xl:grid-cols-4 2xl:max-w-7xl">
+        <ul className="mx-auto grid grid-cols-1 gap-6 xxs:mt-10 xxs:max-w-xs xxs:justify-items-center xs:max-w-sm sm:mt-20 sm:max-w-2xl sm:justify-items-start lg:mx-0 lg:-ml-12 lg:max-w-3xl lg:grid-cols-2 xl:-ml-12 xl:max-w-5xl xl:grid-cols-4 2xl:-ml-16 2xl:max-w-7xl">
           {useCases.map((useCase, index) => (
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
-              className="xxs:max-w-[295px] xxs:px-4 group z-0 border border-white bg-black py-10 hover:!z-10 xs:max-w-[360px] sm:-mr-24 sm:max-w-xl sm:px-8 lg:max-w-7xl"
+              className="group z-0 border border-white bg-black py-10 hover:!z-10 xxs:max-w-[295px] xxs:px-4 xs:max-w-[360px] sm:-mr-24 sm:max-w-xl sm:px-8 lg:max-w-7xl"
             >
-              <div className="xxs:pt-16 group relative lg:pt-0">
+              <div className="group relative xxs:pt-16 lg:pt-0">
                 <div className="h-56"></div>
                 <div className="absolute inset-0 transition-opacity duration-700 ease-in-out group-hover:opacity-0">
                   <useCase.StartImage />
@@ -70,10 +70,10 @@ export function UseCases() {
                     : ''
                 }`}
               >
-                <h3 className="xxs:-mt-2 pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left sm:mt-6 lg:mt-11 xl:mt-6">
+                <h3 className="pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left xxs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6">
                   {useCase.name}
                 </h3>
-                <p className="xxs:-mt-4 xxs:text-xl font-light leading-8 text-white/70 group-hover:text-left sm:mt-0 sm:text-2xl">
+                <p className="font-light leading-8 text-white/70 group-hover:text-left xxs:-mt-4 xxs:text-xl sm:mt-0 sm:text-2xl">
                   {useCase.role}
                 </p>
               </div>
@@ -81,6 +81,11 @@ export function UseCases() {
           ))}
         </ul>
       </div>
+      <style jsx>{`
+        .webkit-center {
+          text-align: -webkit-center;
+        }
+      `}</style>
     </div>
   )
 }
@@ -465,7 +470,7 @@ export function C3RouterStart() {
       viewBox="0 0 422 254"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:scale-[0.6] xxs:-ml-20 xxs:-mt-16 xs:-ml-14 xs:-mt-10 xs:scale-75 sm:ml-2 sm:mt-1 sm:scale-[1.05] md:ml-12 md:mt-2 md:scale-[1.15] lg:-ml-4 lg:-mt-6 lg:scale-[1.05] xl:-ml-20 xl:-mt-16 xl:scale-[0.75] 2xl:-ml-12 2xl:-mt-10 2xl:scale-[0.9]"
+      className="xxs:-ml-20 xxs:-mt-16 xxs:scale-[0.6] xs:-ml-14 xs:-mt-10 xs:scale-75 sm:ml-2 sm:mt-1 sm:scale-[1.05] md:ml-12 md:mt-2 md:scale-[1.15] lg:-ml-4 lg:-mt-6 lg:scale-[1.05] xl:-ml-20 xl:-mt-16 xl:scale-[0.75] 2xl:-ml-12 2xl:-mt-10 2xl:scale-[0.9]"
     >
       <circle cx="298" cy="99" r="28.5" stroke="#676767" />
       <circle cx="298" cy="97" r="28.5" fill="#010101" stroke="#676767" />
@@ -590,7 +595,7 @@ export function C3RouterStart() {
 export function C3RouterEnd() {
   return (
     <Image
-      className="-mt-2 md:scale-95 lg:scale-[1.15]"
+      className="-mt-3 md:scale-95 lg:scale-[1.15]"
       src={C3RouterUseCaseGraphic}
       alt="Network Graphic"
     />
