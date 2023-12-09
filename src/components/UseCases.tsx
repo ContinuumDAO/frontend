@@ -63,17 +63,21 @@ export function UseCases() {
                   <useCase.EndImage />
                 </div>
               </div>
-              <div
-                className={`${
-                  useCases.length - index < useCases.length
-                    ? 'text-left lg:text-right'
-                    : ''
-                }`}
-              >
-                <h3 className="pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left xxs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6">
+              <div>
+                <h3
+                  className={`${
+                    useCases.length - index < useCases.length
+                      ? 'xxs:text-left lg:text-right'
+                      : 'web'
+                  } pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left xxs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6`}
+                >
                   {useCase.name}
                 </h3>
-                <p className="font-light leading-8 text-white/70 group-hover:text-left xxs:-mt-4 xxs:text-xl sm:mt-0 sm:text-2xl">
+                <p
+                  className={`${
+                    useCases.length - index < useCases.length ? 'web' : 'web'
+                  } font-light leading-8 text-white/70 group-hover:text-left xxs:-mt-4 xxs:text-xl sm:mt-0 sm:text-2xl`}
+                >
                   {useCase.role}
                 </p>
               </div>
@@ -84,6 +88,10 @@ export function UseCases() {
       <style jsx>{`
         .webkit-center {
           text-align: -webkit-center;
+        }
+
+        .web {
+          text-align: left !important;
         }
       `}</style>
     </div>
