@@ -4,15 +4,15 @@ import Image from 'next/image'
 const navigation = {
   useCases: [
     {
-      name: 'C3Router',
+      name: 'Cross-chain Bridge',
       href: '#use-cases',
     },
     {
-      name: 'C3Caller',
+      name: 'Cross-chain Swap',
       href: '#use-cases',
     },
     {
-      name: 'C3Wallet',
+      name: 'Omni-chain Wallet',
       href: '#use-cases',
     },
     {

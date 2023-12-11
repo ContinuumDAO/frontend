@@ -7,21 +7,21 @@ import Image from 'next/image'
 const useCases = [
   {
     id: 'c3-router',
-    name: 'C3Router',
+    name: 'Cross-chain Bridge',
     role: 'Enables cross-chain liquidity aggregation or token transfer, all under the control of the dApp. It has a simple-to-implement interface and an inexpensive gas-based fee structure.',
     StartImage: C3RouterStart,
     EndImage: C3RouterEnd,
   },
   {
     id: 'c3-caller',
-    name: 'C3Caller',
+    name: 'Cross-chain Swap',
     role: 'The purest cross-chain primitive, allowing unencrypted messages to be sent cross-chain. Fees can be charged on the source or destination chain and smart contracts can be called on the destination chain, all within one transaction.',
     StartImage: C3CallerStart,
     EndImage: C3CallerEnd,
   },
   {
     id: 'c3-wallet',
-    name: 'C3Wallet',
+    name: 'Omni-chain Wallet',
     role: 'This will be the first truly cross-chain multi-signature wallet, allowing users to sign from diverse chains.',
     StartImage: C3WalletStart,
     EndImage: C3WalletEnd,
@@ -71,7 +71,13 @@ export function UseCases() {
                       : 'web'
                   } pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left xxs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6`}
                 >
-                  {useCase.name}
+                  {useCase.name === 'Build On CTM' ? (
+                    <a href="https://cjlxc0ssl3j.typeform.com/to/wqImeOSe">
+                      {useCase.name}
+                    </a>
+                  ) : (
+                    <span>{useCase.name}</span>
+                  )}
                 </h3>
                 <p
                   className={`${
