@@ -186,7 +186,7 @@ export function Footer() {
               </p>
             </div>
           </div>
-          <div className="mt-10 gap-8 pl-8 md:grid md:grid-cols-3 xl:col-span-2 xl:mt-0 2xl:mt-0">
+          <div className="mt-10 xxs:pl-8 md:-ml-16 md:grid md:grid-cols-3 md:pl-24 xl:col-span-2 xl:mt-0 xl:gap-20 xl:pl-0 2xl:mt-0 2xl:gap-32">
             <div>
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Use Cases
@@ -204,7 +204,7 @@ export function Footer() {
                 ))}
               </ul>
             </div>
-            <div className="mt-10 md:mt-0">
+            <div className="mt-10 md:ml-16 md:mt-0">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Governance
               </h3>
@@ -221,7 +221,7 @@ export function Footer() {
                 ))}
               </ul>
             </div>
-            <div className="mt-10 md:mt-0">
+            <div className="mt-10 md:ml-24 md:mt-0">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Contact Us
               </h3>
