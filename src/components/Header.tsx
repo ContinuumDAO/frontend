@@ -227,7 +227,7 @@ export function Header() {
                       leaveTo="opacity-0 -translate-x-6"
                     >
                       <Popover.Panel
-                        className="absolute -left-4 top-3/4 z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+                        className="absolute -left-4 top-3/4 z-10 mt-8 w-56 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
                         onMouseEnter={onMouseEnter.bind(null, open)}
                         onMouseLeave={onMouseLeave.bind(null, open)}
                       >
