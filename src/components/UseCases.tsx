@@ -7,29 +7,29 @@ import Image from 'next/image'
 const useCases = [
   {
     id: 'c3-router',
-    name: 'Cross-chain Bridge',
-    role: 'Enables cross-chain liquidity aggregation or token transfer, all under the control of the dApp. It has a simple-to-implement interface and an inexpensive gas-based fee structure.',
+    name: 'Token and Message Bridging',
+    role: 'Effortlessly transfer tokens and messages between blockchains. ContinuumDAO simplifies asset movement and communication, enabling seamless interactions across diverse blockchain networks.',
     StartImage: C3RouterStart,
     EndImage: C3RouterEnd,
   },
   {
     id: 'c3-caller',
-    name: 'Cross-chain Swap',
-    role: 'The purest cross-chain primitive, allowing unencrypted messages to be sent cross-chain. Fees can be charged on the source or destination chain and smart contracts can be called on the destination chain, all within one transaction.',
+    name: 'Cross-Chain Liquidity Network',
+    role: 'Connect with multiple liquidity pools across various blockchains. Our platform supports the creation of a more fluid and integrated financial ecosystem, enhancing liquidity access for decentralized applications.',
     StartImage: C3CallerStart,
     EndImage: C3CallerEnd,
   },
   {
     id: 'c3-wallet',
-    name: 'Omni-chain Wallet',
-    role: 'This will be the first truly cross-chain multi-signature wallet, allowing users to sign from diverse chains.',
+    name: 'Decentralized Identity Wallets',
+    role: 'Create and manage decentralized identity wallets with interoperable features. ContinuumDAOs infrastructure ensures secure, cross-chain identity management, paving the way for enhanced user privacy and control in an omnichain space.',
     StartImage: C3WalletStart,
     EndImage: C3WalletEnd,
   },
   {
     id: 'build-on-ctm',
-    name: 'Build On CTM',
-    role: 'External page with project submission application with BD guild info',
+    name: 'Interoperability for Games',
+    role: 'Revolutionize gaming experiences by enabling interoperability across different blockchains. Develop games that transcend boundaries, allowing assets and identities to move freely between gaming worlds.',
     StartImage: BuildOnCtmStart,
     EndImage: BuildOnCtmEnd,
   },
@@ -44,7 +44,7 @@ export function UseCases() {
       <div className="webkit-center mx-auto max-w-xl text-left lg:max-w-[100rem]">
         <div className="mx-auto">
           <p className="text-3xl font-bold tracking-tight text-white xxs:text-center xxs:text-5xl lg:pl-44 lg:text-left xl:pl-36">
-            Use Cases
+            Diverse Use Cases for Developers Building on ContinuumDAO
           </p>
         </div>
         <ul className="mx-auto grid grid-cols-1 gap-6 xxs:mt-10 xxs:max-w-xs xxs:justify-items-center xs:max-w-sm sm:mt-20 sm:max-w-2xl sm:justify-items-start lg:mx-0 lg:-ml-12 lg:max-w-3xl lg:grid-cols-2 xl:-ml-12 xl:max-w-5xl xl:grid-cols-4 2xl:-ml-16 2xl:max-w-7xl">
@@ -69,20 +69,14 @@ export function UseCases() {
                     useCases.length - index < useCases.length
                       ? 'xxs:text-left lg:text-right'
                       : 'web'
-                  } pb-10 text-3xl font-medium leading-7 tracking-tight text-white group-hover:text-left xxs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6`}
+                  } px-4 pb-10 text-2xl font-medium leading-7 tracking-tight text-white group-hover:text-left xxs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6`}
                 >
-                  {useCase.name === 'Build On CTM' ? (
-                    <a href="https://cjlxc0ssl3j.typeform.com/to/wqImeOSe">
-                      {useCase.name}
-                    </a>
-                  ) : (
-                    <span>{useCase.name}</span>
-                  )}
+                  <span>{useCase.name}</span>
                 </h3>
                 <p
                   className={`${
                     useCases.length - index < useCases.length ? 'web' : 'web'
-                  } font-light leading-8 text-white/70 group-hover:text-left xxs:-mt-4 xxs:text-xl sm:mt-0 sm:text-2xl`}
+                  } font-light leading-8 text-white/70 group-hover:text-left xxs:-mt-4 xxs:text-xl sm:mt-0 sm:text-xl`}
                 >
                   {useCase.role}
                 </p>
@@ -112,7 +106,7 @@ export function BuildOnCtmStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-20 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-0 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4565)">
         <g opacity="0.4" filter="url(#filter0_f_865_4565)">
@@ -211,7 +205,7 @@ export function BuildOnCtmEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-100 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-20 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-100 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-0 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4587)">
         <g opacity="0.4" filter="url(#filter0_f_865_4587)">
@@ -296,7 +290,7 @@ export function C3WalletStart() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-20 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-0 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4431)">
         <g clipPath="url(#clip1_865_4431)">
@@ -390,7 +384,7 @@ export function C3WalletEnd() {
       viewBox="0 0 345 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-20 lg:ml-6 xl:-ml-8 2xl:ml-1"
+      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-90 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-0 lg:ml-6 xl:-ml-8 2xl:ml-1"
     >
       <g clipPath="url(#clip0_865_4473)">
         <g clipPath="url(#clip1_865_4473)">

@@ -184,7 +184,7 @@ export function Header() {
             href="#what-we-do"
             className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
-            What We Do
+            The Vision
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
           </a>
           <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
@@ -450,7 +450,7 @@ export function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
-                  What We Do
+                  The Vision
                 </a>
                 <a
                   href="#continuum-matrix"

@@ -167,11 +167,11 @@ export function Footer() {
           <div className="grid grid-cols-1 xxs:pl-8 xl:pl-0">
             <div className="mt-10 xl:mt-0">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
-                What We Do
+                The Vision
               </h3>
               <p className="mt-8 text-lg leading-6 text-white/70">
                 <a className="hover:underline" href="#what-we-do">
-                  What We Do
+                  The Vision
                 </a>
               </p>
             </div>
