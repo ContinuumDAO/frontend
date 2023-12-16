@@ -44,7 +44,7 @@ export function UseCases() {
       <div className="webkit-center mx-auto max-w-xl text-left lg:max-w-[100rem]">
         <div className="mx-auto">
           <p className="text-3xl font-bold tracking-tight text-white xxs:text-center xxs:text-5xl lg:pl-44 lg:text-left xl:pl-36">
-            Diverse Use Cases for Developers Building on ContinuumDAO
+            Diverse Use Cases for Developers
           </p>
         </div>
         <ul className="mx-auto grid grid-cols-1 gap-6 xxs:mt-10 xxs:max-w-xs xxs:justify-items-center xs:max-w-sm sm:mt-20 sm:max-w-2xl sm:justify-items-start lg:mx-0 lg:-ml-12 lg:max-w-3xl lg:grid-cols-2 xl:-ml-12 xl:max-w-5xl xl:grid-cols-4 2xl:-ml-16 2xl:max-w-7xl">
