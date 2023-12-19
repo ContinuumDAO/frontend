@@ -192,7 +192,7 @@ export function Header() {
             href="#continuum-matrix"
             className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
-            Continumm Matrix
+            Continuum Matrix
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
           </a>
           <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
