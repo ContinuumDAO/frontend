@@ -22,7 +22,7 @@ const useCases = [
   {
     id: 'c3-wallet',
     name: 'Decentralized Identity Wallets',
-    role: 'Create and manage decentralized identity wallets with interoperable features. ContinuumDAOs infrastructure ensures secure, cross-chain identity management, paving the way for enhanced user privacy and control in an omnichain space.',
+    role: 'Create and maintain your own decentralized identity wallet. Our robust infrastructure provides a secure solution for managing identities across multiple blockchains, coupled with reliable wallet recovery capabilities.',
     StartImage: C3WalletStart,
     EndImage: C3WalletEnd,
   },
