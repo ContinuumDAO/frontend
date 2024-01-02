@@ -10,19 +10,19 @@ import './Header.css'
 
 const useCases = [
   {
-    name: 'Cross-chain Bridge',
+    name: 'Token and Message Bridging',
     href: '#use-cases',
   },
   {
-    name: 'Cross-chain Swap',
+    name: 'Cross-Chain Liquidity Network',
     href: '#use-cases',
   },
   {
-    name: 'Omni-chain Wallet',
+    name: 'Decentralized Identity Wallets',
     href: '#use-cases',
   },
   {
-    name: 'Build on CTM',
+    name: 'Interoperability for Games',
     href: '#use-cases',
   },
 ]
