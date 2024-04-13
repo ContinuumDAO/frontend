@@ -10,7 +10,7 @@ export default function NotFound() {
     <SlimLayout>
       <div className="flex">
         <Link href="/" aria-label="Home">
-          <Image className="-ml-4 !size-[38px] scale-75" src={Logo} alt="Logo" />
+          <Image width={38} height={38} className="-ml-4 !size-[38px] scale-75" src={Logo} alt="Logo" />
         </Link>
       </div>
       <p className="mt-20 text-sm font-medium text-white">404</p>

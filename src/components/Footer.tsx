@@ -262,6 +262,7 @@ export function Footer() {
               <div className="flex flex-row items-center xxs:pl-2 md:pl-3">
                 <Image
                   className="-mr-4 !size-[38px] pt-1.5 xxs:scale-50 xs:scale-[0.6] lg:scale-[0.5]"
+                  width={38} height={38}
                   src={Logo}
                   alt="Logo"
                 />
