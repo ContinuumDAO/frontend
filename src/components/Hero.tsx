@@ -17,15 +17,15 @@ export function Hero() {
   return (
     <div
       id="hero"
-      className="bg-[url('../images/background-graphic.gif')] pt-24"
+      className="  pt-24"
     >
       <div className="relative isolate xxs:py-28 xs:py-32 sm:py-48">
         <div
-          className="webkit-center absolute inset-x-0 -z-10 transform-gpu overflow-hidden"
+          className="left-1/2 -translate-x-1/2 flex items-center justify-center absolute -z-10 overflow-hidden"
           aria-hidden="true"
         >
           <Image src={Mobius} alt="Mobius Graphic" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent from-0% to-black to-65%"></div>
+          <div className="absolute  !inset-0 bg-gradient-to-b from-transparent from-0% to-black to-65%"></div>
         </div>
 
         <div className="py-24 sm:py-32 lg:pb-40">
@@ -68,8 +68,7 @@ export function Hero() {
                 </svg>
               </h1>
               <p className="mt-20 font-semibold leading-normal text-white xxs:text-xl xs:text-2xl sm:text-[30px]">
-                Bridging the World with Trustless, Fully Decentralized MPC
-                Infrastructure
+                The First DAO MPC Public Goods
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a

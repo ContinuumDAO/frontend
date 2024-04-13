@@ -33,10 +33,10 @@ const navigation = {
       name: 'Learn More',
       href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
     },
-    {
-      name: 'Build With Us',
-      href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
-    },
+    // {
+    //   name: 'Build With Us',
+    //   href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
+    // },
   ],
   contactUs: [
     {
@@ -160,11 +160,12 @@ const navigation = {
 
 export function Footer() {
   return (
-    <div className="z-10 bg-[url('../images/background-graphic.gif')] bg-right-top">
+    <div className="z-10   bg-right-top">
       <h2 className="sr-only">Footer</h2>
       <div className="mx-auto max-w-[115rem] px-6 pb-8 xxs:pt-0 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="grid grid-cols-1 xxs:pl-8 xl:pl-0">
+          <div/>
+          {/* <div className="grid grid-cols-1 xxs:pl-8 xl:pl-0">
             <div className="mt-10 xl:mt-0">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 The Vision
@@ -185,9 +186,10 @@ export function Footer() {
                 </a>
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="mt-10 xxs:pl-8 md:-ml-16 md:grid md:grid-cols-3 md:pl-24 xl:col-span-2 xl:mt-0 xl:gap-20 xl:pl-0 2xl:mt-0 2xl:gap-32">
-            <div>
+            {/* <div/> */}
+            {/* <div>
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Use Cases
               </h3>
@@ -203,7 +205,7 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
             <div className="mt-10 md:ml-16 md:mt-0">
               <h3 className="text-[22px] font-extrabold leading-6 text-white">
                 Governance
@@ -259,7 +261,7 @@ export function Footer() {
               <span className="sr-only">Continuum</span>
               <div className="flex flex-row items-center xxs:pl-2 md:pl-3">
                 <Image
-                  className="-mr-4 pt-1.5 xxs:scale-50 xs:scale-[0.6] lg:scale-[0.5]"
+                  className="-mr-4 !size-[38px] pt-1.5 xxs:scale-50 xs:scale-[0.6] lg:scale-[0.5]"
                   src={Logo}
                   alt="Logo"
                 />

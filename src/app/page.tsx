@@ -10,6 +10,7 @@ import { SideNav } from '@/components/SideNav'
 export default function Home() {
   return (
     <>
+      <div className="fixed top-0 bottom-0 left-0 right-0 -z-[10] bg-[url('../images/background-graphic.gif')]" />
       <Header />
       <SideNav />
       <main>

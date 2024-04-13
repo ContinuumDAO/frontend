@@ -39,7 +39,7 @@ export function UseCases() {
   return (
     <div
       id="use-cases"
-      className="bg-[url('../images/background-graphic.gif')] xxs:py-24 sm:py-32"
+      className="  xxs:py-24 sm:py-32"
     >
       <div className="webkit-center mx-auto max-w-xl text-left lg:max-w-[100rem]">
         <div className="mx-auto">

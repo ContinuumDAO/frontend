@@ -11,10 +11,10 @@ export function CallToAction() {
       label: 'Learn More',
       url: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
     },
-    {
-      label: 'Build With Us',
-      url: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
-    },
+    // {
+    //   label: 'Build With Us',
+    //   url: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
+    // },
   ]
 
   return (

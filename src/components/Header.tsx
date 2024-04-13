@@ -40,10 +40,10 @@ const governance = [
     name: 'Learn More',
     href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
   },
-  {
-    name: 'Build With Us',
-    href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
-  },
+  // {
+  //   name: 'Build With Us',
+  //   href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
+  // },
 ]
 
 const contactUs = [
@@ -159,7 +159,7 @@ export function Header() {
             <span className="sr-only">Continuum</span>
             <div className="flex flex-row items-center xxs:-ml-4 md:ml-0 lg:ml-10 xl:ml-0">
               <Image
-                className="-mr-4 scale-[0.6] pt-1.5 lg:scale-[0.5]"
+                className="-mr-4 !size-[38px] scale-[0.6] pt-1.5 lg:scale-[0.5]"
                 src={Logo}
                 alt="Logo"
               />
@@ -187,14 +187,14 @@ export function Header() {
             The Vision
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
           </a>
-          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
-          <a
+          {/* <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div> */}
+          {/* <a
             href="#continuum-matrix"
             className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
             Continuum Matrix
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-          </a>
+          </a> */}
           <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
           <Popover className="relative">
             {({ open, close }) => {
@@ -452,13 +452,13 @@ export function Header() {
                 >
                   The Vision
                 </a>
-                <a
+                {/* <a
                   href="#continuum-matrix"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
                   Continuum Matrix
-                </a>
+                </a> */}
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>

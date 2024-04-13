@@ -7,7 +7,7 @@ export function WhatWeDo() {
   return (
     <div
       id="what-we-do"
-      className="bg-[url('../images/background-graphic.gif')]"
+      className=" "
     >
       <div className="mx-auto max-w-7xl sm:px-6">
         <div className="relative isolate px-6 xxs:py-10 sm:px-10 sm:py-20 sm:selection:rounded-3xl lg:py-12 xl:px-24">
@@ -17,13 +17,10 @@ export function WhatWeDo() {
                 A New Continuum in Interoperability
               </p>
               <p className="mt-10 font-medium leading-8 text-white xxs:text-2xl sm:text-3xl">
-                Revolutionizing Interoperability through Trustless MPC Network
+                Revolutionizing Interoperability through decentralized MPC Network
               </p>
               <p className="mt-10 font-light leading-8 text-gray-300 xs:text-xl sm:text-2xl xl:pr-24">
-                At ContinuumDAO, we are pioneering a new frontier in blockchain
-                interoperability. Our mission is to enable decentralized
-                applications (dApps) to effortlessly implement cross-chain and
-                interoperability functionalities.
+                Continuum, a trustless MPC network of decentralized nodes, enables smooth dApp interaction across various blockchains via decentralized SMPC for security. ContinuumDAO aims to globally manage the network transparently with on-chain governance into the protocol.
               </p>
               <div className="mt-10 flex xs:justify-center lg:justify-start">
                 <a

@@ -8,7 +8,7 @@ export function SlimLayout({ children }: { children: React.ReactNode }) {
           </main>
         </div>
         <div className="hidden sm:contents lg:relative lg:block lg:flex-1">
-          <div className="absolute inset-0 h-full w-full bg-[url('../images/background-graphic.gif')] object-cover" />
+          <div className="absolute inset-0 h-full w-full   object-cover" />
         </div>
       </div>
     </>
