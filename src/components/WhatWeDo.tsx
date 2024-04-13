@@ -25,7 +25,7 @@ export function WhatWeDo() {
               <div className="mt-10 flex xs:justify-center lg:justify-start">
                 <a
                   href="../../assets/White_Paper_ContinuumDAO.a0c79446.pdf"
-                  className="link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
+                  className="backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
                 >
                   Read Our Whitepaper <span aria-hidden="true">↗</span>
                   <span className="link-bg"></span>
@@ -68,7 +68,7 @@ export function WhatWeDo() {
             </div>
             <div className="-z-20 xs:-mt-10 sm:-mt-24 lg:row-span-4 lg:-ml-24 lg:max-w-none">
               <Image
-                className="md:items-center lg:ml-16 lg:mt-20 lg:scale-100 xl:ml-32 xl:mt-24"
+                className="main-shadow md:items-center lg:ml-16 lg:mt-20 lg:scale-100 xl:ml-32 xl:mt-24"
                 src={WhoWeAreGraphic}
                 alt="Network Graphic"
               />

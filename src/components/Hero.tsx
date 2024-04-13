@@ -21,7 +21,7 @@ export function Hero() {
     >
       <div className="relative isolate xxs:py-28 xs:py-32 sm:py-48">
         <div
-          className="left-1/2 -translate-x-1/2 flex items-center justify-center absolute -z-10 overflow-hidden"
+          className="left-1/2 -translate-x-1/2 flex items-center justify-center absolute -z-10 overflow-hidden main-shadow"
           aria-hidden="true"
         >
           <Image src={Mobius} alt="Mobius Graphic" />
@@ -74,7 +74,7 @@ export function Hero() {
                 <a
                   ref={linkRef}
                   href="https://docs.continuumdao.org/"
-                  className="link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-10 xs:px-8 sm:px-10"
+                  className="backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-10 xs:px-8 sm:px-10"
                 >
                   Learn about ContinuumDAO <span aria-hidden="true">↗</span>
                   <span className="link-bg"></span>

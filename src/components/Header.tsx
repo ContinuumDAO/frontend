@@ -67,6 +67,10 @@ const contactUs = [
     name: 'GitHub',
     href: 'https://github.com/ContinuumDAO',
   },
+  {
+    name: 'Discord',
+    href: '/',
+  },
 ]
 
 function classNames(...classes: string[]) {
@@ -148,7 +152,7 @@ export function Header() {
     <header
       className={`${
         mobileMenuOpen ? 'z-20' : 'z-50'
-      } fixed top-0 w-full bg-black pt-8`}
+      } fixed top-0 w-full pt-8 bg-[transparent] backdrop-blur-[6px]`}
     >
       <nav
         className="mx-auto flex max-w-[110rem] items-center justify-between border-b border-t border-white/30 px-8"
@@ -181,13 +185,13 @@ export function Header() {
           </button>
         </div>
         <Popover.Group className="hidden items-center lg:flex">
-          <a
+          {/* <a
             href="#what-we-do"
             className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
             The Vision
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-          </a>
+          </a> */}
           {/* <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div> */}
           {/* <a
             href="#continuum-matrix"
@@ -196,7 +200,7 @@ export function Header() {
             Continuum Matrix
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
           </a> */}
-          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          {/* <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div> */}
           <Popover className="relative">
             {({ open, close }) => {
               return (
@@ -414,12 +418,47 @@ export function Header() {
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end xl:pr-4">
           <a
             href="https://network.continuumdao.org"
-            className="rounded-full bg-[#C8EAFF] font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
+            className="link text-white border border-white font-semibold leading-6 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
           >
             MPC Network
+            <span className="link-bg"></span>
           </a>
         </div>
       </nav>
+      <style jsx>{`
+        .link {
+          position: relative;
+          overflow: hidden;
+          transition: color 0.5s ease;
+          color: white;
+        }
+
+        .link-bg {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 100%;
+          bottom: 0;
+          background-color: white;
+          z-index: -1;
+          transition: right 0.5s ease;
+        }
+
+        .link:hover {
+          color: black;
+        }
+        .link:hover .link-bg {
+          right: 0;
+        }
+
+        .webkit-center {
+          display: flex;
+          -webkit-align-items: center;
+          align-items: center;
+          justify-content: center;
+        }
+      `}</style>
       <Dialog
         as="div"
         className="lg:hidden"
@@ -446,13 +485,13 @@ export function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/30">
               <div className="space-y-2 py-6">
-                <a
+                {/* <a
                   href="#what-we-do"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
                   The Vision
-                </a>
+                </a> */}
                 {/* <a
                   href="#continuum-matrix"
                   onClick={() => setMobileMenuOpen(false)}

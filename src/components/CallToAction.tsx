@@ -26,7 +26,7 @@ export function CallToAction() {
               target="_"
               key={index}
               href={action.url}
-              className="link relative h-16 w-64 overflow-hidden border border-white text-center  text-base font-semibold leading-6 text-white"
+              className="backdrop-blur-[2px] link relative h-16 w-64 overflow-hidden border border-white text-center  text-base font-semibold leading-6 text-white"
             >
               <div className="mt-5">
                 {action.label} <span aria-hidden="true">↗</span>
