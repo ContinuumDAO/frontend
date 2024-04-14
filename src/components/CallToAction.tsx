@@ -8,9 +8,14 @@ export function CallToAction() {
     { label: 'Forum', url: 'https://forum.continuumdao.org/' },
     { label: 'Vote', url: 'https://snapshot.org/#/continuumdao.eth' },
     {
-      label: 'Learn More',
-      url: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+      name: 'Staking',
+      href: '',
+      disabled: true
     },
+    // {
+    //   label: 'Learn More',
+    //   url: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+    // },
     // {
     //   label: 'Build With Us',
     //   url: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',

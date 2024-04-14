@@ -37,9 +37,14 @@ const governance = [
     href: 'https://snapshot.org/#/continuumdao.eth',
   },
   {
-    name: 'Learn More',
-    href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+    name: 'Staking',
+    href: '',
+    disabled: true
   },
+  // {
+  //   name: 'Learn More',
+  //   href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+  // },
   // {
   //   name: 'Build With Us',
   //   href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
@@ -73,6 +78,17 @@ const contactUs = [
   },
 ]
 
+const learnMore = [
+  {
+    name: 'Docs',
+    href: 'https://docs.continuumdao.org/',
+  },
+  {
+    name: 'Whitepaper',
+    href: 'https://continuumdao.org/assets/White_Paper_ContinuumDAO.a0c79446.pdf',
+  },
+]
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
@@ -83,6 +99,7 @@ export function Header() {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const buttonRef2 = useRef<HTMLButtonElement>(null)
   const buttonRef3 = useRef<HTMLButtonElement>(null)
+  const buttonRef4 = useRef<HTMLButtonElement>(null)
   const timeoutDuration = 200
   let timeout: any
 
@@ -114,6 +131,15 @@ export function Header() {
       }),
     )
   }
+  const closePopover4 = () => {
+    return buttonRef4.current?.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'Escape',
+        bubbles: true,
+        cancelable: true,
+      }),
+    )
+  }
 
   const onMouseEnter = (open: any) => {
     clearTimeout(timeout)
@@ -133,6 +159,12 @@ export function Header() {
     return buttonRef3.current?.click()
   }
 
+  const onMouseEnter4 = (open: any) => {
+    clearTimeout(timeout)
+    if (open) return
+    return buttonRef4.current?.click()
+  }
+
   const onMouseLeave = (open: any) => {
     if (!open) return
     timeout = setTimeout(() => closePopover(), timeoutDuration)
@@ -146,6 +178,11 @@ export function Header() {
   const onMouseLeave3 = (open: any) => {
     if (!open) return
     timeout = setTimeout(() => closePopover3(), timeoutDuration)
+  }
+
+  const onMouseLeave4 = (open: any) => {
+    if (!open) return
+    timeout = setTimeout(() => closePopover4(), timeoutDuration)
   }
 
   return (
@@ -413,6 +450,77 @@ export function Header() {
               )
             }}
           </Popover>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <Popover className="relative">
+            {({ open, close }) => {
+              return (
+                <>
+                  <div>
+                    <Popover.Button
+                      ref={buttonRef4}
+                      onMouseEnter={onMouseEnter4.bind(null, open)}
+                      onMouseLeave={onMouseLeave4.bind(null, open)}
+                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
+                    >
+                      <span className="flex items-center gap-x-1">
+                        Learn More
+                        <ChevronDownIcon
+                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
+                    </Popover.Button>
+
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-500"
+                      enterFrom="opacity-0 -translate-x-6"
+                      enterTo="opacity-100 translate-x-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 -translate-x-6"
+                    >
+                      <Popover.Panel
+                        onMouseEnter={onMouseEnter4.bind(null, open)}
+                        onMouseLeave={onMouseLeave4.bind(null, open)}
+                        className="absolute -left-4 top-3/4
+              z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+                      >
+                        <div className="px-4">
+                          {learnMore.map((item, i) => (
+                            <div
+                              key={item.name}
+                              className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
+                            >
+                              <div className="flex-auto">
+                                <a
+                                  onClick={close}
+                                  href={item.href}
+                                  target="_"
+                                  className="block font-semibold text-white"
+                                >
+                                  {item.name}
+                                </a>
+                                <div
+                                  className={`${
+                                    i !== learnMore.length - 1
+                                      ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
+                                      : ''
+                                  } `}
+                                ></div>
+                                <div className=""></div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </div>
+                </>
+              )
+            }}
+          </Popover>
         </Popover.Group>
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end xl:pr-4">
           <a
@@ -572,6 +680,36 @@ export function Header() {
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
                         {[...contactUs].map((item) => (
+                          <Disclosure.Button
+                            key={item.name}
+                            as="a"
+                            target="_"
+                            onClick={() => setMobileMenuOpen(false)}
+                            href={item.href}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
+                          >
+                            {item.name}
+                          </Disclosure.Button>
+                        ))}
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
+                <Disclosure as="div" className="-mx-3">
+                  {({ open }) => (
+                    <>
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-white/10">
+                        Learn More
+                        <ChevronDownIcon
+                          className={classNames(
+                            open ? 'rotate-180' : '',
+                            'h-5 w-5 flex-none',
+                          )}
+                          aria-hidden="true"
+                        />
+                      </Disclosure.Button>
+                      <Disclosure.Panel className="mt-2 space-y-2">
+                        {[...learnMore].map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"

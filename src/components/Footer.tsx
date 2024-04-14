@@ -30,9 +30,14 @@ const navigation = {
       href: 'https://snapshot.org/#/continuumdao.eth',
     },
     {
-      name: 'Learn More',
-      href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+      name: 'Staking',
+      href: '',
+      disabled: true
     },
+    // {
+    //   name: 'Learn More',
+    //   href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+    // },
     // {
     //   name: 'Build With Us',
     //   href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
@@ -62,6 +67,16 @@ const navigation = {
     {
       name: 'Discord',
       href: 'https://discord.gg/PxYFWs93',
+    },
+  ],
+  learnMore: [
+    {
+      name: 'Docs',
+      href: 'https://docs.continuumdao.org/',
+    },
+    {
+      name: 'Whitepaper',
+      href: 'https://continuumdao.org/assets/White_Paper_ContinuumDAO.a0c79446.pdf',
     },
   ],
   social: [
