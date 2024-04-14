@@ -8,7 +8,7 @@ export function CallToAction() {
     { label: 'Forum', url: 'https://forum.continuumdao.org/' },
     { label: 'Vote', url: 'https://snapshot.org/#/continuumdao.eth' },
     {
-      name: 'Staking',
+      label: 'Staking',
       href: '',
       disabled: true
     },
