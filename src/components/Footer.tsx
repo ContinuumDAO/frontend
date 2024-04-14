@@ -286,7 +286,7 @@ export function Footer() {
               <span className="sr-only">Continuum</span>
               <div className="flex flex-row items-center xxs:pl-2 md:pl-3">
                 <Image
-                  className="-mr-4 pt-1.5 xxs:scale-50 xs:scale-[0.6] lg:scale-[0.5]"
+                  className="-mr-4 pt-1.5 xxs:scale-50 xs:scale-[0.6] lg:scale-[0.5] w-[76px]"
                   src={Logo}
                   alt="Logo"
                 />

@@ -199,7 +199,7 @@ export function Header() {
             <span className="sr-only">Continuum</span>
             <div className="flex flex-row items-center xxs:-ml-4 md:ml-0 lg:ml-10 xl:ml-0">
               <Image
-                className="-mr-4 max-w-auto scale-[0.6] pt-1.5 lg:scale-[0.5]"
+                className="-mr-4 max-w-auto scale-[0.6] pt-1.5 lg:scale-[0.5] w-[76px]"
                 src={Logo}
                 alt="Logo"
               />
@@ -575,7 +575,7 @@ export function Header() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto border-l border-white/30 bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <Image
-              className=" -mb-1.5 -ml-5 scale-50 pt-1.5"
+              className=" -mb-1.5 -ml-5 scale-50 pt-1.5 w-[76px]"
               src={Logo}
               alt="Logo"
             />
