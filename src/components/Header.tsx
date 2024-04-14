@@ -163,8 +163,7 @@ export function Header() {
             <span className="sr-only">Continuum</span>
             <div className="flex flex-row items-center xxs:-ml-4 md:ml-0 lg:ml-10 xl:ml-0">
               <Image
-                width={38} height={38}
-                className="-mr-4 !size-[38px] scale-[0.6] pt-1.5 lg:scale-[0.5]"
+                className="-mr-4 max-w-auto scale-[0.6] pt-1.5 lg:scale-[0.5]"
                 src={Logo}
                 alt="Logo"
               />
