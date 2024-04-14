@@ -38,8 +38,7 @@ const governance = [
   },
   {
     name: 'Staking',
-    href: '',
-    disabled: true
+    href: 'https://c3staking-frontend.pages.dev/'
   },
   // {
   //   name: 'Learn More',
@@ -524,7 +523,7 @@ export function Header() {
         </Popover.Group>
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end xl:pr-4">
           <a
-            href="https://network.continuumdao.org"
+            href="https://c3mpcnetwork-frontend.pages.dev/"
             className="link text-white border border-white font-semibold leading-6 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
           >
             MPC Network
@@ -728,7 +727,7 @@ export function Header() {
               </div>
               <div className="rounded py-6">
                 <a
-                  href="https://network.continuumdao.org"
+                  href="https://c3mpcnetwork-frontend.pages.dev"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
                   MPC Network

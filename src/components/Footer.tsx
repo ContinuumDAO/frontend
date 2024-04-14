@@ -31,8 +31,7 @@ const navigation = {
     },
     {
       name: 'Staking',
-      href: '',
-      disabled: true
+      href: 'https://c3staking-frontend.pages.dev/',
     },
     // {
     //   name: 'Learn More',
