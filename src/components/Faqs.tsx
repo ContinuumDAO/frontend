@@ -57,7 +57,7 @@ export function Faqs() {
   }
 
   return (
-    <div id="faq" className="z-10 bg-[url('../images/background-graphic.gif')]">
+    <div id="faq" className="z-10">
       <div className="mx-auto max-w-[115rem] px-6 py-32 sm:py-48 lg:px-8 lg:py-48">
         <div className="mx-auto max-w-6xl">
           <h2 className="xxs:text-4xl xxs:text-center xxs:leading-snug pb-12 font-bold tracking-tight text-white sm:text-5xl sm:leading-10 lg:text-left">
@@ -127,10 +127,7 @@ export function Faqs() {
                         </span>
                         <div className="xxs:px-8 absolute sm:px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
                           <span className="xxs:text-lg leading-7 text-gray-300 sm:text-xl md:mt-0 md:text-2xl">
-                            Continuum is a trustless MPC network of
-                            decentralized nodes that allows dApps from many
-                            diverse blockchains to seamlessly interact using
-                            decentralized SMPC for security.
+                            A 100% DAO structure enables open democratic on-chain decision making that operates the Continuum Network with verifiable tracing.
                           </span>
                         </div>
                       </Transition.Child>

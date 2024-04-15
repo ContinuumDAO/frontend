@@ -7,7 +7,7 @@ export function WhatWeDo() {
   return (
     <div
       id="what-we-do"
-      className="bg-[url('../images/background-graphic.gif')]"
+      className=" "
     >
       <div className="mx-auto max-w-7xl sm:px-6">
         <div className="relative isolate px-6 xxs:py-10 sm:px-10 sm:py-20 sm:selection:rounded-3xl lg:py-12 xl:px-24">
@@ -17,18 +17,15 @@ export function WhatWeDo() {
                 A New Continuum in Interoperability
               </p>
               <p className="mt-10 font-medium leading-8 text-white xxs:text-2xl sm:text-3xl">
-                Revolutionizing Interoperability through Trustless MPC Network
+                Revolutionizing Interoperability through decentralized MPC Network
               </p>
               <p className="mt-10 font-light leading-8 text-gray-300 xs:text-xl sm:text-2xl xl:pr-24">
-                At ContinuumDAO, we are pioneering a new frontier in blockchain
-                interoperability. Our mission is to enable decentralized
-                applications (dApps) to effortlessly implement cross-chain and
-                interoperability functionalities.
+                Continuum, a trustless MPC network of decentralized nodes, enables smooth dApp interaction across various blockchains via decentralized SMPC for security. ContinuumDAO aims to globally manage the network transparently with on-chain governance into the protocol.
               </p>
               <div className="mt-10 flex xs:justify-center lg:justify-start">
                 <a
                   href="../../assets/White_Paper_ContinuumDAO.a0c79446.pdf"
-                  className="link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
+                  className="backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
                 >
                   Read Our Whitepaper <span aria-hidden="true">↗</span>
                   <span className="link-bg"></span>
@@ -71,7 +68,7 @@ export function WhatWeDo() {
             </div>
             <div className="-z-20 xs:-mt-10 sm:-mt-24 lg:row-span-4 lg:-ml-24 lg:max-w-none">
               <Image
-                className="md:items-center lg:ml-16 lg:mt-20 lg:scale-100 xl:ml-32 xl:mt-24"
+                className="main-shadow md:items-center lg:ml-16 lg:mt-20 lg:scale-100 xl:ml-32 xl:mt-24"
                 src={WhoWeAreGraphic}
                 alt="Network Graphic"
               />

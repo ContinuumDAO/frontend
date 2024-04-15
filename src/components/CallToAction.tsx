@@ -8,13 +8,17 @@ export function CallToAction() {
     { label: 'Forum', url: 'https://forum.continuumdao.org/' },
     { label: 'Vote', url: 'https://snapshot.org/#/continuumdao.eth' },
     {
-      label: 'Learn More',
-      url: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+      label: 'Staking',
+      href: 'https://c3staking-frontend.pages.dev/',
     },
-    {
-      label: 'Build With Us',
-      url: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
-    },
+    // {
+    //   label: 'Learn More',
+    //   url: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+    // },
+    // {
+    //   label: 'Build With Us',
+    //   url: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
+    // },
   ]
 
   return (
@@ -26,7 +30,7 @@ export function CallToAction() {
               target="_"
               key={index}
               href={action.url}
-              className="link relative h-16 w-64 overflow-hidden border border-white text-center  text-base font-semibold leading-6 text-white"
+              className="backdrop-blur-[2px] link relative h-16 w-64 overflow-hidden border border-white text-center  text-base font-semibold leading-6 text-white"
             >
               <div className="mt-5">
                 {action.label} <span aria-hidden="true">↗</span>

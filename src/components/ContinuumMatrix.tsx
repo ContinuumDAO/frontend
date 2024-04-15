@@ -5,7 +5,7 @@ export function ContinuumMatrix() {
     <div
       id="continuum-matrix"
       aria-label="Continuum Matrix"
-      className="bg-[url('../images/background-graphic.gif')] xxs:-ml-28 xxs:mb-[48rem] sm:ml-0 xl:mb-0"
+      className="  xxs:-ml-28 xxs:mb-[48rem] sm:ml-0 xl:mb-0"
     >
       <div className="mx-auto max-w-7xl xxs:py-12 sm:py-32 lg:px-8 lg:py-40">
         <div className="xxs:pl-28 xs:pl-28 sm:pl-0">

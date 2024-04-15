@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: 'ContinuumDAO',
   },
   description:
-    'Continuum is a trustless MPC network of decentralized nodes that allows dApps from many diverse blockchains to seamlessly interact using decentralized SMPC for security.',
+    'A 100% DAO structure enables open democratic on-chain decision making that operates the Continuum Network with verifiable tracing.',
 }
 
 const montserrat = Montserrat({

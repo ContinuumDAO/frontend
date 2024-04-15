@@ -37,13 +37,17 @@ const governance = [
     href: 'https://snapshot.org/#/continuumdao.eth',
   },
   {
-    name: 'Learn More',
-    href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+    name: 'Staking',
+    href: 'https://c3staking-frontend.pages.dev/'
   },
-  {
-    name: 'Build With Us',
-    href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
-  },
+  // {
+  //   name: 'Learn More',
+  //   href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
+  // },
+  // {
+  //   name: 'Build With Us',
+  //   href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
+  // },
 ]
 
 const contactUs = [
@@ -67,6 +71,21 @@ const contactUs = [
     name: 'GitHub',
     href: 'https://github.com/ContinuumDAO',
   },
+  {
+    name: 'Discord',
+    href: 'https://discord.gg/PxYFWs93',
+  },
+]
+
+const learnMore = [
+  {
+    name: 'Docs',
+    href: 'https://docs.continuumdao.org/',
+  },
+  {
+    name: 'Whitepaper',
+    href: 'https://continuumdao.org/assets/White_Paper_ContinuumDAO.a0c79446.pdf',
+  },
 ]
 
 function classNames(...classes: string[]) {
@@ -79,6 +98,7 @@ export function Header() {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const buttonRef2 = useRef<HTMLButtonElement>(null)
   const buttonRef3 = useRef<HTMLButtonElement>(null)
+  const buttonRef4 = useRef<HTMLButtonElement>(null)
   const timeoutDuration = 200
   let timeout: any
 
@@ -110,6 +130,15 @@ export function Header() {
       }),
     )
   }
+  const closePopover4 = () => {
+    return buttonRef4.current?.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'Escape',
+        bubbles: true,
+        cancelable: true,
+      }),
+    )
+  }
 
   const onMouseEnter = (open: any) => {
     clearTimeout(timeout)
@@ -129,6 +158,12 @@ export function Header() {
     return buttonRef3.current?.click()
   }
 
+  const onMouseEnter4 = (open: any) => {
+    clearTimeout(timeout)
+    if (open) return
+    return buttonRef4.current?.click()
+  }
+
   const onMouseLeave = (open: any) => {
     if (!open) return
     timeout = setTimeout(() => closePopover(), timeoutDuration)
@@ -144,11 +179,16 @@ export function Header() {
     timeout = setTimeout(() => closePopover3(), timeoutDuration)
   }
 
+  const onMouseLeave4 = (open: any) => {
+    if (!open) return
+    timeout = setTimeout(() => closePopover4(), timeoutDuration)
+  }
+
   return (
     <header
       className={`${
         mobileMenuOpen ? 'z-20' : 'z-50'
-      } fixed top-0 w-full bg-black pt-8`}
+      } fixed top-0 w-full pt-8 bg-[transparent] backdrop-blur-[6px]`}
     >
       <nav
         className="mx-auto flex max-w-[110rem] items-center justify-between border-b border-t border-white/30 px-8"
@@ -159,7 +199,7 @@ export function Header() {
             <span className="sr-only">Continuum</span>
             <div className="flex flex-row items-center xxs:-ml-4 md:ml-0 lg:ml-10 xl:ml-0">
               <Image
-                className="-mr-4 scale-[0.6] pt-1.5 lg:scale-[0.5]"
+                className="-mr-4 max-w-auto scale-[0.6] pt-1.5 lg:scale-[0.5] w-[76px]"
                 src={Logo}
                 alt="Logo"
               />
@@ -180,22 +220,22 @@ export function Header() {
           </button>
         </div>
         <Popover.Group className="hidden items-center lg:flex">
-          <a
+          {/* <a
             href="#what-we-do"
             className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
             The Vision
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-          </a>
-          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
-          <a
+          </a> */}
+          {/* <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div> */}
+          {/* <a
             href="#continuum-matrix"
             className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
           >
             Continuum Matrix
             <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-          </a>
-          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          </a> */}
+          {/* <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div> */}
           <Popover className="relative">
             {({ open, close }) => {
               return (
@@ -409,16 +449,122 @@ export function Header() {
               )
             }}
           </Popover>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <Popover className="relative">
+            {({ open, close }) => {
+              return (
+                <>
+                  <div>
+                    <Popover.Button
+                      ref={buttonRef4}
+                      onMouseEnter={onMouseEnter4.bind(null, open)}
+                      onMouseLeave={onMouseLeave4.bind(null, open)}
+                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
+                    >
+                      <span className="flex items-center gap-x-1">
+                        Learn More
+                        <ChevronDownIcon
+                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
+                    </Popover.Button>
+
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-500"
+                      enterFrom="opacity-0 -translate-x-6"
+                      enterTo="opacity-100 translate-x-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 -translate-x-6"
+                    >
+                      <Popover.Panel
+                        onMouseEnter={onMouseEnter4.bind(null, open)}
+                        onMouseLeave={onMouseLeave4.bind(null, open)}
+                        className="absolute -left-4 top-3/4
+              z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
+                      >
+                        <div className="px-4">
+                          {learnMore.map((item, i) => (
+                            <div
+                              key={item.name}
+                              className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
+                            >
+                              <div className="flex-auto">
+                                <a
+                                  onClick={close}
+                                  href={item.href}
+                                  target="_"
+                                  className="block font-semibold text-white"
+                                >
+                                  {item.name}
+                                </a>
+                                <div
+                                  className={`${
+                                    i !== learnMore.length - 1
+                                      ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
+                                      : ''
+                                  } `}
+                                ></div>
+                                <div className=""></div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </div>
+                </>
+              )
+            }}
+          </Popover>
         </Popover.Group>
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end xl:pr-4">
           <a
-            href="https://network.continuumdao.org"
-            className="rounded-full bg-[#C8EAFF] font-semibold leading-6 text-gray-900 hover:bg-[#C8EAFF]/80 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
+            href="https://c3mpcnetwork-frontend.pages.dev/"
+            className="link text-white border border-white font-semibold leading-6 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
           >
             MPC Network
+            <span className="link-bg"></span>
           </a>
         </div>
       </nav>
+      <style jsx>{`
+        .link {
+          position: relative;
+          overflow: hidden;
+          transition: color 0.5s ease;
+          color: white;
+        }
+
+        .link-bg {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 100%;
+          bottom: 0;
+          background-color: white;
+          z-index: -1;
+          transition: right 0.5s ease;
+        }
+
+        .link:hover {
+          color: black;
+        }
+        .link:hover .link-bg {
+          right: 0;
+        }
+
+        .webkit-center {
+          display: flex;
+          -webkit-align-items: center;
+          align-items: center;
+          justify-content: center;
+        }
+      `}</style>
       <Dialog
         as="div"
         className="lg:hidden"
@@ -429,7 +575,7 @@ export function Header() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto border-l border-white/30 bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <Image
-              className=" -mb-1.5 -ml-5 scale-50 pt-1.5"
+              className=" -mb-1.5 -ml-5 scale-50 pt-1.5 w-[76px]"
               src={Logo}
               alt="Logo"
             />
@@ -445,20 +591,20 @@ export function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/30">
               <div className="space-y-2 py-6">
-                <a
+                {/* <a
                   href="#what-we-do"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
                   The Vision
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href="#continuum-matrix"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
                   Continuum Matrix
-                </a>
+                </a> */}
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
@@ -548,10 +694,40 @@ export function Header() {
                     </>
                   )}
                 </Disclosure>
+                <Disclosure as="div" className="-mx-3">
+                  {({ open }) => (
+                    <>
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-white/10">
+                        Learn More
+                        <ChevronDownIcon
+                          className={classNames(
+                            open ? 'rotate-180' : '',
+                            'h-5 w-5 flex-none',
+                          )}
+                          aria-hidden="true"
+                        />
+                      </Disclosure.Button>
+                      <Disclosure.Panel className="mt-2 space-y-2">
+                        {[...learnMore].map((item) => (
+                          <Disclosure.Button
+                            key={item.name}
+                            as="a"
+                            target="_"
+                            onClick={() => setMobileMenuOpen(false)}
+                            href={item.href}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
+                          >
+                            {item.name}
+                          </Disclosure.Button>
+                        ))}
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
               </div>
               <div className="rounded py-6">
                 <a
-                  href="https://network.continuumdao.org"
+                  href="https://c3mpcnetwork-frontend.pages.dev"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-white/10"
                 >
                   MPC Network

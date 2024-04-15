@@ -10,7 +10,7 @@ export default function NotFound() {
     <SlimLayout>
       <div className="flex">
         <Link href="/" aria-label="Home">
-          <Image className="-ml-4 scale-75" src={Logo} alt="Logo" />
+          <Image className="-ml-4 scale-75 w-[76px]" src={Logo} alt="Logo" />
         </Link>
       </div>
       <p className="mt-20 text-sm font-medium text-white">404</p>
@@ -23,7 +23,7 @@ export default function NotFound() {
       <div className="mt-10 flex justify-start">
         <a
           href="/"
-          className="link relative overflow-hidden border border-white px-8 py-3 text-xs font-semibold leading-6 text-white"
+          className="backdrop-blur-[2px] link relative overflow-hidden border border-white px-8 py-3 text-xs font-semibold leading-6 text-white"
         >
           Go Back Home <span aria-hidden="true">↗</span>
           <span className="link-bg"></span>
