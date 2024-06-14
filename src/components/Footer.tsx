@@ -189,7 +189,7 @@ const navigation = {
 
 export function Footer() {
   return (
-    <div className="z-10   bg-right-top">
+    <div className="z-10   bg-right-top mt-32">
       <h2 className="sr-only">Footer</h2>
       {/* lg:pt-32  xxs:pt-0 sm:pt-24  */}
       <div className="mx-auto max-w-[115rem] px-6 pb-8 lg:px-8 pt-0">
@@ -231,7 +231,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto">
-        <div className="px-6 lg:px-8 backdrop-blur-[2px] bg-[rgba(255,255,255,0.01)] mt-8 border-t border-white/30 pt-0 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
+        <div className="px-6 lg:px-8 backdrop-blur-[2px] bg-[rgba(255,255,255,0.01)] mt-8 border-t border-white/30 pt-0 md:flex md:items-center md:justify-between">
           <div className="mb-2 flex xxs:space-x-6 xs:space-x-8 sm:only:space-x-14 md:order-2 md:mb-0">
             {navigation.social.map((item) => (
               <a
