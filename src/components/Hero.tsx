@@ -68,7 +68,7 @@ export function Hero() {
                 </svg>
               </h1>
               <p className="mt-20 font-semibold leading-normal text-white xxs:text-xl xs:text-2xl sm:text-[30px]">
-                The First DAO MPC Public Goods
+                The First Decentralized MPC Network
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a

@@ -206,6 +206,7 @@ export function Header() {
               <span className="hidden pl-3 pt-0.5 font-semibold text-white xl:inline xl:text-2xl 2xl:text-3xl">
                 Continuum
               </span>
+              <span className='text-white font-semibold -mt-3 text-xs scale-90'>Testnet</span>
             </div>
           </a>
         </div>

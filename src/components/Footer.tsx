@@ -65,7 +65,7 @@ const navigation = {
     },
     {
       name: 'Discord',
-      href: 'https://discord.gg/vCAQxfXE',
+      href: 'https://discord.gg/2kcDRjGuAE',
     },
   ],
   learnMore: [
@@ -83,7 +83,7 @@ const navigation = {
       name: 'Discord',
       href: 'https://discord.gg/vCAQxfXE',
       icon: () => (
-        <svg className='w-[31px] h-[32px]' height="1828" viewBox="-10.63 -.07077792 823.87 610.06955549" width="2500" xmlns="http://www.w3.org/2000/svg"><path d="m678.27 51.62c90.35 132.84 134.97 282.68 118.29 455.18-.07.73-.45 1.4-1.05 1.84-68.42 50.24-134.71 80.73-200.07 100.95a2.55 2.55 0 0 1 -2.81-.95c-15.1-21.01-28.82-43.16-40.84-66.42-.69-1.37-.06-3.02 1.36-3.56 21.79-8.21 42.51-18.05 62.44-29.7 1.57-.92 1.67-3.17.22-4.25-4.23-3.14-8.42-6.44-12.43-9.74-.75-.61-1.76-.73-2.61-.32-129.39 59.75-271.13 59.75-402.05 0-.85-.38-1.86-.25-2.59.35-4 3.3-8.2 6.57-12.39 9.71-1.45 1.08-1.33 3.33.25 4.25 19.93 11.43 40.65 21.49 62.41 29.74 1.41.54 2.08 2.15 1.38 3.52-11.76 23.29-25.48 45.44-40.86 66.45-.67.85-1.77 1.24-2.81.92-65.05-20.22-131.34-50.71-199.76-100.95-.57-.44-.98-1.14-1.04-1.87-13.94-149.21 14.47-300.29 118.18-455.18.25-.41.63-.73 1.07-.92 51.03-23.42 105.7-40.65 162.84-50.49 1.04-.16 2.08.32 2.62 1.24 7.06 12.5 15.13 28.53 20.59 41.63 60.23-9.2 121.4-9.2 182.89 0 5.46-12.82 13.25-29.13 20.28-41.63a2.47 2.47 0 0 1 2.62-1.24c57.17 9.87 111.84 27.1 162.83 50.49.45.19.82.51 1.04.95zm-339.04 283.7c.63-44.11-31.53-80.61-71.9-80.61-40.04 0-71.89 36.18-71.89 80.61 0 44.42 32.48 80.6 71.89 80.6 40.05 0 71.9-36.18 71.9-80.6zm265.82 0c.63-44.11-31.53-80.61-71.89-80.61-40.05 0-71.9 36.18-71.9 80.61 0 44.42 32.48 80.6 71.9 80.6 40.36 0 71.89-36.18 71.89-80.6z" fill="#fff"/></svg>
+        <svg className='w-[20px] h-[20px]' height="1828" viewBox="-10.63 -.07077792 823.87 610.06955549" width="2500" xmlns="http://www.w3.org/2000/svg"><path d="m678.27 51.62c90.35 132.84 134.97 282.68 118.29 455.18-.07.73-.45 1.4-1.05 1.84-68.42 50.24-134.71 80.73-200.07 100.95a2.55 2.55 0 0 1 -2.81-.95c-15.1-21.01-28.82-43.16-40.84-66.42-.69-1.37-.06-3.02 1.36-3.56 21.79-8.21 42.51-18.05 62.44-29.7 1.57-.92 1.67-3.17.22-4.25-4.23-3.14-8.42-6.44-12.43-9.74-.75-.61-1.76-.73-2.61-.32-129.39 59.75-271.13 59.75-402.05 0-.85-.38-1.86-.25-2.59.35-4 3.3-8.2 6.57-12.39 9.71-1.45 1.08-1.33 3.33.25 4.25 19.93 11.43 40.65 21.49 62.41 29.74 1.41.54 2.08 2.15 1.38 3.52-11.76 23.29-25.48 45.44-40.86 66.45-.67.85-1.77 1.24-2.81.92-65.05-20.22-131.34-50.71-199.76-100.95-.57-.44-.98-1.14-1.04-1.87-13.94-149.21 14.47-300.29 118.18-455.18.25-.41.63-.73 1.07-.92 51.03-23.42 105.7-40.65 162.84-50.49 1.04-.16 2.08.32 2.62 1.24 7.06 12.5 15.13 28.53 20.59 41.63 60.23-9.2 121.4-9.2 182.89 0 5.46-12.82 13.25-29.13 20.28-41.63a2.47 2.47 0 0 1 2.62-1.24c57.17 9.87 111.84 27.1 162.83 50.49.45.19.82.51 1.04.95zm-339.04 283.7c.63-44.11-31.53-80.61-71.9-80.61-40.04 0-71.89 36.18-71.89 80.61 0 44.42 32.48 80.6 71.89 80.6 40.05 0 71.9-36.18 71.9-80.6zm265.82 0c.63-44.11-31.53-80.61-71.89-80.61-40.05 0-71.9 36.18-71.9 80.61 0 44.42 32.48 80.6 71.9 80.6 40.36 0 71.89-36.18 71.89-80.6z" fill="#fff" /></svg>
       ),
     },
     {
@@ -91,6 +91,7 @@ const navigation = {
       href: 'https://twitter.com/ContinuumDAO',
       icon: () => (
         <svg
+          className='w-[20px] h-[20px]'
           width="30"
           height="28"
           viewBox="0 0 30 28"
@@ -109,6 +110,7 @@ const navigation = {
       href: 'https://t.me/ContinuumDAO',
       icon: () => (
         <svg
+          className='w-[20px] h-[20px]'
           width="31"
           height="32"
           viewBox="0 0 31 32"
@@ -127,10 +129,10 @@ const navigation = {
       href: 'https://medium.com/@continuumdao',
       icon: () => (
         <svg
+          className='w-[20px] h-[20px]'
           width="32"
           height="19"
           viewBox="0 0 32 19"
-          className="mt-1.5"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -147,6 +149,7 @@ const navigation = {
       href: 'https://forum.continuumdao.org/',
       icon: () => (
         <svg
+          className='w-[20px] h-[20px]'
           width="31"
           height="32"
           viewBox="0 0 31 32"
@@ -167,6 +170,7 @@ const navigation = {
       href: 'https://github.com/ContinuumDAO',
       icon: () => (
         <svg
+          className='w-[20px] h-[20px]'
           width="29"
           height="28"
           viewBox="0 0 29 28"
@@ -187,94 +191,54 @@ export function Footer() {
   return (
     <div className="z-10   bg-right-top">
       <h2 className="sr-only">Footer</h2>
-      <div className="mx-auto max-w-[115rem] px-6 pb-8 xxs:pt-0 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div/>
-          {/* <div className="grid grid-cols-1 xxs:pl-8 xl:pl-0">
-            <div className="mt-10 xl:mt-0">
-              <h3 className="text-[22px] font-extrabold leading-6 text-white">
-                The Vision
-              </h3>
-              <p className="mt-8 text-lg leading-6 text-white/70">
-                <a className="hover:underline" href="#what-we-do">
-                  The Vision
-                </a>
-              </p>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-[22px] font-extrabold leading-6 text-white">
-                Continuum Matrix
-              </h3>
-              <p className="mt-6 text-lg leading-6 text-white/70">
-                <a className="hover:underline" href="#continuum-matrix">
-                  Continuum Matrix
-                </a>
-              </p>
-            </div>
-          </div> */}
-          <div className="mt-10 xxs:pl-8 md:-ml-16 md:grid md:grid-cols-3 md:pl-24 xl:col-span-2 xl:mt-0 xl:gap-20 xl:pl-0 2xl:mt-0 2xl:gap-32">
-            {/* <div/> */}
-            {/* <div>
-              <h3 className="text-[22px] font-extrabold leading-6 text-white">
-                Use Cases
-              </h3>
-              <ul role="list" className="mt-6 space-y-5">
-                {navigation.useCases.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-xl leading-6 text-white/70 hover:text-white"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
-            <div className="mt-10 md:ml-16 md:mt-0 text-center">
-              <h3 className="text-[22px] font-extrabold leading-6 text-white">
-                Governance
-              </h3>
-              <ul role="list" className="mt-6 space-y-5">
-                {navigation.governance.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-xl leading-6 text-white/70 hover:text-white"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-10 md:ml-24 md:mt-0 text-center">
-              <h3 className="text-[22px] font-extrabold leading-6 text-white">
-                Contact Us
-              </h3>
-              <ul role="list" className="mt-6 space-y-5">
-                {navigation.contactUs.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-xl leading-6 text-white/70 hover:text-white"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      {/* lg:pt-32  xxs:pt-0 sm:pt-24  */}
+      <div className="mx-auto max-w-[115rem] px-6 pb-8 lg:px-8 pt-0">
+        <div className="flex flex-col items-center gap-[5rem] justify-center">
+          <div className="text-center">
+            <h3 className="text-[22px] font-extrabold leading-6 text-white">
+              Governance
+            </h3>
+            <ul role="list" className="mt-6 flex items-center gap-6 items-center justify-center">
+              {navigation.governance.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-xl leading-6 text-white/70 hover:text-white"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="text-center">
+            <h3 className="text-[22px] font-extrabold leading-6 text-white">
+              Contact Us
+            </h3>
+            <ul role="list" className="mt-6 flex items-center gap-6 items-center justify-center">
+              {navigation.contactUs.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-xl leading-6 text-white/70 hover:text-white"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <div className="mt-16 border-t border-white/30 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
+      </div>
+      <div className="mx-auto">
+        <div className="px-6 lg:px-8 backdrop-blur-[2px] bg-[rgba(255,255,255,0.01)] mt-8 border-t border-white/30 pt-0 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
           <div className="mb-2 flex xxs:space-x-6 xs:space-x-8 sm:only:space-x-14 md:order-2 md:mb-0">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 target="_"
-                className="h-8 w-8 text-white hover:text-white/75"
+                className="h-4 w-4 text-white hover:text-white/75"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" />
@@ -290,7 +254,7 @@ export function Footer() {
                   src={Logo}
                   alt="Logo"
                 />
-                <span className="pl-3 pt-0.5 font-semibold text-white xxs:text-3xl xs:text-4xl">
+                <span className="pl-3 pt-0.5 font-semibold text-white xxs:text-xl xs:text-2xl">
                   Continuum
                 </span>
               </div>

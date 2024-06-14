@@ -7,10 +7,34 @@ import Image from 'next/image'
 const useCases = [
   {
     id: 'c3-router',
-    name: 'Token and Message Bridging',
-    role: 'Effortlessly transfer tokens and messages between blockchains. ContinuumDAO simplifies asset movement and communication, enabling seamless interactions across diverse blockchain networks.',
+    name: 'Token and Message Bridging - C3Caller',
+    role: 'An open-source, immutable messaging protocol designed to facilitate the creation of multi-chain, interoperable applications. Developers can easily customize data with multi-chain messaging while preserving full autonomy and control over applications.',
     StartImage: C3RouterStart,
     EndImage: C3RouterEnd,
+    suffix: <div className="mt-10 flex xs:justify-center lg:justify-start">
+      <a
+        href="https://c3caller-frontend.pages.dev"
+        className="backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
+      >
+        Visit C3Caller
+        <span className="link-bg"></span>
+      </a>
+    </div>
+  },
+  {
+    id: 'c3-wallet',
+    name: 'Members, Ensuring Decentralized decision-making. (Cross-on-chain-gov)',
+    role: 'Create and maintain your own decentralized identity wallet. Our robust infrastructure provides a secure solution for managing identities across multiple blockchains, coupled with reliable wallet recovery capabilities.',
+    StartImage: C3WalletStart,
+    EndImage: C3WalletEnd,
+    suffix: <div className="mt-10 flex xs:justify-center lg:justify-start">
+      <div
+        className="opacity-60 backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
+      >
+        Coming Soon
+        <span className="link-bg"></span>
+      </div>
+    </div>
   },
   {
     id: 'c3-caller',
@@ -18,13 +42,14 @@ const useCases = [
     role: 'Connect with multiple liquidity pools across various blockchains. Our platform supports the creation of a more fluid and integrated financial ecosystem, enhancing liquidity access for decentralized applications.',
     StartImage: C3CallerStart,
     EndImage: C3CallerEnd,
-  },
-  {
-    id: 'c3-wallet',
-    name: 'Decentralized Identity Wallets',
-    role: 'Create and maintain your own decentralized identity wallet. Our robust infrastructure provides a secure solution for managing identities across multiple blockchains, coupled with reliable wallet recovery capabilities.',
-    StartImage: C3WalletStart,
-    EndImage: C3WalletEnd,
+    suffix: <div className="mt-10 flex xs:justify-center lg:justify-start">
+      <div
+        className="opacity-60 backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
+      >
+        Coming Soon
+        <span className="link-bg"></span>
+      </div>
+    </div>
   },
   {
     id: 'build-on-ctm',
@@ -32,6 +57,14 @@ const useCases = [
     role: 'Revolutionize gaming experiences by enabling interoperability across different blockchains. Develop games that transcend boundaries, allowing assets and identities to move freely between gaming worlds.',
     StartImage: BuildOnCtmStart,
     EndImage: BuildOnCtmEnd,
+    suffix: <div className="mt-10 flex xs:justify-center lg:justify-start">
+      <div
+        className="opacity-60 backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
+      >
+        Coming Soon
+        <span className="link-bg"></span>
+      </div>
+    </div>
   },
 ]
 
@@ -52,7 +85,7 @@ export function UseCases() {
             <li
               key={useCase.name}
               style={{ zIndex: useCases.length - index }}
-              className="group z-0 border border-white bg-black py-10 hover:!z-10 xxs:max-w-[295px] xxs:px-4 xs:max-w-[360px] sm:-mr-24 sm:max-w-xl sm:px-8 lg:max-w-7xl"
+              className="relative group z-0 border border-white bg-black py-10 hover:!z-10 xxs:max-w-[295px] xxs:px-4 xs:max-w-[360px] sm:-mr-24 sm:max-w-xl sm:px-8 lg:max-w-7xl"
             >
               <div className="group relative xxs:pt-16 lg:pt-0">
                 <div className="h-56"></div>
@@ -63,23 +96,26 @@ export function UseCases() {
                   <useCase.EndImage />
                 </div>
               </div>
-              <div>
-                <h3
-                  className={`${
-                    useCases.length - index < useCases.length
+              <div className='flex flex-col gap-2 pb-[3.75rem] justify-between'>
+                <div className='flex-1'>
+                  <h3
+                    className={`${useCases.length - index < useCases.length
                       ? 'xxs:text-left lg:text-right'
                       : 'web'
-                  } px-4 pb-10 text-2xl font-medium leading-7 tracking-tight text-white group-hover:text-left xxs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6`}
-                >
-                  <span>{useCase.name}</span>
-                </h3>
-                <p
-                  className={`${
-                    useCases.length - index < useCases.length ? 'web' : 'web'
-                  } font-light leading-8 text-white/70 group-hover:text-left xxs:-mt-4 xxs:text-xl sm:mt-0 sm:text-xl`}
-                >
-                  {useCase.role}
-                </p>
+                      } pb-10 text-2xl font-medium leading-7 tracking-tight text-white group-hover:text-left xxs:-mt-2 sm:mt-6 lg:mt-11 xl:mt-6`}
+                  >
+                    <span>{useCase.name}</span>
+                  </h3>
+                  <p
+                    className={`${useCases.length - index < useCases.length ? 'web' : 'web'
+                      } font-light leading-8 text-white/70 group-hover:text-left xxs:-mt-4 xxs:text-xl sm:mt-0 sm:text-xl`}
+                  >
+                    {useCase.role}
+                  </p>
+                </div>
+                <div className='absolute bottom-5'>
+                {useCase?.suffix}
+                </div>
               </div>
             </li>
           ))}

@@ -14,13 +14,13 @@ export function WhatWeDo() {
           <div className="mx-auto mt-28 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
             <div className="xxs:text-center lg:row-start-2 lg:max-w-xl lg:text-left xl:-ml-24">
               <p className="font-bold tracking-tight text-white xxs:text-4xl xs:text-5xl">
-                A New Continuum in Interoperability
+              Ultimate public good
               </p>
               <p className="mt-10 font-medium leading-8 text-white xxs:text-2xl sm:text-3xl">
-                Revolutionizing Interoperability through decentralized MPC Network
+              Permissionless service<br/>Autonomous operation<br/>Programable MPC functions<br/>Unlimited nodes scale
               </p>
               <p className="mt-10 font-light leading-8 text-gray-300 xs:text-xl sm:text-2xl xl:pr-24">
-                Continuum, a trustless MPC network of decentralized nodes, enables smooth dApp interaction across various blockchains via decentralized SMPC for security. ContinuumDAO aims to globally manage the network transparently with on-chain governance into the protocol.
+              Continuum is a decentralized MPC network designed to serve as a public good. Its primary purpose is to facilitate seamless integration of dApps across various blockchains. Governance of the network is managed through on-chain voting by ContinuumDAO 
               </p>
               <div className="mt-10 flex xs:justify-center lg:justify-start">
                 <a
