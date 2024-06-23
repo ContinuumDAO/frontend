@@ -73,7 +73,7 @@ const contactUs = [
   },
   {
     name: 'Discord',
-    href: 'https://discord.gg/vCAQxfXE',
+    href: 'https://discord.gg/2kcDRjGuAE',
   },
 ]
 
