@@ -9,7 +9,7 @@ export function CallToAction() {
     { label: 'Vote', url: 'https://snapshot.org/#/continuumdao.eth' },
     {
       label: 'Staking',
-      url: 'https://c3staking-frontend.pages.dev/',
+      url: 'https://staking.continuumdao.org',
     },
     // {
     //   label: 'Learn More',

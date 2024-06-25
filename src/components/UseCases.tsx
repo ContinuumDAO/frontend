@@ -13,7 +13,7 @@ const useCases = [
     EndImage: C3RouterEnd,
     suffix: <div className="mt-10 flex xs:justify-center lg:justify-start">
       <a
-        href="https://c3caller-frontend.pages.dev"
+        href="https://c3caller.continuumdao.org"
         className="backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
       >
         Visit C3Caller

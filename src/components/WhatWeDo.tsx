@@ -17,7 +17,7 @@ export function WhatWeDo() {
               Ultimate public good
               </p>
               <p className="mt-10 font-medium leading-8 text-white xxs:text-2xl sm:text-3xl">
-              Permissionless service<br/>Autonomous operation<br/>Programable MPC functions<br/>Unlimited nodes scale
+              Permissionless service<br/>Autonomous operation<br/>Programable MPC functions<br/>Unlimited node scaling
               </p>
               <p className="mt-10 font-light leading-8 text-gray-300 xs:text-xl sm:text-2xl xl:pr-24">
               Continuum is a decentralized MPC network designed to serve as a public good. Its primary purpose is to facilitate seamless integration of dApps across various blockchains. Governance of the network is managed through on-chain voting by ContinuumDAO 

@@ -8,11 +8,11 @@ const navigation = {
       href: '#use-cases',
     },
     {
-      name: 'Cross-Chain Liquidity Network',
+      name: 'Cross-on-chain-governance',
       href: '#use-cases',
     },
     {
-      name: 'Decentralized Identity Wallets',
+      name: 'Cross-Chain Liquidity Network',
       href: '#use-cases',
     },
     {
@@ -31,7 +31,7 @@ const navigation = {
     },
     {
       name: 'Staking',
-      href: 'https://c3staking-frontend.pages.dev/',
+      href: 'https://staking.continuumdao.org',
     },
     // {
     //   name: 'Learn More',

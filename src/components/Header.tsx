@@ -14,11 +14,11 @@ const useCases = [
     href: '#use-cases',
   },
   {
-    name: 'Cross-Chain Liquidity Network',
+    name: 'Cross-on-chain-governance',
     href: '#use-cases',
   },
   {
-    name: 'Decentralized Identity Wallets',
+    name: 'Cross-Chain Liquidity Network',
     href: '#use-cases',
   },
   {
@@ -38,7 +38,7 @@ const governance = [
   },
   {
     name: 'Staking',
-    href: 'https://c3staking-frontend.pages.dev/'
+    href: 'https://staking.continuumdao.org'
   },
   // {
   //   name: 'Learn More',
@@ -524,7 +524,7 @@ export function Header() {
         </Popover.Group>
         <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end xl:pr-4">
           <a
-            href="https://c3mpcnetwork-frontend.pages.dev/"
+            href="https://dashboard.continuumdao.org"
             className="link text-white border border-white font-semibold leading-6 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
           >
             MPC Network
