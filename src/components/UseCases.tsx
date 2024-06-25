@@ -23,7 +23,7 @@ const useCases = [
   },
   {
     id: 'c3-wallet',
-    name: 'Cross-on-chain-governance',
+    name: <span>Cross-on-chain<br/>Governance</span>,
     role: 'Which leverages the interoperability between different blockchains to ensure that governance processes can be coordinated and executed across multiple networks.',
     StartImage: C3WalletStart,
     EndImage: C3WalletEnd,
@@ -53,7 +53,7 @@ const useCases = [
   },
   {
     id: 'build-on-ctm',
-    name: 'Interoperability for Games',
+    name: <span>Gaming<br/>Interoperability</span>,
     role: 'Revolutionize gaming experiences by enabling interoperability across different blockchains. Develop games that transcend boundaries, allowing assets and identities to move freely between gaming worlds.',
     StartImage: BuildOnCtmStart,
     EndImage: BuildOnCtmEnd,
