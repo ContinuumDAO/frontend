@@ -81,9 +81,9 @@ export function UseCases() {
           </p>
         </div>
         <ul className="mx-auto grid grid-cols-1 gap-6 xxs:mt-10 xxs:max-w-xs xxs:justify-items-center xs:max-w-sm sm:mt-20 sm:max-w-2xl sm:justify-items-start lg:mx-0 lg:-ml-12 lg:max-w-3xl lg:grid-cols-2 xl:-ml-12 xl:max-w-5xl xl:grid-cols-4 2xl:-ml-16 2xl:max-w-7xl">
-          {useCases.map((useCase, index) => (
+          {useCases.map((useCase: any, index: number) => (
             <li
-              key={useCase.name}
+              key={useCase?.name}
               style={{ zIndex: useCases.length - index }}
               className="relative group z-0 border border-white bg-black py-10 hover:!z-10 xxs:max-w-[295px] xxs:px-4 xs:max-w-[360px] sm:-mr-24 sm:max-w-xl sm:px-8 lg:max-w-7xl"
             >
