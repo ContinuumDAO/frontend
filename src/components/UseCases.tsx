@@ -2,6 +2,8 @@
 
 import C3RouterUseCaseGraphic from '../images/c3-router-usecase.gif'
 import C3CallerUseCaseGraphic from '../images/c3-caller-usecase.gif'
+import C3GamingUseCaseGraphic from '../images/c3-gaming-usecase.gif'
+import C3GovUseCaseGraphic from '../images/c3-gov-usecase.gif'
 import Image from 'next/image'
 
 const useCases = [
@@ -23,7 +25,7 @@ const useCases = [
   },
   {
     id: 'c3-wallet',
-    name: <span>Cross-on-chain<br/>Governance</span>,
+    name: <span>Cross-on-chain<br />Governance</span>,
     role: 'Which leverages the interoperability between different blockchains to ensure that governance processes can be coordinated and executed across multiple networks.',
     StartImage: C3WalletStart,
     EndImage: C3WalletEnd,
@@ -53,7 +55,7 @@ const useCases = [
   },
   {
     id: 'build-on-ctm',
-    name: <span>Gaming<br/>Interoperability</span>,
+    name: <span>Gaming<br />Interoperability</span>,
     role: 'Revolutionize gaming experiences by enabling interoperability across different blockchains. Develop games that transcend boundaries, allowing assets and identities to move freely between gaming worlds.',
     StartImage: BuildOnCtmStart,
     EndImage: BuildOnCtmEnd,
@@ -234,88 +236,11 @@ export function BuildOnCtmStart() {
 }
 
 export function BuildOnCtmEnd() {
-  return (
-    <svg
-      width="345"
-      height="208"
-      viewBox="0 0 345 208"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="xxs:-ml-10 xxs:-mt-10 xxs:scale-100 xs:-ml-4 xs:-mt-8 xs:scale-100 sm:ml-20 sm:mt-0 md:ml-0 lg:ml-6 xl:-ml-8 2xl:ml-1"
-    >
-      <g clipPath="url(#clip0_865_4587)">
-        <g opacity="0.4" filter="url(#filter0_f_865_4587)">
-          <ellipse cx="170.5" cy="273.5" rx="191.5" ry="88.5" fill="white" />
-        </g>
-        <rect
-          x="118.376"
-          y="47.5434"
-          width="187"
-          height="262"
-          rx="9.5"
-          transform="rotate(5.21912 118.376 47.5434)"
-          fill="#010101"
-          stroke="#676767"
-        />
-        <rect
-          x="36.5301"
-          y="64.1331"
-          width="187"
-          height="262"
-          rx="9.5"
-          transform="rotate(-3.55743 36.5301 64.1331)"
-          fill="#010101"
-          stroke="#676767"
-        />
-        <rect
-          x="77.5"
-          y="45.5"
-          width="187"
-          height="262"
-          rx="9.5"
-          fill="#010101"
-          stroke="#676767"
-        />
-        <rect x="94" y="89" width="153" height="22" rx="10" fill="white" />
-        <rect x="94" y="131" width="153" height="22" rx="10" fill="white" />
-        <rect
-          opacity="0.4"
-          x="94"
-          y="173"
-          width="103"
-          height="22"
-          rx="10"
-          fill="white"
-        />
-      </g>
-      <defs>
-        <filter
-          id="filter0_f_865_4587"
-          x="-121"
-          y="85"
-          width="583"
-          height="377"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feFlood floodOpacity="0" result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
-          <feGaussianBlur
-            stdDeviation="50"
-            result="effect1_foregroundBlur_865_4587"
-          />
-        </filter>
-        <clipPath id="clip0_865_4587">
-          <rect width="345" height="208" fill="white" />
-        </clipPath>
-      </defs>
-    </svg>
-  )
+  return <Image
+  className="xs:-mt-4 xs:scale-[1.05] sm:-mt-6 sm:scale-[0.98] md:-ml-0.5 md:-mt-6 md:scale-[1] lg:-mt-6 lg:scale-[1.1] xl:-mt-1 xl:ml-0 2xl:-mt-4 2xl:scale-[1.12]"
+  src={C3GamingUseCaseGraphic}
+  alt="Network Graphic"
+/>
 }
 
 export function C3WalletStart() {
@@ -345,28 +270,11 @@ export function C3WalletStart() {
 
 export function C3WalletEnd() {
   return (
-    <svg width="345" height="235" viewBox="0 0 345 235" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_7602_11731)">
-        <g clip-path="url(#clip1_7602_11731)">
-          <path d="M136 139H208L210 144H134L136 139Z" fill="white" />
-          <rect x="184.045" y="82.7028" width="45" height="63" rx="1.5" transform="rotate(38.6436 184.045 82.7028)" fill="black" stroke="white" />
-          <rect x="-0.0782856" y="0.70276" width="33.9125" height="49.1866" rx="1.5" transform="matrix(-0.781045 0.624474 0.624474 0.781045 154.69 92.2028)" fill="black" stroke="white" />
-          <rect x="173.628" y="115.654" width="33.9125" height="49.1866" rx="1.5" transform="rotate(22.6909 173.628 115.654)" fill="black" stroke="white" />
-        </g>
-        <path d="M135 141.5H209L210 144H134L135 141.5Z" fill="white" />
-        <rect x="26.5" y="150.5" width="292" height="167" rx="9.5" fill="#010101" stroke="#676767" />
-        <rect x="82" y="144" width="175" height="6" fill="#010101" />
-      </g>
-      <defs>
-        <clipPath id="clip0_7602_11731">
-          <rect width="345" height="235" fill="white" />
-        </clipPath>
-        <clipPath id="clip1_7602_11731">
-          <rect width="293" height="141" fill="white" transform="translate(26 1)" />
-        </clipPath>
-      </defs>
-    </svg>
-
+    <Image
+      className="xs:-mt-4 xs:scale-[1.05] sm:-mt-6 sm:scale-[0.98] md:-ml-0.5 md:-mt-6 md:scale-[1] lg:-mt-6 lg:scale-[1.1] xl:-mt-1 xl:ml-0 2xl:-mt-4 2xl:scale-[1.12]"
+      src={C3GovUseCaseGraphic}
+      alt="Network Graphic"
+    />
   )
 }
 
