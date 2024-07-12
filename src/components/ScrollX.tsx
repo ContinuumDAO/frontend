@@ -2,11 +2,11 @@ import Image from 'next/image'
 
 const parterners = [
   {
-    name: 'Arbtrum',
+    name: 'Arbitrum',
     img: require('@/images/parterner/1..png'),
   },
   {
-    name: 'Areon',
+    name: 'Areon Network',
     img: require('@/images/parterner/2..png'),
   },
   {
@@ -34,7 +34,7 @@ const parterners = [
     img: require('@/images/parterner/8..png'),
   },
   {
-    name: 'Crossfi',
+    name: 'CrossFi',
     img: require('@/images/parterner/9..png'),
   },
 
@@ -97,7 +97,7 @@ export const ScrollX = () => {
 
 
     .scroll-parent{
-        animation: ani linear 40s infinite;
+        animation: ani linear 30s infinite;
     }
     .scroll-item{
         min-width: 200px;
@@ -107,10 +107,11 @@ export const ScrollX = () => {
 }
 
     </style>
-    <div className="flex items-center scroll-parent mb-10">
+    <div className='w-screen overflow-hidden'>
+    <div className="flex items-center scroll-parent mb-10 w-screen">
       {[...parterners, ...parterners]?.map((i: any, index: number) => {
         return (
-          <div key={index} className="scroll-item relative flex h-[166px] w-screen items-center overflow-hidden">
+          <div key={index} className="scroll-item relative flex h-[166px] items-center">
             <div className="absolute flex h-full w-full items-center">
               <div
                 className="flex h-full w-full flex-col items-center gap-4"
@@ -131,6 +132,8 @@ export const ScrollX = () => {
         )
       })}
     </div>
+    </div>
+    
     </>
   )
 }
