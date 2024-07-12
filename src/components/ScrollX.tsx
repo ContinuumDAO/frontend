@@ -124,7 +124,7 @@ export const ScrollX = () => {
                     alt="Logo"
                   />
                 </div>
-                <div className="font-bold text-[#fff] text-center">{i.name}</div>
+                <div className="font-semibold text-[#fff] text-center">{i.name}</div>
               </div>
             </div>
           </div>

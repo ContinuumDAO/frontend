@@ -20,7 +20,11 @@ export default function Home() {
         {/* <ContinuumMatrix /> */}
         <UseCases />
         <Faqs />
-        <ScrollX />
+        <div className='flex flex-col'>
+    <span className='text-[36px] mb-12 text-[#fff] font-bold self-center'>Our Partner</span>
+    <ScrollX />
+        </div>
+
       </main>
       <Footer />
     </>
