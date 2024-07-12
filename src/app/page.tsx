@@ -11,7 +11,7 @@ import { ScrollX } from '@/components/ScrollX'
 export default function Home() {
   return (
     <>
-      <div className="fixed top-0 bottom-0 left-0 right-0 -z-[10] w-screen h-screen bg-cover bg-[url('../images/background-graphic.gif')]" />
+      <div className="fixed bottom-0 left-0 right-0 top-0 -z-[10] h-screen w-screen bg-[url('../images/background-graphic.gif')] bg-cover" />
       <Header />
       <SideNav />
       <main>
@@ -20,11 +20,12 @@ export default function Home() {
         {/* <ContinuumMatrix /> */}
         <UseCases />
         <Faqs />
-        <div className='flex flex-col'>
-    <span className='text-[36px] mb-12 text-[#fff] font-bold self-center'>Our Partner</span>
-    <ScrollX />
+        <div className="flex flex-col">
+          <span className="mb-12 self-center text-[36px] font-bold text-[#fff]">
+            Our Partner
+          </span>
+          <ScrollX />
         </div>
-
       </main>
       <Footer />
     </>

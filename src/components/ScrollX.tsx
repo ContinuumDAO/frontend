@@ -108,7 +108,7 @@ export const ScrollX = () => {
 
     </style>
     <div className="flex items-center scroll-parent mb-10">
-      {[...parterners, ...parterners]?.map((i, index) => {
+      {[...parterners, ...parterners]?.map((i: any, index: number) => {
         return (
           <div key={index} className="scroll-item relative flex h-[166px] w-screen items-center overflow-hidden">
             <div className="absolute flex h-full w-full items-center">
