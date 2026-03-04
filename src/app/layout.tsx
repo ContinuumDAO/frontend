@@ -31,7 +31,7 @@ export default function RootLayout({
         montserrat.variable,
       )}
     >
-      <body className="flex h-full flex-col">{children}</body>
+      <body className="flex h-full flex-col bg-black text-white">{children}</body>
     </html>
   )
 }

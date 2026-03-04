@@ -6,7 +6,7 @@ export function CallToAction() {
   // List of actions, each with a label and a link (assuming URLs will be different)
   const actions = [
     { label: 'Forum', url: 'https://forum.continuumdao.org/' },
-    { label: 'Vote', url: 'https://snapshot.org/#/continuumdao.eth' },
+    { label: 'Vote', url: 'https://app.continuumdao.org/governance' },
     {
       label: 'Staking',
       url: 'https://staking.continuumdao.org',

@@ -2,7 +2,6 @@
 
 import { Disclosure, Transition } from '@headlessui/react'
 import { useRef } from 'react'
-import { CallToAction } from './CallToAction'
 import { Bobble } from './Bobble'
 
 export function Faqs() {
@@ -292,9 +291,6 @@ export function Faqs() {
             </Disclosure>
           </dl>
           <div></div>
-        </div>
-        <div className="pt-20">
-          <CallToAction />
         </div>
       </div>
     </div>

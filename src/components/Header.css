@@ -13,3 +13,11 @@
 .custom-link:hover::after {
   width: 100%;
 }
+
+/* Native details/summary dropdown – hide browser's default triangle */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::marker {
+  display: none;
+}

@@ -14,17 +14,17 @@ export function WhatWeDo() {
           <div className="mx-auto mt-28 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
             <div className="xxs:text-center lg:row-start-2 lg:max-w-xl lg:text-left xl:-ml-24">
               <p className="font-bold tracking-tight text-white xxs:text-4xl xs:text-5xl">
-              Ultimate public good
+              ContinuumDAO
               </p>
-              <p className="mt-10 font-medium leading-8 text-white xxs:text-2xl sm:text-3xl">
-              Permissionless service<br/>Autonomous operation<br/>Programable MPC functions<br/>Unlimited node scaling
+              <p className="mt-10 font-medium leading-8 text-white xxs:text-2xl sm:text-3xl whitespace-nowrap">
+              Permissionless service <span className="font-extrabold">•</span> Autonomous operation <span className="font-extrabold">•</span> Programable MPC functions <span className="font-extrabold">•</span> Unlimited node scaling
               </p>
               <p className="mt-10 font-light leading-8 text-gray-300 xs:text-xl sm:text-2xl xl:pr-24">
-              Continuum is a decentralized MPC network designed to serve as a public good. Its primary purpose is to facilitate seamless integration of dApps across various blockchains. Governance of the network is managed through on-chain voting by ContinuumDAO 
+              Continuum is a decentralized Multi-Party Computation network designed to serve as a public good and run by a DAO. Anyone can run a node, join an MPC signer pool and earn rewards. Our products include:<br/><br/><span className="font-bold text-white">C3Caller</span> for seamless integration of dApps across blockchains with MPC message-passing<br/><br/><span className="font-bold text-white">Multi-Party Agent Wallet</span> for human-in-the-loop transactions, designed for AI agents<br/><br/><span className="font-bold text-white">C3Governor</span> for Cross-chain and On-chain Governance, extending Open Zeppelin's Governor functionality for multi-option and multi-chain governance.
               </p>
               <div className="mt-10 flex xs:justify-center lg:justify-start">
                 <a
-                  href="../../assets/White_Paper_ContinuumDAO.pdf"
+                  href="https://docs.continuumdao.org/ContinuumDAO/WhitePaper"
                   className="backdrop-blur-[2px] link relative overflow-hidden border border-white py-4 text-base font-semibold leading-6 text-white xxs:px-8 xs:px-10"
                 >
                   Read Our Whitepaper <span aria-hidden="true">↗</span>

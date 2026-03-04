@@ -9,83 +9,31 @@ import Logo from '@/images/logo.png'
 import './Header.css'
 
 const useCases = [
-  {
-    name: 'Token and Message Bridging',
-    href: '#use-cases',
-  },
-  {
-    name: 'Cross-on-chain-governance',
-    href: '#use-cases',
-  },
-  {
-    name: 'Cross-Chain Liquidity Network',
-    href: '#use-cases',
-  },
-  {
-    name: 'Interoperability for Games',
-    href: '#use-cases',
-  },
+  { name: 'Cross chain Messaging', href: '#use-cases' },
+  { name: 'Multi-Party Agent Wallet', href: '#use-cases' },
+  { name: 'Cross-on-chain-governance', href: '#use-cases' },
 ]
 
 const governance = [
-  {
-    name: 'Forum',
-    href: 'https://forum.continuumdao.org/',
-  },
-  {
-    name: 'Vote',
-    href: 'https://snapshot.org/#/continuumdao.eth',
-  },
-  {
-    name: 'Staking',
-    href: 'https://staking.continuumdao.org'
-  },
-  // {
-  //   name: 'Learn More',
-  //   href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
-  // },
-  // {
-  //   name: 'Build With Us',
-  //   href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
-  // },
+  { name: 'Forum', href: 'https://forum.continuumdao.org/' },
+  { name: 'Vote', href: 'https://app.continuumdao.org/governance' },
+  { name: 'Tokens in Escrow', href: 'https://app.continuumdao.org/escrow' },
+  { name: 'Vote (legacy snapshot)', href: 'https://snapshot.org/#/continuumdao.eth' },
+  { name: 'Our Constitution', href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution' },
 ]
 
 const contactUs = [
-  {
-    name: 'X',
-    href: 'https://twitter.com/ContinuumDAO',
-  },
-  {
-    name: 'Telegram',
-    href: 'https://t.me/ContinuumDAO',
-  },
-  {
-    name: 'Medium',
-    href: 'https://medium.com/@continuumdao',
-  },
-  {
-    name: 'Forum',
-    href: 'https://forum.continuumdao.org/',
-  },
-  {
-    name: 'GitHub',
-    href: 'https://github.com/ContinuumDAO',
-  },
-  {
-    name: 'Discord',
-    href: 'https://discord.gg/2kcDRjGuAE',
-  },
+  { name: 'X', href: 'https://twitter.com/ContinuumDAO' },
+  { name: 'Telegram', href: 'https://t.me/ContinuumDAO' },
+  { name: 'Medium', href: 'https://medium.com/@continuumdao' },
+  { name: 'Forum', href: 'https://forum.continuumdao.org/' },
+  { name: 'GitHub', href: 'https://github.com/ContinuumDAO' },
 ]
 
 const learnMore = [
-  {
-    name: 'Docs',
-    href: 'https://docs.continuumdao.org/',
-  },
-  {
-    name: 'Whitepaper',
-    href: 'https://continuumdao.org/assets/White_Paper_ContinuumDAO.pdf',
-  },
+  { name: 'Docs', href: 'https://docs.continuumdao.org/' },
+  { name: 'The CTM Token', href: 'https://app.continuumdao.org/metrics' },
+  { name: 'Whitepaper', href: 'https://docs.continuumdao.org/ContinuumDAO/WhitePaper' },
 ]
 
 function classNames(...classes: string[]) {
@@ -94,101 +42,31 @@ function classNames(...classes: string[]) {
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   const buttonRef = useRef<HTMLButtonElement>(null)
   const buttonRef2 = useRef<HTMLButtonElement>(null)
   const buttonRef3 = useRef<HTMLButtonElement>(null)
   const buttonRef4 = useRef<HTMLButtonElement>(null)
   const timeoutDuration = 200
-  let timeout: any
+  let timeout: ReturnType<typeof setTimeout>
 
-  const closePopover = () => {
-    return buttonRef.current?.dispatchEvent(
-      new KeyboardEvent('keydown', {
-        key: 'Escape',
-        bubbles: true,
-        cancelable: true,
-      }),
-    )
-  }
+  const closePopover = () => buttonRef.current?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true, cancelable: true }))
+  const closePopover2 = () => buttonRef2.current?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true, cancelable: true }))
+  const closePopover3 = () => buttonRef3.current?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true, cancelable: true }))
+  const closePopover4 = () => buttonRef4.current?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true, cancelable: true }))
 
-  const closePopover2 = () => {
-    return buttonRef2.current?.dispatchEvent(
-      new KeyboardEvent('keydown', {
-        key: 'Escape',
-        bubbles: true,
-        cancelable: true,
-      }),
-    )
-  }
-  const closePopover3 = () => {
-    return buttonRef3.current?.dispatchEvent(
-      new KeyboardEvent('keydown', {
-        key: 'Escape',
-        bubbles: true,
-        cancelable: true,
-      }),
-    )
-  }
-  const closePopover4 = () => {
-    return buttonRef4.current?.dispatchEvent(
-      new KeyboardEvent('keydown', {
-        key: 'Escape',
-        bubbles: true,
-        cancelable: true,
-      }),
-    )
-  }
+  const onMouseEnter = (open: boolean) => { clearTimeout(timeout); if (!open) buttonRef.current?.click() }
+  const onMouseEnter2 = (open: boolean) => { clearTimeout(timeout); if (!open) buttonRef2.current?.click() }
+  const onMouseEnter3 = (open: boolean) => { clearTimeout(timeout); if (!open) buttonRef3.current?.click() }
+  const onMouseEnter4 = (open: boolean) => { clearTimeout(timeout); if (!open) buttonRef4.current?.click() }
 
-  const onMouseEnter = (open: any) => {
-    clearTimeout(timeout)
-    if (open) return
-    return buttonRef.current?.click()
-  }
-
-  const onMouseEnter2 = (open: any) => {
-    clearTimeout(timeout)
-    if (open) return
-    return buttonRef2.current?.click()
-  }
-
-  const onMouseEnter3 = (open: any) => {
-    clearTimeout(timeout)
-    if (open) return
-    return buttonRef3.current?.click()
-  }
-
-  const onMouseEnter4 = (open: any) => {
-    clearTimeout(timeout)
-    if (open) return
-    return buttonRef4.current?.click()
-  }
-
-  const onMouseLeave = (open: any) => {
-    if (!open) return
-    timeout = setTimeout(() => closePopover(), timeoutDuration)
-  }
-
-  const onMouseLeave2 = (open: any) => {
-    if (!open) return
-    timeout = setTimeout(() => closePopover2(), timeoutDuration)
-  }
-
-  const onMouseLeave3 = (open: any) => {
-    if (!open) return
-    timeout = setTimeout(() => closePopover3(), timeoutDuration)
-  }
-
-  const onMouseLeave4 = (open: any) => {
-    if (!open) return
-    timeout = setTimeout(() => closePopover4(), timeoutDuration)
-  }
+  const onMouseLeave = (open: boolean) => { if (open) timeout = setTimeout(closePopover, timeoutDuration) }
+  const onMouseLeave2 = (open: boolean) => { if (open) timeout = setTimeout(closePopover2, timeoutDuration) }
+  const onMouseLeave3 = (open: boolean) => { if (open) timeout = setTimeout(closePopover3, timeoutDuration) }
+  const onMouseLeave4 = (open: boolean) => { if (open) timeout = setTimeout(closePopover4, timeoutDuration) }
 
   return (
     <header
-      className={`${
-        mobileMenuOpen ? 'z-20' : 'z-50'
-      } fixed top-0 w-full pt-8 bg-[transparent] backdrop-blur-[6px]`}
+      className={`${mobileMenuOpen ? 'z-20' : 'z-50'} fixed top-0 w-full pt-8 bg-[transparent] backdrop-blur-[6px] isolate`}
     >
       <nav
         className="mx-auto flex max-w-[110rem] items-center justify-between border-b border-t border-white/30 px-8"
@@ -206,7 +84,7 @@ export function Header() {
               <span className="hidden pl-3 pt-0.5 font-semibold text-white xl:inline xl:text-2xl 2xl:text-3xl">
                 Continuum
               </span>
-              <span className='text-white font-semibold -mt-3 text-xs scale-90'>Testnet</span>
+              <span className="text-white font-semibold -mt-3 text-xs scale-90">Testnet</span>
             </div>
           </a>
         </div>
@@ -220,363 +98,116 @@ export function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+
         <Popover.Group className="hidden items-center lg:flex">
-          {/* <a
-            href="#what-we-do"
-            className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
-          >
-            The Vision
-            <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-          </a> */}
-          {/* <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div> */}
-          {/* <a
-            href="#continuum-matrix"
-            className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
-          >
-            Continuum Matrix
-            <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-          </a> */}
-          {/* <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div> */}
           <Popover className="relative">
-            {({ open, close }) => {
-              return (
-                <>
-                  <div>
-                    <Popover.Button
-                      ref={buttonRef}
-                      onMouseEnter={onMouseEnter.bind(null, open)}
-                      onMouseLeave={onMouseLeave.bind(null, open)}
-                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
-                    >
-                      <span className="flex items-center gap-x-1">
-                        Use Cases
-                        <ChevronDownIcon
-                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
-                          aria-hidden="true"
-                        />
-                      </span>
-                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-                    </Popover.Button>
-
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-500"
-                      enterFrom="opacity-0 -translate-x-6"
-                      enterTo="opacity-100 translate-x-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 -translate-x-6"
-                    >
-                      <Popover.Panel
-                        className="absolute -left-4 top-3/4 z-10 mt-8 w-56 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
-                        onMouseEnter={onMouseEnter.bind(null, open)}
-                        onMouseLeave={onMouseLeave.bind(null, open)}
-                      >
-                        <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                          <div className="px-4">
-                            {useCases.map((item, i) => (
-                              <div
-                                key={item.name}
-                                className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
-                              >
-                                <div className="flex-auto">
-                                  <a
-                                    onClick={close}
-                                    href={item.href}
-                                    className="block font-semibold text-white"
-                                  >
-                                    {item.name}
-                                  </a>
-                                  <div
-                                    className={`${
-                                      i !== useCases.length - 1
-                                        ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
-                                        : ''
-                                    } `}
-                                  ></div>
-                                  <div className=""></div>
-                                </div>
-                              </div>
-                            ))}
+            {({ open, close }: { open: boolean; close: () => void }) => (
+              <>
+                <div>
+                  <Popover.Button ref={buttonRef} onMouseEnter={() => onMouseEnter(open)} onMouseLeave={() => onMouseLeave(open)} className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left">
+                    <span className="flex items-center gap-x-1">Use Cases <ChevronDownIcon className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500" aria-hidden /></span>
+                    <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full" />
+                  </Popover.Button>
+                  <Transition as={Fragment} enter="transition ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100" leave="transition ease-in duration-150" leaveFrom="opacity-100" leaveTo="opacity-0">
+                    <Popover.Panel className="absolute left-0 top-full z-10 mt-2 w-56 overflow-hidden rounded-lg bg-[#171717] shadow-lg ring-1 ring-white/30" onMouseEnter={() => onMouseEnter(open)} onMouseLeave={() => onMouseLeave(open)}>
+                      <div className="px-4 py-2">
+                        {useCases.map((item, i) => (
+                          <div key={item.name} className="relative flex items-center gap-x-6 p-4 text-sm leading-6">
+                            <a onClick={() => close()} href={item.href} className="block font-semibold text-white">{item.name}</a>
+                            {i !== useCases.length - 1 && <div className="absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30" />}
                           </div>
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </div>
-                </>
-              )
-            }}
+                        ))}
+                      </div>
+                    </Popover.Panel>
+                  </Transition>
+                </div>
+              </>
+            )}
           </Popover>
-
-          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block" />
           <Popover className="relative">
-            {({ open, close }) => {
-              return (
-                <>
-                  <div>
-                    <Popover.Button
-                      ref={buttonRef2}
-                      onMouseEnter={onMouseEnter2.bind(null, open)}
-                      onMouseLeave={onMouseLeave2.bind(null, open)}
-                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
-                    >
-                      <span className="flex items-center gap-x-1">
-                        Governance
-                        <ChevronDownIcon
-                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
-                          aria-hidden="true"
-                        />
-                      </span>
-                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-                    </Popover.Button>
-
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-500"
-                      enterFrom="opacity-0 -translate-x-6"
-                      enterTo="opacity-100 translate-x-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 -translate-x-6"
-                    >
-                      <Popover.Panel
-                        onMouseEnter={onMouseEnter2.bind(null, open)}
-                        onMouseLeave={onMouseLeave2.bind(null, open)}
-                        className="absolute -left-4 top-3/4
-              z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
-                      >
-                        <div className="px-4">
-                          {governance.map((item, i) => (
-                            <div
-                              key={item.name}
-                              className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
-                            >
-                              <div className="flex-auto">
-                                <a
-                                  target="_"
-                                  onClick={close}
-                                  href={item.href}
-                                  className="block font-semibold text-white"
-                                >
-                                  {item.name}
-                                </a>
-                                <div
-                                  className={`${
-                                    i !== governance.length - 1
-                                      ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
-                                      : ''
-                                  } `}
-                                ></div>
-                                <div className=""></div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </div>
-                </>
-              )
-            }}
+            {({ open, close }: { open: boolean; close: () => void }) => (
+              <>
+                <div>
+                  <Popover.Button ref={buttonRef2} onMouseEnter={() => onMouseEnter2(open)} onMouseLeave={() => onMouseLeave2(open)} className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left">
+                    <span className="flex items-center gap-x-1">Governance <ChevronDownIcon className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500" aria-hidden /></span>
+                    <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full" />
+                  </Popover.Button>
+                  <Transition as={Fragment} enter="transition ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100" leave="transition ease-in duration-150" leaveFrom="opacity-100" leaveTo="opacity-0">
+                    <Popover.Panel className="absolute left-0 top-full z-10 mt-2 w-48 overflow-hidden rounded-lg bg-[#171717] shadow-lg ring-1 ring-white/30" onMouseEnter={() => onMouseEnter2(open)} onMouseLeave={() => onMouseLeave2(open)}>
+                      <div className="px-4 py-2">
+                        {governance.map((item, i) => (
+                          <div key={item.name} className="relative flex items-center gap-x-6 p-4 text-sm leading-6">
+                            <a onClick={() => close()} href={item.href} target="_blank" rel="noopener noreferrer" className="block font-semibold text-white">{item.name}</a>
+                            {i !== governance.length - 1 && <div className="absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30" />}
+                          </div>
+                        ))}
+                      </div>
+                    </Popover.Panel>
+                  </Transition>
+                </div>
+              </>
+            )}
           </Popover>
-          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block" />
           <Popover className="relative">
-            {({ open, close }) => {
-              return (
-                <>
-                  <div>
-                    <Popover.Button
-                      ref={buttonRef3}
-                      onMouseEnter={onMouseEnter3.bind(null, open)}
-                      onMouseLeave={onMouseLeave3.bind(null, open)}
-                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
-                    >
-                      <span className="flex items-center gap-x-1">
-                        Contact Us
-                        <ChevronDownIcon
-                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
-                          aria-hidden="true"
-                        />
-                      </span>
-                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-                    </Popover.Button>
-
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-500"
-                      enterFrom="opacity-0 -translate-x-6"
-                      enterTo="opacity-100 translate-x-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 -translate-x-6"
-                    >
-                      <Popover.Panel
-                        onMouseEnter={onMouseEnter3.bind(null, open)}
-                        onMouseLeave={onMouseLeave3.bind(null, open)}
-                        className="absolute -left-4 top-3/4
-              z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
-                      >
-                        <div className="px-4">
-                          {contactUs.map((item, i) => (
-                            <div
-                              key={item.name}
-                              className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
-                            >
-                              <div className="flex-auto">
-                                <a
-                                  onClick={close}
-                                  href={item.href}
-                                  target="_"
-                                  className="block font-semibold text-white"
-                                >
-                                  {item.name}
-                                </a>
-                                <div
-                                  className={`${
-                                    i !== contactUs.length - 1
-                                      ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
-                                      : ''
-                                  } `}
-                                ></div>
-                                <div className=""></div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </div>
-                </>
-              )
-            }}
+            {({ open, close }: { open: boolean; close: () => void }) => (
+              <>
+                <div>
+                  <Popover.Button ref={buttonRef3} onMouseEnter={() => onMouseEnter3(open)} onMouseLeave={() => onMouseLeave3(open)} className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left">
+                    <span className="flex items-center gap-x-1">Contact Us <ChevronDownIcon className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500" aria-hidden /></span>
+                    <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full" />
+                  </Popover.Button>
+                  <Transition as={Fragment} enter="transition ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100" leave="transition ease-in duration-150" leaveFrom="opacity-100" leaveTo="opacity-0">
+                    <Popover.Panel className="absolute left-0 top-full z-10 mt-2 w-48 overflow-hidden rounded-lg bg-[#171717] shadow-lg ring-1 ring-white/30" onMouseEnter={() => onMouseEnter3(open)} onMouseLeave={() => onMouseLeave3(open)}>
+                      <div className="px-4 py-2">
+                        {contactUs.map((item, i) => (
+                          <div key={item.name} className="relative flex items-center gap-x-6 p-4 text-sm leading-6">
+                            <a onClick={() => close()} href={item.href} target="_blank" rel="noopener noreferrer" className="block font-semibold text-white">{item.name}</a>
+                            {i !== contactUs.length - 1 && <div className="absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30" />}
+                          </div>
+                        ))}
+                      </div>
+                    </Popover.Panel>
+                  </Transition>
+                </div>
+              </>
+            )}
           </Popover>
-          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block"></div>
+          <div className="hidden min-h-[2.2rem] w-[1px] bg-white/30 lg:inline-block" />
           <Popover className="relative">
-            {({ open, close }) => {
-              return (
-                <>
-                  <div>
-                    <Popover.Button
-                      ref={buttonRef4}
-                      onMouseEnter={onMouseEnter4.bind(null, open)}
-                      onMouseLeave={onMouseLeave4.bind(null, open)}
-                      className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left"
-                    >
-                      <span className="flex items-center gap-x-1">
-                        Learn More
-                        <ChevronDownIcon
-                          className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500"
-                          aria-hidden="true"
-                        />
-                      </span>
-                      <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full"></span>
-                    </Popover.Button>
-
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-500"
-                      enterFrom="opacity-0 -translate-x-6"
-                      enterTo="opacity-100 translate-x-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 -translate-x-6"
-                    >
-                      <Popover.Panel
-                        onMouseEnter={onMouseEnter4.bind(null, open)}
-                        onMouseLeave={onMouseLeave4.bind(null, open)}
-                        className="absolute -left-4 top-3/4
-              z-10 mt-8 w-48 max-w-md -translate-x-6 overflow-hidden bg-[#171717] opacity-0 shadow-lg ring-1 ring-white/30 transition"
-                      >
-                        <div className="px-4">
-                          {learnMore.map((item, i) => (
-                            <div
-                              key={item.name}
-                              className="group relative flex animate-slide-in-left items-center gap-x-6 p-4 text-sm leading-6"
-                            >
-                              <div className="flex-auto">
-                                <a
-                                  onClick={close}
-                                  href={item.href}
-                                  target="_"
-                                  className="block font-semibold text-white"
-                                >
-                                  {item.name}
-                                </a>
-                                <div
-                                  className={`${
-                                    i !== learnMore.length - 1
-                                      ? 'absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30'
-                                      : ''
-                                  } `}
-                                ></div>
-                                <div className=""></div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </div>
-                </>
-              )
-            }}
+            {({ open, close }: { open: boolean; close: () => void }) => (
+              <>
+                <div>
+                  <Popover.Button ref={buttonRef4} onMouseEnter={() => onMouseEnter4(open)} onMouseLeave={() => onMouseLeave4(open)} className="custom-link group relative px-8 py-8 text-center font-medium leading-6 text-white focus:outline-none lg:text-sm xl:text-lg 2xl:text-left">
+                    <span className="flex items-center gap-x-1">Learn More <ChevronDownIcon className="h-5 w-5 flex-none text-white group-hover:rotate-180 group-hover:duration-500" aria-hidden /></span>
+                    <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full" />
+                  </Popover.Button>
+                  <Transition as={Fragment} enter="transition ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100" leave="transition ease-in duration-150" leaveFrom="opacity-100" leaveTo="opacity-0">
+                    <Popover.Panel className="absolute left-0 top-full z-10 mt-2 w-48 overflow-hidden rounded-lg bg-[#171717] shadow-lg ring-1 ring-white/30" onMouseEnter={() => onMouseEnter4(open)} onMouseLeave={() => onMouseLeave4(open)}>
+                      <div className="px-4 py-2">
+                        {learnMore.map((item, i) => (
+                          <div key={item.name} className="relative flex items-center gap-x-6 p-4 text-sm leading-6">
+                            <a onClick={() => close()} href={item.href} target="_blank" rel="noopener noreferrer" className="block font-semibold text-white">{item.name}</a>
+                            {i !== learnMore.length - 1 && <div className="absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30" />}
+                          </div>
+                        ))}
+                      </div>
+                    </Popover.Panel>
+                  </Transition>
+                </div>
+              </>
+            )}
           </Popover>
         </Popover.Group>
-        <div className="hidden lg:-mr-8 lg:flex lg:flex-1 lg:justify-end xl:pr-4">
-          <a
-            href="https://dashboard.continuumdao.org"
-            className="link text-white border border-white font-semibold leading-6 lg:px-8 lg:py-3 lg:text-center lg:text-xs 2xl:px-8 2xl:py-3 2xl:text-base"
-          >
-            MPC Network
-            <span className="link-bg"></span>
-          </a>
-        </div>
       </nav>
-      <style jsx>{`
-        .link {
-          position: relative;
-          overflow: hidden;
-          transition: color 0.5s ease;
-          color: white;
-        }
 
-        .link-bg {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 100%;
-          bottom: 0;
-          background-color: white;
-          z-index: -1;
-          transition: right 0.5s ease;
-        }
-
-        .link:hover {
-          color: black;
-        }
-        .link:hover .link-bg {
-          right: 0;
-        }
-
-        .webkit-center {
-          display: flex;
-          -webkit-align-items: center;
-          align-items: center;
-          justify-content: center;
-        }
-      `}</style>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
+      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto border-l border-white/30 bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <Image
-              className=" -mb-1.5 -ml-5 scale-50 pt-1.5 w-[76px]"
+              className="-mb-1.5 -ml-5 scale-50 pt-1.5 w-[76px]"
               src={Logo}
               alt="Logo"
             />
@@ -592,35 +223,18 @@ export function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/30">
               <div className="space-y-2 py-6">
-                {/* <a
-                  href="#what-we-do"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
-                >
-                  The Vision
-                </a> */}
-                {/* <a
-                  href="#continuum-matrix"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
-                >
-                  Continuum Matrix
-                </a> */}
                 <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
+                  {({ open }: { open: boolean }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-white/10">
                         Use Cases
                         <ChevronDownIcon
-                          className={classNames(
-                            open ? 'rotate-180' : '',
-                            'h-5 w-5 flex-none',
-                          )}
+                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...useCases].map((item) => (
+                        {useCases.map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"
@@ -636,26 +250,24 @@ export function Header() {
                   )}
                 </Disclosure>
                 <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
+                  {({ open }: { open: boolean }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-white/10">
                         Governance
                         <ChevronDownIcon
-                          className={classNames(
-                            open ? 'rotate-180' : '',
-                            'h-5 w-5 flex-none',
-                          )}
+                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...governance].map((item) => (
+                        {governance.map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"
-                            target="_"
-                            onClick={() => setMobileMenuOpen(false)}
                             href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
                           >
                             {item.name}
@@ -666,26 +278,24 @@ export function Header() {
                   )}
                 </Disclosure>
                 <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
+                  {({ open }: { open: boolean }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-white/10">
                         Contact Us
                         <ChevronDownIcon
-                          className={classNames(
-                            open ? 'rotate-180' : '',
-                            'h-5 w-5 flex-none',
-                          )}
+                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...contactUs].map((item) => (
+                        {contactUs.map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"
-                            target="_"
-                            onClick={() => setMobileMenuOpen(false)}
                             href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
                           >
                             {item.name}
@@ -696,26 +306,24 @@ export function Header() {
                   )}
                 </Disclosure>
                 <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
+                  {({ open }: { open: boolean }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-white/10">
                         Learn More
                         <ChevronDownIcon
-                          className={classNames(
-                            open ? 'rotate-180' : '',
-                            'h-5 w-5 flex-none',
-                          )}
+                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...learnMore].map((item) => (
+                        {learnMore.map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"
-                            target="_"
-                            onClick={() => setMobileMenuOpen(false)}
                             href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
                           >
                             {item.name}
@@ -725,14 +333,6 @@ export function Header() {
                     </>
                   )}
                 </Disclosure>
-              </div>
-              <div className="rounded py-6">
-                <a
-                  href="https://c3mpcnetwork-frontend.pages.dev"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-white/10"
-                >
-                  MPC Network
-                </a>
               </div>
             </div>
           </div>
