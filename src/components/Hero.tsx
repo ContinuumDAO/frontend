@@ -1,17 +1,50 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { LinkIcon } from '@heroicons/react/24/outline'
 import Mobius from '@/images/mobius.gif'
+
+const ESCROW_BOX_DEADLINE = new Date('2026-06-01T00:00:00Z')
+
+function getCountdown(deadline: Date): { days: number; hours: number; minutes: number; seconds: number } | null {
+  const now = new Date()
+  const diff = deadline.getTime() - now.getTime()
+  if (diff <= 0) return null
+  const totalSeconds = Math.floor(diff / 1000)
+  const days = Math.floor(totalSeconds / 86400)
+  const hours = Math.floor((totalSeconds % 86400) / 3600)
+  const minutes = Math.floor((totalSeconds % 3600) / 60)
+  const seconds = totalSeconds % 60
+  return { days, hours, minutes, seconds }
+}
+
+function formatCountdown(c: { days: number; hours: number; minutes: number; seconds: number }) {
+  const h = String(c.hours).padStart(2, '0')
+  const m = String(c.minutes).padStart(2, '0')
+  const s = String(c.seconds).padStart(2, '0')
+  return `${c.days}d ${h}:${m}:${s}`
+}
 
 export function Hero() {
   const linkRef = useRef<HTMLAnchorElement>(null)
+  const [countdown, setCountdown] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(() => getCountdown(ESCROW_BOX_DEADLINE))
+  const showEscrowBox = countdown !== null
 
   useEffect(() => {
-    // Force a reflow
     if (linkRef.current) {
       linkRef.current.offsetWidth
     }
+  }, [])
+
+  useEffect(() => {
+    const tick = () => {
+      const next = getCountdown(ESCROW_BOX_DEADLINE)
+      setCountdown(next)
+    }
+    tick()
+    const id = setInterval(tick, 1000)
+    return () => clearInterval(id)
   }, [])
 
   return (
@@ -80,6 +113,28 @@ export function Hero() {
                   <span className="link-bg"></span>
                 </a>
               </div>
+              {showEscrowBox && (
+                <div className="mt-10 mx-auto max-w-3xl rounded-2xl border-4 border-white px-6 py-8 sm:px-10 sm:py-10 text-center">
+                  <p className="text-white text-lg sm:text-xl md:text-2xl font-medium leading-relaxed">
+                    Convert your CTMDAOVOTE tokens to veCTM now. The deadline is midnight 31st May 2026.
+                  </p>
+                  {countdown && (
+                    <p className="mt-4 font-extrabold text-xl sm:text-2xl md:text-3xl text-green-300 tabular-nums" role="timer" aria-live="polite">
+                      {formatCountdown(countdown)}
+                    </p>
+                  )}
+                  <a
+                    href="https://app.continuumdao.org/escrow"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="backdrop-blur-[2px] link relative mt-6 inline-flex items-center justify-center overflow-hidden rounded-lg border border-white p-4 text-white hover:border-white/90 xxs:p-5 sm:p-6"
+                    aria-label="Convert CTMDAOVOTE to veCTM"
+                  >
+                    <LinkIcon className="h-14 w-14 sm:h-16 sm:w-16" aria-hidden />
+                    <span className="link-bg" />
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>

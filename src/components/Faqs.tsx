@@ -8,6 +8,7 @@ export function Faqs() {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const buttonRef2 = useRef<HTMLButtonElement>(null)
   const buttonRef3 = useRef<HTMLButtonElement>(null)
+  const buttonRef4 = useRef<HTMLButtonElement>(null)
   const timeoutDuration = 200
   let timeout: any
 
@@ -20,6 +21,9 @@ export function Faqs() {
   }
   const closePopover3 = () => {
     return buttonRef3.current?.click()
+  }
+  const closePopover4 = () => {
+    return buttonRef4.current?.click()
   }
 
   const onMouseEnter = (open: any) => {
@@ -40,6 +44,12 @@ export function Faqs() {
     return buttonRef3.current?.click()
   }
 
+  const onMouseEnter4 = (open: any) => {
+    clearTimeout(timeout)
+    if (open) return
+    return buttonRef4.current?.click()
+  }
+
   const onMouseLeave = (open: any) => {
     if (!open) return
     timeout = setTimeout(() => closePopover(), timeoutDuration)
@@ -53,6 +63,11 @@ export function Faqs() {
   const onMouseLeave3 = (open: any) => {
     if (!open) return
     timeout = setTimeout(() => closePopover3(), timeoutDuration)
+  }
+
+  const onMouseLeave4 = (open: any) => {
+    if (!open) return
+    timeout = setTimeout(() => closePopover4(), timeoutDuration)
   }
 
   return (
@@ -280,6 +295,80 @@ export function Faqs() {
                             We are committed to building trust with our
                             community by providing full visibility into our
                             daily operations as much as possible.
+                          </span>
+                        </div>
+                      </Transition.Child>
+                    </Disclosure.Panel>
+                  </Transition>
+                  <div className="border-b border-white/70 pt-6"></div>
+                </>
+              )}
+            </Disclosure>
+          </dl>
+          <dl className="xxs:-ml-4 sm:ml-0">
+            <Disclosure id="faq" as="div" className="pt-6 focus:outline-none">
+              {({ open }) => (
+                <>
+                  <dt>
+                    <Disclosure.Button
+                      id="faq"
+                      ref={buttonRef4}
+                      onMouseEnter={onMouseEnter4.bind(null, open)}
+                      onMouseLeave={onMouseLeave4.bind(null, open)}
+                      className={`${
+                        open
+                          ? 'ease-in-out" translate-x-8 transition-transform duration-[350ms]'
+                          : 'ease-in-out" -translate-x-0 transition-transform delay-[250ms] duration-500'
+                      } relative flex w-full items-start justify-between text-left text-white focus:outline-none`}
+                    >
+                      <span className="flex flex-row py-6 pl-8 text-3xl font-medium leading-7 focus:outline-none">
+                        <div className="flex flex-row">
+                          <div
+                            className={`opacity-0 ${
+                              open
+                                ? 'ease-in-out" opacity-100 transition-opacity duration-[350ms]'
+                                : 'ease-in-out" opacity-0 transition-opacity duration-[350ms]'
+                            } -ml-12 -mt-2 scale-75`}
+                          >
+                            <Bobble />
+                          </div>
+                          <div className="xxs:pt-2 text-2xl font-medium leading-7 sm:pt-0.5 sm:text-3xl">
+                            Get Involved
+                          </div>
+                        </div>
+                      </span>
+                    </Disclosure.Button>
+                  </dt>
+                  <Transition
+                    show={open}
+                    enter="transition transition-[max-height] duration-500 ease-in"
+                    enterFrom="transform max-h-0 scale-95 opacity-0"
+                    enterTo="transform max-h-screen scale-100"
+                    leave="transition transition-[max-height] duration-500 ease-out"
+                    leaveFrom="transform max-h-screen"
+                    leaveTo="transform max-h-0"
+                  >
+                    <Disclosure.Panel
+                      as="dd"
+                      id="faq"
+                      onMouseEnter={onMouseEnter4.bind(null, open)}
+                      onMouseLeave={onMouseLeave4.bind(null, open)}
+                      className="xxs:h-64 relative -mt-4 pr-0 sm:h-36 xl:mt-2 xl:pr-12"
+                    >
+                      <Transition.Child
+                        enter="transition ease-in-out duration-500"
+                        enterFrom="transform opacity-0"
+                        enterTo="transform opacity-100"
+                        leave="transition ease-in-out duration-500"
+                        leaveFrom="transform opacity-100"
+                        leaveTo="transform opacity-0"
+                      >
+                        <span className="xxs:top-8 absolute sm:-top-20">
+                          <Ellipse />
+                        </span>
+                        <div className="xxs:px-8 absolute sm:px-12 xl:-top-20 xl:right-0 xl:w-1/2 xl:pl-16">
+                          <span className="xxs:text-lg leading-7 text-gray-300 sm:text-xl md:mt-0 md:text-2xl">
+                            We welcome new members to join our DAO community. Participate in our novel governance. Run a node in our MPC network. Help us build new cross-chain applications. If our DAO likes your ideas, we may back you!
                           </span>
                         </div>
                       </Transition.Child>
