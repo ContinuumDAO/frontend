@@ -32,6 +32,7 @@ const contactUs = [
 
 const ourToken = [
   { name: 'The CTM Token', href: '#ctm-token' },
+  { name: 'Staking', href: '/staking' },
   { name: 'Metrics', href: 'https://app.continuumdao.org/metrics' },
 ]
 
@@ -40,12 +41,17 @@ const learnMore = [
   { name: 'Whitepaper', href: 'https://docs.continuumdao.org/ContinuumDAO/WhitePaper' },
 ]
 
+const auditsSubmenu = [
+  { name: 'QuillAudit Dec 2025', href: 'https://www.quillaudits.com/leaderboard/continuumdao' },
+]
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [auditsSubmenuOpen, setAuditsSubmenuOpen] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
   const buttonRef2 = useRef<HTMLButtonElement>(null)
   const buttonRef3 = useRef<HTMLButtonElement>(null)
@@ -89,10 +95,9 @@ export function Header() {
                 src={Logo}
                 alt="Logo"
               />
-              <span className="hidden pl-3 pt-0.5 font-semibold text-white xl:inline xl:text-2xl 2xl:text-3xl">
+              <span className="hidden pl-3 pt-0.5 font-sans font-semibold text-white xl:inline xl:text-2xl 2xl:text-3xl">
                 Continuum
               </span>
-              <span className="text-white font-semibold -mt-3 text-xs scale-90">Testnet</span>
             </div>
           </a>
         </div>
@@ -171,7 +176,7 @@ export function Header() {
                       <div className="px-4 py-2">
                         {ourToken.map((item, i) => (
                           <div key={item.name} className="relative flex items-center gap-x-6 p-4 text-sm leading-6">
-                            <a onClick={() => close()} href={item.href} {...(item.href.startsWith('#') ? {} : { target: '_blank', rel: 'noopener noreferrer' })} className="block font-semibold text-white">{item.name}</a>
+                            <a onClick={() => close()} href={item.href} {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="block font-semibold text-white">{item.name}</a>
                             {i !== ourToken.length - 1 && <div className="absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30" />}
                           </div>
                         ))}
@@ -217,14 +222,37 @@ export function Header() {
                     <span className="block h-0.5 max-w-0 bg-white/70 transition-all duration-500 group-hover:max-w-full" />
                   </Popover.Button>
                   <Transition as={Fragment} enter="transition ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100" leave="transition ease-in duration-150" leaveFrom="opacity-100" leaveTo="opacity-0">
-                    <Popover.Panel className="absolute left-0 top-full z-10 mt-2 w-48 overflow-hidden rounded-lg bg-[#171717] shadow-lg ring-1 ring-white/30" onMouseEnter={() => onMouseEnter5(open)} onMouseLeave={() => onMouseLeave5(open)}>
-                      <div className="px-4 py-2">
+                    <Popover.Panel className="absolute left-0 top-full z-10 mt-2 flex rounded-lg bg-[#171717] shadow-lg ring-1 ring-white/30" onMouseEnter={() => onMouseEnter5(open)} onMouseLeave={() => { onMouseLeave5(open); setAuditsSubmenuOpen(false) }}>
+                      <div className="min-w-[12rem] py-2">
                         {learnMore.map((item, i) => (
-                          <div key={item.name} className="relative flex items-center gap-x-6 p-4 text-sm leading-6">
-                            <a onClick={() => close()} href={item.href} {...(item.href.startsWith('#') ? {} : { target: '_blank', rel: 'noopener noreferrer' })} className="block font-semibold text-white">{item.name}</a>
+                          <div key={item.name} className="relative flex items-center gap-x-6 px-4 py-2 text-sm leading-6">
+                            <a onClick={() => close()} href={item.href} {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="block font-semibold text-white">{item.name}</a>
                             {i !== learnMore.length - 1 && <div className="absolute bottom-0 left-0 h-0.5 w-full -translate-x-1/2 scale-x-0 transform animate-grow-border bg-white/30" />}
                           </div>
                         ))}
+                        <div
+                          className="relative flex items-center px-4 py-2 text-sm leading-6"
+                          onMouseEnter={() => setAuditsSubmenuOpen(true)}
+                          onMouseLeave={() => setAuditsSubmenuOpen(false)}
+                        >
+                          <span className="font-semibold text-white">Audits</span>
+                          {auditsSubmenuOpen && (
+                            <div className="absolute left-full top-0 z-20 min-w-[12rem] rounded-r-lg border-l border-white/20 bg-[#171717] py-2 shadow-lg">
+                              {auditsSubmenu.map((item) => (
+                                <a
+                                  key={item.name}
+                                  onClick={() => close()}
+                                  href={item.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block px-4 py-2 font-semibold text-white hover:bg-white/10"
+                                >
+                                  {item.name}
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </Popover.Panel>
                   </Transition>
@@ -326,7 +354,7 @@ export function Header() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            {...(item.href.startsWith('#') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                            {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                             onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
                           >
@@ -381,13 +409,40 @@ export function Header() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            {...(item.href.startsWith('#') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                            {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                             onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
                           >
                             {item.name}
                           </Disclosure.Button>
                         ))}
+                        <Disclosure as="div" className="-mx-3">
+                          {({ open: auditsOpen }: { open: boolean }) => (
+                            <>
+                              <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-6 pr-3.5 text-sm font-semibold leading-7 text-white hover:bg-white/10">
+                                Audits
+                                <ChevronDownIcon
+                                  className={classNames(auditsOpen ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                                  aria-hidden="true"
+                                />
+                              </Disclosure.Button>
+                              <Disclosure.Panel className="mt-1 space-y-1">
+                                {auditsSubmenu.map((item) => (
+                                  <a
+                                    key={item.name}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="block rounded-lg py-2 pl-10 pr-3 text-sm font-semibold leading-7 text-white hover:bg-white/10"
+                                  >
+                                    {item.name}
+                                  </a>
+                                ))}
+                              </Disclosure.Panel>
+                            </>
+                          )}
+                        </Disclosure>
                       </Disclosure.Panel>
                     </>
                   )}

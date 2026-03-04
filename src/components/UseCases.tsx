@@ -35,33 +35,35 @@ export function UseCases() {
             Use Cases for Developers, DAOs and AI Agents
           </p>
         </div>
-        <ul className="grid grid-cols-1 gap-12 xxs:mt-10 sm:mt-20 max-w-2xl">
-          {useCaseItems.map((item) => (
+        <ul className="flex flex-col gap-12 xxs:mt-10 sm:mt-20 w-full">
+          {useCaseItems.map((item, index) => (
             <li
               key={item.title}
-              className="flex flex-col border border-white bg-black py-8 px-6 text-left"
+              className={`flex w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end -mr-6 sm:-mr-10 xl:-mr-24'}`}
             >
-              <h3 className="pb-4 text-xl font-bold tracking-tight text-white sm:text-2xl text-left">
-                {item.title}
-              </h3>
-              <div className="mb-4 relative w-full overflow-hidden rounded border border-white/30 bg-white/5">
-                {item.image ? (
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    className="h-auto w-full object-contain"
-                    width={800}
-                    height={400}
-                  />
-                ) : (
-                  <div className="flex h-48 items-center justify-center text-white/50 text-sm">
-                    Image to be added
-                  </div>
-                )}
+              <div className="flex flex-col border border-white bg-black py-8 px-6 text-left max-w-2xl">
+                <h3 className="pb-4 text-xl font-bold tracking-tight text-white sm:text-2xl text-left">
+                  {item.title}
+                </h3>
+                <div className="mb-4 relative w-full overflow-hidden rounded border border-white/30 bg-white/5">
+                  {item.image ? (
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      className="h-auto w-full object-contain"
+                      width={800}
+                      height={400}
+                    />
+                  ) : (
+                    <div className="flex h-48 items-center justify-center text-white/50 text-sm">
+                      Image to be added
+                    </div>
+                  )}
+                </div>
+                <p className="font-light leading-7 text-white/70 text-base sm:text-lg text-left">
+                  {item.text}
+                </p>
               </div>
-              <p className="font-light leading-7 text-white/70 text-base sm:text-lg text-left">
-                {item.text}
-              </p>
             </li>
           ))}
         </ul>

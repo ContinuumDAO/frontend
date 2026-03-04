@@ -180,9 +180,24 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="mx-auto">
-        <div className="px-6 lg:px-8 backdrop-blur-[2px] bg-[rgba(255,255,255,0.01)] mt-8 border-t border-white/30 pt-0 md:flex md:items-center md:justify-between">
-          <div className="mb-2 flex xxs:space-x-6 xs:space-x-8 sm:only:space-x-14 md:order-2 md:mb-0">
+      <div className="mx-auto max-w-[115rem] px-6 lg:px-8">
+        <div className="backdrop-blur-[2px] bg-[rgba(255,255,255,0.01)] mt-8 border-t border-white/30 pt-0 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="-ml-6 flex shrink-0 lg:-ml-0">
+            <a href="#" className="lg:-mx-8">
+              <span className="sr-only">Continuum</span>
+              <div className="flex flex-row items-center xxs:pl-2 md:pl-3">
+                <Image
+                  className="-mr-4 pt-1.5 xxs:scale-50 xs:scale-[0.6] lg:scale-[0.5] w-[76px]"
+                  src={Logo}
+                  alt="Logo"
+                />
+                <span className="pl-3 pt-0.5 font-sans font-semibold text-white xxs:text-xl xs:text-2xl">
+                  Continuum
+                </span>
+              </div>
+            </a>
+          </div>
+          <div className="mb-2 flex w-full max-w-6xl flex-1 justify-between md:mb-0">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
@@ -194,21 +209,6 @@ export function Footer() {
                 <item.icon aria-hidden="true" />
               </a>
             ))}
-          </div>
-          <div className="-ml-6 flex lg:-ml-0 lg:flex-1">
-            <a href="#" className=" lg:-mx-8">
-              <span className="sr-only">Continuum</span>
-              <div className="flex flex-row items-center xxs:pl-2 md:pl-3">
-                <Image
-                  className="-mr-4 pt-1.5 xxs:scale-50 xs:scale-[0.6] lg:scale-[0.5] w-[76px]"
-                  src={Logo}
-                  alt="Logo"
-                />
-                <span className="pl-3 pt-0.5 font-semibold text-white xxs:text-xl xs:text-2xl">
-                  Continuum
-                </span>
-              </div>
-            </a>
           </div>
         </div>
       </div>
