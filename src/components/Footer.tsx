@@ -20,28 +20,6 @@ const navigation = {
       href: '#use-cases',
     },
   ],
-  governance: [
-    {
-      name: 'Forum',
-      href: 'https://forum.continuumdao.org/',
-    },
-    {
-      name: 'Vote',
-      href: 'https://snapshot.org/#/continuumdao.eth',
-    },
-    {
-      name: 'Staking',
-      href: 'https://staking.continuumdao.org',
-    },
-    // {
-    //   name: 'Learn More',
-    //   href: 'https://docs.continuumdao.org/ContinuumDAO/Governance/Constitution',
-    // },
-    // {
-    //   name: 'Build With Us',
-    //   href: 'https://cjlxc0ssl3j.typeform.com/to/NOoKdeBc',
-    // },
-  ],
   contactUs: [
     {
       name: 'X',
@@ -183,23 +161,6 @@ export function Footer() {
       {/* lg:pt-32  xxs:pt-0 sm:pt-24  */}
       <div className="mx-auto max-w-[115rem] px-6 pb-8 lg:px-8 pt-0">
         <div className="flex flex-col items-center gap-[5rem] justify-center">
-          <div className="text-center">
-            <h3 className="text-[22px] font-extrabold leading-6 text-white">
-              Governance
-            </h3>
-            <ul role="list" className="mt-6 flex items-center gap-6 items-center justify-center">
-              {navigation.governance.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-xl leading-6 text-white/70 hover:text-white"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
           <div className="text-center">
             <h3 className="text-[22px] font-extrabold leading-6 text-white">
               Contact Us
