@@ -3,7 +3,13 @@ import clsx from 'clsx'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://continuumdao.org'
+function getSiteUrl(): string {
+  const url = process.env.NEXT_PUBLIC_SITE_URL
+  if (url && (url.startsWith('http://') || url.startsWith('https://'))) return url
+  return 'https://continuumdao.org'
+}
+
+const SITE_URL = getSiteUrl()
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -103,7 +109,7 @@ export default function RootLayout({
         montserrat.variable,
       )}
     >
-      <body className="flex h-full flex-col bg-black text-white">
+      <body className="flex min-h-screen flex-col bg-black text-white">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

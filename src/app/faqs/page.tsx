@@ -1,4 +1,5 @@
 import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 import { FAQs } from '@/components/FAQs'
 import { faqItems } from '@/data/faqs'
 import backgroundGraphic from '@/images/background-graphic.gif'
@@ -26,19 +27,20 @@ const faqPageJsonLd = {
 export default function FAQsPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
-      />
       <div
         className="fixed bottom-0 left-0 right-0 top-0 -z-[10] h-screen w-screen bg-cover pointer-events-none"
         style={{ backgroundImage: `url(${backgroundGraphic.src})` }}
         aria-hidden
       />
       <Header />
-      <main>
+      <main className="min-h-screen relative z-10 flex flex-col">
         <FAQs />
       </main>
+      <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
+      />
     </>
   )
 }
