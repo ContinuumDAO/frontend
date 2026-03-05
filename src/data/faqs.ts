@@ -32,7 +32,7 @@ export const faqItems = [
   {
     question: 'How do I unlock CTM from veCTM?',
     answer:
-      'You can unlock CTM from veCTM through the front end, or by calling the smart contract function directly. You can unlock your CTM at any time, and the amount of CTM you unlock will be based on the amount of time you have locked your CTM in veCTM. For a 4 year lock, you will lose 50% of your CTM, linearly decressing to zero as the uinlock time approaches. You can also unlock smaller amounts by splitting your veCTM and liquidating one of them.',
+      'You can unlock CTM from veCTM through the front end liquidate feature, or by calling the smart contract function directly. You can unlock your CTM at any time, and the amount of CTM you unlock will be based on the amount of time you have locked your CTM in veCTM. For a 4 year lock, you will lose 50% of your CTM, linearly decreasing to zero as the unlock time approaches. You can also unlock smaller amounts by splitting your veCTM and liquidating one of them.',
   },
   {
     question: 'Why is the MPC Network run by a DAO?',
@@ -52,7 +52,7 @@ export const faqItems = [
   {
     question: 'Where can I find more documentation?',
     answer:
-      'Full documentation, the whitepaper, and technical details are available at docs.continuumdao.org. Governance and voting take place at app.continuumdao.org and the forum.',
+      'Full documentation, the whitepaper, and technical details are available at https://docs.continuumdao.org. Governance and voting take place at https://app.continuumdao.org and the forum.',
   },
   {
     question: 'What is the C3Caller?',
@@ -122,12 +122,12 @@ export const faqItems = [
   {
     question: 'Does the Multi-Party Agent Wallet support EVMs and other chains such as Solana, NEAR, TON, Stellar etc.?',
     answer:
-      'It will very soon. The Multi-Party Agent Wallet supports EVMs now and other for other chains such as Solana, NEAR, TON, Stellar etc. are being added now (but not yet released).',
+      'It will very soon. The Multi-Party Agent Wallet supports EVMs now and other chains such as Solana, NEAR, TON, Stellar etc. are being added now (but not yet released).',
   },
   {
     question: 'Does the Multi-Party Agent Wallet depend on any external services to function?',
     answer:
-      'No. The Multi-Party Agent Wallet is self-contained and does not depend on any external services to function. It is designed to be resilient and decentralized. Once installed using Docker, the configured nodes in a Group manage their own secure communication with each other. Even the Multi-Party Agent front end is not required if management signatures are made using ed25519 key pairs rather than MetaMask',
+      'No. The Multi-Party Agent Wallet is self-contained and does not depend on any external services to function. It is designed to be resilient and decentralized. Once installed using Docker, the configured nodes in a Group manage their own secure communication with each other. Even the Multi-Party Agent front end is not required if management signatures are made using ed25519 key pairs and the Restful API rather than MetaMask',
   },
   {
     question: 'How is the Multi-Party Agent Wallet different from a Multi-Sig Wallet?',
@@ -137,12 +137,12 @@ export const faqItems = [
   {
     question: 'What uses can a Multi-Party Agent Wallet be used for?',
     answer:
-      'A Multi-Party Agent Wallet can be used for a variety of purposes, such as: Human-in-the-loop transactions, DAO voting, DAO proposal summarization by AI, controlled access to assets, cross-chain messaging support for C3Callerand more.',
+      'A Multi-Party Agent Wallet can be used for a variety of purposes, such as: Human-in-the-loop transactions, DAO voting, DAO proposal summarization by AI, controlled access to assets for semi-autonomous trading by AI, cross-chain messaging support for C3Caller and more.',
   },
   {
     question: 'Why is it useful to use a Multi-Party Agent Wallet for DAO voting?',
     answer:
-      'A Multi-Party Agent Wallet can be used to vote on DAO proposals. Frequently complex proposals are difficult for humans to understand and vote on. By using a Multi-Party Agent Wallet, the proposal can be summarized by AI before voting, and the voting can be done by the AI Agent after the agreement of the DAO vote token holder. Over time, the AI agent understands the priorities of the human voter, since each AI suggestion is documented, as is the human response to it. This context is stored in the nodes of the Group for use by any AI agent that is used.',
+      'A Multi-Party Agent Wallet can be used to vote on DAO proposals. Frequently complex proposals are difficult for humans to understand and vote on, which can reduce the number of DAO participants who actaully vote. By using a Multi-Party Agent Wallet, the proposal can be summarized by AI before voting, and the voting can be done by the AI Agent after the agreement of the DAO vote token holder. Over time, the AI agent understands the priorities of the human voter, since each AI suggestion is documented, as is the human response to it. This context is stored in the nodes of the Group for use by any AI agent that is used. In this way, it is hoped that DAO participation rates will stay strong, which is very important for decentralization.',
 
   },
   {
@@ -158,12 +158,12 @@ export const faqItems = [
   {
     question: 'What AI agents can be used with the Multi-Party Agent Wallet?',
     answer:
-      'Any AI agent that can be installed on a node. For example, Open Claw easily be installed on a node. The files https://github.com/ContinuumDAO/mpc-config/blob/main/docs/AGENT_ED25519_SETUP.md and https://github.com/ContinuumDAO/mpc-config/blob/main/docs/API_IMPLEMENTATION.md provide the instructions for installing Open Claw on a node and act as the Skill needed for it.',
+      'Any AI agent that can be installed on a node. For example, Open Claw can easily be installed on a node. The files https://github.com/ContinuumDAO/mpc-config/blob/main/docs/AGENT_ED25519_SETUP.md and https://github.com/ContinuumDAO/mpc-config/blob/main/docs/API_IMPLEMENTATION.md provide the instructions for installing Open Claw on a node and act as the Skill needed for it.',
   },
   {
     question: 'How do I install Multi-Party Agent Wallet on a node?',
     answer:
-      'You can install Multi-Party Agent Wallet on a node by following the instructions in https://github.com/ContinuumDAO/mpc-config/blob/main/README.md and then continuing via the front end.',
+      'You can install Multi-Party Agent Wallet on a node by following the instructions in https://github.com/ContinuumDAO/mpc-config/blob/main/README.md and https://github.com/ContinuumDAO/mpc-config/blob/main/docs/AGENT_ED25519_SETUP.md and https://github.com/ContinuumDAO/mpc-config/blob/main/docs/API_IMPLEMENTATION.md and then continuing the setupvia the front end, if you do not want to use the Restful API.',
   },
   {
     question: 'Can the Multi-Party Agent Wallet join the C3Caller MPC signer pool to earn rewards?',
@@ -173,6 +173,6 @@ export const faqItems = [
   {
     question: 'Do I have to pay for the Multi-Party Agent Wallet?',
     answer:
-      'Yes, with some initial free usage. The Multi-Party Agent Wallet is free to use for a limited number of sign requests for each generated keyGen (e.g Ethereum address). Afterwards, their is a small charge for each keyGen, as decided by the DAO. The user can top up their balance for their keyGen address and everytime that this address is used, the fee (a few cents) is deducted from the balance.',
+      'Yes, with some initial free usage. The Multi-Party Agent Wallet is free to use for a limited number of sign requests for each generated keyGen (e.g Ethereum address). Afterwards, there is a small charge for each sign request made by a keyGen, as decided by the DAO. The user can top up their balance for their keyGen address and everytime that this address is used, the fee (a few cents) is deducted from the balance.',
   },
 ]
