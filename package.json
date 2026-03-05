@@ -1,6 +1,6 @@
 {
   "// DO NOT upgrade next": "Keep at 13.3.4 until Headless UI dropdown bug in Next.js 13.4+ is fixed. See next.config.mjs.",
-  "name": "tailwindui-salient",
+  "name": "continuum-home",
   "version": "0.1.0",
   "private": true,
   "scripts": {

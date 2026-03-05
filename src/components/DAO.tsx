@@ -4,7 +4,7 @@ import { Disclosure, Transition } from '@headlessui/react'
 import { useRef } from 'react'
 import { Bobble } from './Bobble'
 
-export function Faqs() {
+export function DAO() {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const buttonRef2 = useRef<HTMLButtonElement>(null)
   const buttonRef3 = useRef<HTMLButtonElement>(null)

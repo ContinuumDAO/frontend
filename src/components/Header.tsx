@@ -45,6 +45,7 @@ const mpcMenu = [
 const learnMore = [
   { name: 'Docs', href: 'https://docs.continuumdao.org/' },
   { name: 'Whitepaper', href: 'https://docs.continuumdao.org/ContinuumDAO/WhitePaper' },
+  { name: 'FAQs', href: '/faqs' },
 ]
 
 const auditsSubmenu = [

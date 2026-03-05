@@ -1,4 +1,4 @@
-import { Faqs } from '@/components/Faqs'
+import { DAO } from '@/components/DAO'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
@@ -21,7 +21,7 @@ export default function Home() {
         <Hero />
         <WhatWeDo />
         <UseCases />
-        <Faqs />
+        <DAO />
         <section id="ctm-token" className="z-10 mx-auto max-w-[115rem] px-6 py-16 sm:py-24 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <h2 className="pb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl text-left sm:leading-10">
