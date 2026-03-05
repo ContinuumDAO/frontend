@@ -120,6 +120,16 @@ export const faqItems = [
       'The Multi-Party Agent Wallet is a human-in-the-loop transaction wallet designed for both humans and AI agents. It can be used to sign transactions with a private key generated collectively by multiple nodes. The nodes can either be humans (for human-in-the-loop transactions) or AI agents. Context built up over time between AI Agents and humans is stored on the nodes and is accessible by any AI Agent. Suitable for use with Open Claw, to allow controlled access to assets. Also suitable for DAOs, so that complex proposals can be summarized by AI before voting. Multi-Party Agent Wallets can optionally join the C3Caller MPC signer pool to earn rewards.',
   },
   {
+    question: 'Does the Multi-Party Agent Wallet support EVMs and other chains such as Solana, NEAR, TON, Stellar etc.?',
+    answer:
+      'It will very soon. The Multi-Party Agent Wallet supports EVMs now and other for other chains such as Solana, NEAR, TON, Stellar etc. are being added now (but not yet released).',
+  },
+  {
+    question: 'Does the Multi-Party Agent Wallet depend on any external services to function?',
+    answer:
+      'No. The Multi-Party Agent Wallet is self-contained and does not depend on any external services to function. It is designed to be resilient and decentralized. Once installed using Docker, the configured nodes in a Group manage their own secure communication with each other. Even the Multi-Party Agent front end is not required if management signatures are made using ed25519 key pairs rather than MetaMask',
+  },
+  {
     question: 'How is the Multi-Party Agent Wallet different from a Multi-Sig Wallet?',
     answer:
       'A Multi-Sig Wallet is a wallet that is controlled by multiple private keys. The Multi-Party Agent Wallet is a wallet that is controlled by multiple nodes, not smart contracts. Once enough nodes have agreed to sign a transaction (threshold + 1 nodes), then they collectively create a single signature. The signing process, whilst still being highly secure, is off-chain and privacy preserving.',
@@ -148,7 +158,7 @@ export const faqItems = [
   {
     question: 'What AI agents can be used with the Multi-Party Agent Wallet?',
     answer:
-      'Any AI agent that can be installed on a node. For example, Open Claw easily be installed on a node. The files https://github.com/ContinuumDAO/mpc-config/blob/main/MPC_AUTH_README.md and https://github.com/ContinuumDAO/mpc-config/blob/main/API_IMPLEMENTATION.md provide the instructions for installing Open Claw on a node and act as the Skill needed for it.',
+      'Any AI agent that can be installed on a node. For example, Open Claw easily be installed on a node. The files https://github.com/ContinuumDAO/mpc-config/blob/main/docs/AGENT_ED25519_SETUP.md and https://github.com/ContinuumDAO/mpc-config/blob/main/docs/API_IMPLEMENTATION.md provide the instructions for installing Open Claw on a node and act as the Skill needed for it.',
   },
   {
     question: 'How do I install Multi-Party Agent Wallet on a node?',
@@ -159,5 +169,10 @@ export const faqItems = [
     question: 'Can the Multi-Party Agent Wallet join the C3Caller MPC signer pool to earn rewards?',
     answer:
       'Yes. The Multi-Party Agent Wallet can join the C3Caller MPC signer pool by creating two keyGens of KeyType "tx-check", one for EVMs (secp256k1) and one for Edwards Curve (ed25519) for Solana, NEAR, TON, Stellar etc. These two keyGens can then be used to sign messages sent to them by the C3Caller relayer.',
+  },
+  {
+    question: 'Do I have to pay for the Multi-Party Agent Wallet?',
+    answer:
+      'Yes, with some initial free usage. The Multi-Party Agent Wallet is free to use for a limited number of sign requests for each generated keyGen (e.g Ethereum address). Afterwards, their is a small charge for each keyGen, as decided by the DAO. The user can top up their balance for their keyGen address and everytime that this address is used, the fee (a few cents) is deducted from the balance.',
   },
 ]
