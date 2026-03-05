@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header'
-import { FAQs, faqItems } from '@/components/FAQs'
+import { FAQs } from '@/components/FAQs'
+import { faqItems } from '@/data/faqs'
 import backgroundGraphic from '@/images/background-graphic.gif'
 import { type Metadata } from 'next'
 

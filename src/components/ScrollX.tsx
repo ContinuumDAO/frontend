@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 const partners = [
   {
     name: 'Arbitrum',
@@ -109,9 +107,9 @@ export const ScrollX = () => {
     </style>
     <div className='w-screen overflow-hidden'>
     <div className="flex items-center scroll-parent mb-10 w-screen">
-      {[...partners, ...partners]?.map((i: any, index: number) => {
+      {[...partners, ...partners]?.map((_, index) => {
         return (
-          <div></div>
+          <div key={index}></div>
           // <div key={index} className="scroll-item relative flex h-[166px] items-center">
           //   <div className="absolute flex h-full w-full items-center">
           //     <div
