@@ -3,6 +3,27 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { faqItems } from '@/data/faqs'
 
+const URL_REGEX = /(https?:\/\/[^\s<>"']+)/g
+
+function answerWithLinks(text: string): React.ReactNode {
+  const parts = text.split(URL_REGEX)
+  return parts.map((part, i) =>
+    part.startsWith('http://') || part.startsWith('https://') ? (
+      <a
+        key={i}
+        href={part.replace(/[.,;:)]+$/, '')}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white underline hover:text-white/90"
+      >
+        {part}
+      </a>
+    ) : (
+      part
+    )
+  )
+}
+
 export function FAQs() {
   return (
     <div className="z-10">
@@ -54,7 +75,7 @@ export function FAQs() {
                     >
                       <Disclosure.Panel as="dd" className="pb-4">
                         <p className="text-base leading-7 text-gray-300 sm:text-lg pl-0 pr-8">
-                          {item.answer}
+                          {answerWithLinks(item.answer)}
                         </p>
                       </Disclosure.Panel>
                     </Transition>
