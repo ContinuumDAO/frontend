@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { DAO } from '@/components/DAO'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -5,19 +6,26 @@ import { Hero } from '@/components/Hero'
 import { WhatWeDo } from '@/components/WhatWeDo'
 import { UseCases } from '@/components/UseCases'
 import { SideNav } from '@/components/SideNav'
-import backgroundGraphic from '@/images/background-graphic.gif'
 
 export default function Home() {
   return (
     <>
       <div
-        className="fixed bottom-0 left-0 right-0 top-0 -z-[10] h-screen w-screen bg-cover pointer-events-none"
-        style={{ backgroundImage: `url(${backgroundGraphic.src})` }}
+        className="fixed inset-0 z-0 min-h-screen min-w-full overflow-hidden pointer-events-none"
         aria-hidden
-      />
-      <Header />
-      <SideNav />
-      <main>
+      >
+        <Image
+          src="/images/background-graphic.gif"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
+      <div className="relative z-10">
+        <Header />
+        <SideNav />
+        <main>
         <Hero />
         <WhatWeDo />
         <UseCases />
@@ -51,7 +59,8 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
+        <Footer />
+      </div>
     </>
   )
 }

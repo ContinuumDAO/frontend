@@ -60,14 +60,14 @@ export function Hero() {
     >
       <div className="relative isolate xxs:py-28 xs:py-32 sm:py-48">
         <div
-          className="left-1/2 -translate-x-1/2 flex items-center justify-center absolute -z-10 overflow-hidden main-shadow"
+          className="left-1/2 -translate-x-1/2 flex items-center justify-center absolute z-[1] overflow-hidden main-shadow"
           aria-hidden="true"
         >
           <Image src={Mobius} alt="Mobius Graphic" />
           <div className="absolute  !inset-0 bg-gradient-to-b from-transparent from-0% to-black to-65%"></div>
         </div>
 
-        <div className="py-24 sm:py-32 lg:pb-40">
+        <div className="relative z-10 py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
               <h1 className="text-[10rem] font-bold tracking-wide text-white/50 xxs:-ml-40 xxs:scale-[0.3] xs:-ml-40 xs:scale-[0.34] sm:-ml-24 sm:scale-50 md:-ml-10 md:scale-[0.70] lg:scale-100">
