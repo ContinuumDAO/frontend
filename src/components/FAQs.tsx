@@ -2,7 +2,7 @@
 
 import { Disclosure, Transition } from '@headlessui/react'
 
-const faqItems = [
+export const faqItems = [
   {
     question: 'What is ContinuumDAO?',
     answer:
