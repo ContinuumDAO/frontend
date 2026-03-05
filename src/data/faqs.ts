@@ -2,7 +2,7 @@ export const faqItems = [
   {
     question: 'What is ContinuumDAO?',
     answer:
-      'ContinuumDAO is a protocol that runs a decentralized Multi-Party Computation network. The network is designed to serve as a public good and run by a DAO. Anyone can run a node, join an MPC signer pool and earn rewards. The MPC Network is a permissionless service, and anyone can join the network and earn rewards.',
+      'ContinuumDAO is a protocol that runs a decentralized Multi-Party Computation network. The network is designed to serve as a public good and run by a DAO. Anyone can run a node, join an MPC signer pool and earn rewards. Anyone can create a Multi-Party Agent Wallet. Any dApp can use its services for cross-chain message signing. The MPC Network is a permissionless service.',
   },
   {
     question: 'What is the CTM token?',
@@ -22,7 +22,7 @@ export const faqItems = [
   {
     question: 'Can I initiate a proposal?',
     answer:
-    'Yes you can if you hold enough veCTM Voting Power (determined by the DAO). If you do not have enough Voting Power, you can still initiate a proposal, provided enough other veCTM holders have delegated their Voting Power to you.',
+      'Yes you can if you hold enough veCTM Voting Power (determined by the DAO). If you do not have enough Voting Power, you can still initiate a proposal, provided enough other veCTM holders have delegated their Voting Power to you.',
   },
   {
     question: 'How do I lock CTM in veCTM?',

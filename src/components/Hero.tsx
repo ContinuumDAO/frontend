@@ -28,8 +28,9 @@ function formatCountdown(c: { days: number; hours: number; minutes: number; seco
 
 export function Hero() {
   const linkRef = useRef<HTMLAnchorElement>(null)
-  const [countdown, setCountdown] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(() => getCountdown(ESCROW_BOX_DEADLINE))
-  const showEscrowBox = countdown !== null
+  const [countdown, setCountdown] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null)
+  const [hasMounted, setHasMounted] = useState(false)
+  const showEscrowBox = hasMounted && countdown !== null
 
   useEffect(() => {
     if (linkRef.current) {
@@ -38,6 +39,11 @@ export function Hero() {
   }, [])
 
   useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!hasMounted) return
     const tick = () => {
       const next = getCountdown(ESCROW_BOX_DEADLINE)
       setCountdown(next)
@@ -45,7 +51,7 @@ export function Hero() {
     tick()
     const id = setInterval(tick, 1000)
     return () => clearInterval(id)
-  }, [])
+  }, [hasMounted])
 
   return (
     <div
